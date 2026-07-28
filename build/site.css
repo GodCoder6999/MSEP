@@ -94,9 +94,9 @@ img { max-width: 100%; }
   /* slides are absolutely positioned, so the wrapper needs a height that can
      actually hold the copy — the desktop clamp bottomed out at 430px and cut
      the "Know More" button off on a 360px phone */
-  .hero-wrap { height: min(92vh, 700px) !important; }
-  .hero-wrap h1, .hero-wrap h2 { font-size: 27px !important; line-height: 1.2 !important; }
-  .hero-wrap p { font-size: 14.5px !important; line-height: 1.6 !important; margin-bottom: 22px !important; }
+  .hero-wrap { height: min(80vh, 560px) !important; }
+  .hero-wrap h1, .hero-wrap h2 { font-size: 25px !important; line-height: 1.2 !important; }
+  .hero-wrap p { font-size: 14px !important; line-height: 1.55 !important; margin-bottom: 18px !important; }
   .hero-wrap .hero-slide > div:last-child > div { padding: 26px 20px !important; }
 
   /* pills keep their labels, just smaller, and sit lower so they clear the copy */
