@@ -296,20 +296,20 @@ img { max-width: 100%; }
 .pillar p { font-size: 14px; line-height: 1.65; color: #5A6B78; margin: 0; }
 
 /* ---------- career paths ---------- */
-.paths { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0; border-top: 1px solid #D7DFE5; }
+.paths { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0; border-top: 1px solid #E4D3A9; }
 .path {
-  padding: 30px 28px; border-left: 1px solid #D7DFE5; border-bottom: 1px solid #D7DFE5;
+  padding: 30px 28px; border-left: 1px solid #E4D3A9; border-bottom: 1px solid #E4D3A9;
   color: #16232E; transition: background 0.2s ease;
 }
 .path:first-child { border-left: 0; }
-.path:hover { background: #FFFFFF; color: #16232E; }
+.path:hover { background: rgba(255, 255, 255, 0.72); color: #16232E; }
 .path__ico { display: block; color: #2F7E78; margin-bottom: 16px; line-height: 0; transition: transform 0.25s ease; }
 .path:hover .path__ico { transform: translateY(-3px); }
 .path h3 { font-size: 16.5px; font-weight: 700; color: #0B2545; margin: 0 0 8px; }
 .path p { font-size: 14px; line-height: 1.65; color: #5A6B78; margin: 0 0 14px; }
 .path__tag {
   font-size: 11.5px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
-  color: #7A5E1E; background: #F7F1E3; padding: 4px 10px; border-radius: 3px;
+  color: #1F6E68; background: #D6EDE7; padding: 4px 10px; border-radius: 3px;
 }
 @media (max-width: 620px) { .path { border-left: 0; padding: 26px 0; } }
 
@@ -388,12 +388,12 @@ img { max-width: 100%; }
 @media (min-width: 620px) { .quick-grid { grid-template-columns: repeat(4, 1fr); } }
 .quick {
   display: flex; flex-direction: column; gap: 11px;
-  padding: 18px 16px; border: 1px solid #D7DFE5; border-radius: 10px;
-  font-size: 14px; font-weight: 700; color: #0B2545; background: #FFFFFF;
+  padding: 18px 16px; border: 1px solid #CFE4DE; border-radius: 10px;
+  font-size: 14px; font-weight: 700; color: #0B2545; background: #F2F9F7;
   transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 .quick:hover, .quick:focus-visible {
-  border-color: #5AA9A3; color: #0B2545;
+  border-color: #5AA9A3; color: #0B2545; background: #E4F2EE;
   transform: translateY(-2px); box-shadow: 0 8px 22px rgba(11, 37, 69, 0.09);
 }
 .quick__ico { color: #2F7E78; line-height: 0; }
