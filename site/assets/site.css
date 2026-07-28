@@ -328,6 +328,92 @@ img { max-width: 100%; }
 /* inline phone / mail / WhatsApp marks inside links and buttons */
 .ico { vertical-align: -3px; margin-right: 3px; flex-shrink: 0; }
 
+/* ---------- admission enquiry modal ---------- */
+.emodal {
+  width: min(560px, calc(100vw - 32px)); padding: 0; border: 0; border-radius: 14px;
+  overflow: hidden; background: #FFFFFF; color: #16232E;
+  box-shadow: 0 30px 80px rgba(6, 23, 38, 0.45);
+  font-family: 'Public Sans', system-ui, sans-serif;
+}
+.emodal::backdrop { background: rgba(6, 23, 38, 0.62); backdrop-filter: blur(3px); }
+.emodal[open] { animation: emodal-in 0.28s cubic-bezier(0.2, 0.9, 0.3, 1); }
+@keyframes emodal-in { from { opacity: 0; transform: translateY(14px) scale(0.98); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .emodal[open] { animation: none; } }
+
+.emodal__close {
+  position: absolute; right: 14px; top: 14px; z-index: 2;
+  width: 34px; height: 34px; border-radius: 50%; border: 0; cursor: pointer;
+  background: rgba(255, 255, 255, 0.16); color: #FFFFFF;
+  display: flex; align-items: center; justify-content: center;
+  transition: background 0.2s ease;
+}
+.emodal__close:hover { background: rgba(255, 255, 255, 0.3); }
+
+.emodal__head { position: relative; background: #0B2545; color: #FFFFFF; padding: 26px 28px 24px; }
+.emodal__head::after {
+  content: ''; position: absolute; right: -40px; top: -60px; width: 190px; height: 190px;
+  border-radius: 50%; background: rgba(255, 255, 255, 0.05);
+}
+.emodal__pill {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: #C89B3C; color: #2A2109; font-size: 12.5px; font-weight: 700;
+  padding: 6px 14px; border-radius: 30px;
+}
+.emodal__dot { width: 7px; height: 7px; border-radius: 50%; background: #2A2109; }
+.emodal__head h2 {
+  font-family: 'Source Serif 4', serif; font-weight: 700;
+  font-size: clamp(24px, 4vw, 30px); margin: 14px 0 8px; color: #FFFFFF;
+}
+.emodal__head p { font-size: 14.5px; line-height: 1.6; color: #C2D2DC; margin: 0; max-width: 46ch; }
+
+.emodal__body { padding: 24px 28px 26px; display: flex; flex-direction: column; gap: 14px; }
+/* a class-level `display: flex` outranks the UA rule for [hidden], so restate it */
+.emodal [hidden] { display: none !important; }
+.emodal__row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+@media (max-width: 480px) { .emodal__row { grid-template-columns: 1fr; } }
+.emodal label { display: block; font-size: 13.5px; font-weight: 700; color: #0B2545; }
+.emodal label span { color: #C0392B; }
+.emodal label em { font-style: normal; font-weight: 500; color: #5A6B78; }
+.emodal input, .emodal textarea {
+  width: 100%; margin-top: 7px; padding: 12px 14px;
+  border: 1.5px solid #D7DFE5; border-radius: 8px; background: #FFFFFF;
+  font-size: 15px; font-weight: 400; color: #16232E;
+  font-family: inherit; resize: vertical;
+}
+.emodal input:focus, .emodal textarea:focus {
+  outline: none; border-color: #5AA9A3; box-shadow: 0 0 0 3px rgba(90, 169, 163, 0.2);
+}
+.emodal__error {
+  margin: 0; font-size: 13.5px; color: #8A3517;
+  background: #FBEFE9; border: 1px solid #E3B7A2; border-radius: 6px; padding: 10px 12px;
+}
+.emodal__submit {
+  display: flex; align-items: center; justify-content: center; gap: 9px;
+  width: 100%; border: 0; cursor: pointer; border-radius: 8px; padding: 15px;
+  background: #C89B3C; color: #2A2109; font-size: 16px; font-weight: 700;
+  font-family: inherit; transition: background 0.2s ease;
+}
+.emodal__submit:hover { background: #DBB05B; }
+.emodal__note { margin: 0; text-align: center; font-size: 12.5px; color: #5A6B78; }
+
+.emodal__done { text-align: center; align-items: center; padding-top: 30px; }
+.emodal__tick {
+  width: 56px; height: 56px; border-radius: 50%; background: #E2EFEC; color: #2F7E78;
+  display: flex; align-items: center; justify-content: center;
+}
+.emodal__done h3 { font-family: 'Source Serif 4', serif; font-size: 22px; color: #0B2545; margin: 0; }
+.emodal__done p { font-size: 14.5px; line-height: 1.65; color: #35424D; margin: 0; max-width: 40ch; }
+.emodal__wa {
+  display: inline-flex; align-items: center; gap: 9px;
+  background: #25D366; color: #073B14; font-weight: 700; font-size: 15px;
+  padding: 12px 22px; border-radius: 8px;
+}
+.emodal__wa:hover { background: #1EBD5A; color: #073B14; }
+.emodal__link {
+  border: 0; background: none; cursor: pointer; font-family: inherit;
+  font-size: 13.5px; color: #5A6B78; text-decoration: underline;
+}
+
 /* ---------- misc ---------- */
 button { font-family: 'Public Sans', system-ui, sans-serif; }
 a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {

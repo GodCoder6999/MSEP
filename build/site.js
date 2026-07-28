@@ -14,6 +14,78 @@
     });
   });
 
+  /* ---------------- admission enquiry modal ----------------
+     Opens shortly after the first page of a visit. Dismissal is remembered for
+     the session, so it does not re-open on every navigation. */
+  var emodal = document.getElementById('enquiry-modal');
+  if (emodal && typeof emodal.showModal === 'function') {
+    var SEEN = 'msep-enquiry-seen';
+    var eForm = emodal.querySelector('[data-emodal-form]');
+    var eDone = emodal.querySelector('[data-emodal-done]');
+    var eError = emodal.querySelector('[data-emodal-error]');
+    var onApplyPage = /(^|\/)apply\.html$/.test(location.pathname);
+
+    function seen() {
+      try { return sessionStorage.getItem(SEEN) === '1'; } catch (e) { return false; }
+    }
+    function markSeen() {
+      try { sessionStorage.setItem(SEEN, '1'); } catch (e) { /* private mode */ }
+    }
+    function closeModal() { markSeen(); if (emodal.open) emodal.close(); }
+
+    emodal.querySelectorAll('[data-emodal-close]').forEach(function (b) {
+      b.addEventListener('click', closeModal);
+    });
+    // click outside the panel closes it; Esc is handled natively by <dialog>
+    emodal.addEventListener('click', function (e) { if (e.target === emodal) closeModal(); });
+    emodal.addEventListener('close', markSeen);
+
+    if (!seen() && !onApplyPage) {
+      setTimeout(function () {
+        if (seen() || emodal.open) return;
+        emodal.showModal();
+        var first = emodal.querySelector('#m-name');
+        if (first) first.focus({ preventScroll: true });
+      }, 1400);
+    }
+
+    var eSubmit = emodal.querySelector('[data-emodal-submit]');
+    var eFields = {
+      name: emodal.querySelector('#m-name'),
+      phone: emodal.querySelector('#m-phone'),
+      email: emodal.querySelector('#m-email'),
+      msg: emodal.querySelector('#m-msg'),
+    };
+    Object.keys(eFields).forEach(function (k) {
+      if (eFields[k]) eFields[k].addEventListener('input', function () { eError.hidden = true; });
+    });
+
+    if (eSubmit) eSubmit.addEventListener('click', function () {
+      var name = (eFields.name.value || '').trim();
+      var phone = (eFields.phone.value || '').trim();
+      var email = (eFields.email.value || '').trim();
+      var msg = (eFields.msg.value || '').trim();
+
+      function fail(text, field) {
+        eError.textContent = text;
+        eError.hidden = false;
+        if (field) field.focus();
+      }
+      if (!name) return fail('Please enter the student’s name.', eFields.name);
+      if (phone.replace(/\D/g, '').length < 10) return fail('Please enter a valid 10-digit mobile number.', eFields.phone);
+
+      emodal.querySelector('[data-emodal-first]').textContent = name.split(/\s+/)[0] || 'student';
+      emodal.querySelector('[data-emodal-phone]').textContent = phone;
+      emodal.querySelector('[data-emodal-wa]').href = 'https://wa.me/919830236143?text=' + encodeURIComponent(
+        'Hello, I am ' + name + '. I would like to know about D.Pharm admission.' +
+        (email ? ' Email: ' + email + '.' : '') + (msg ? ' ' + msg : ''));
+
+      eForm.hidden = true;
+      eDone.hidden = false;
+      markSeen();
+    });
+  }
+
   /* ---------------- notice ticker ---------------- */
   var ticker = document.querySelector('.ticker');
   if (ticker) {
