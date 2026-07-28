@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+  body { margin: 0; background: #EEF2F5; color: #16232E; font-family: 'Public Sans', system-ui, sans-serif; }
+  a { color: #0B2545; text-decoration: none; }
+  a:hover { color: #2F7E78; }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
+</style>
+</helmet>
+<dc-import name="SiteHeader" hint-size="100%,180px"></dc-import>
+
+<div style="position: relative; background: #061726;">
+  <div style="position: relative; height: clamp(430px, 58vw, 620px); overflow: hidden;">
+      <div style="position: absolute; inset: 0; opacity: {{ op0 }}; transition: opacity 0.9s ease; pointer-events: {{ pe0 }};">
+        <div style="position: absolute; inset: 0;"><image-slot id="hero-campus" shape="rect" fit="cover" style="width: 100%; height: 100%;" placeholder="Hero photograph — students in the laboratory or campus building"></image-slot></div>
+        <div style="position: absolute; inset: 0; background: linear-gradient(100deg, rgba(6,23,38,0.92) 0%, rgba(6,23,38,0.78) 45%, rgba(6,23,38,0.35) 100%);"></div>
+        <div style="position: relative; height: 100%; display: flex; align-items: center;">
+          <div style="max-width: 1180px; margin: 0 auto; padding: clamp(44px, 6vw, 76px) clamp(48px, 7vw, 92px); width: 100%; box-sizing: border-box;">
+            <div style="max-width: 640px;">
+              <div style="display: inline-block; border-left: 3px solid #C89B3C; padding: 2px 0 2px 12px; font-size: 12.5px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #E8CE9A; margin-bottom: 20px;">Admissions open · Session 2026–27</div>
+              <h1 style="font-family: 'Source Serif 4', serif; font-weight: 700; font-size: clamp(29px, 4.2vw, 48px); line-height: 1.15; margin: 0 0 18px; color: #FFFFFF; text-wrap: pretty;">Empowering the Next Generation of <span style="color: #C89B3C;">Pharmacists</span></h1>
+              <p style="font-size: clamp(15px, 1.5vw, 17.5px); line-height: 1.7; color: #C2D2DC; margin: 0 0 30px; max-width: 54ch;">Our students gain the knowledge, skills and confidence to excel in pharmacy and healthcare. We combine quality education, hands-on training and expert guidance for a rewarding career.</p>
+              <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                <a href="apply.dc.html" style="background: #C89B3C; color: #2A2109; font-weight: 700; font-size: 16px; padding: 14px 28px; border-radius: 4px;" style-hover="background: #DBB05B; color: #2A2109;">Apply Now</a>
+                <a href="dpharm.dc.html" style="background: transparent; color: #FFFFFF; font-weight: 600; font-size: 16px; padding: 14px 28px; border-radius: 4px; border: 1.5px solid rgba(255,255,255,0.5);" style-hover="background: rgba(255,255,255,0.14); color: #FFFFFF;">Know More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="position: absolute; inset: 0; opacity: {{ op1 }}; transition: opacity 0.9s ease; pointer-events: {{ pe1 }};">
+        <div style="position: absolute; inset: 0;"><image-slot id="hero-slide-2" shape="rect" fit="cover" style="width: 100%; height: 100%;" placeholder="Hero photograph — laboratory practical session"></image-slot></div>
+        <div style="position: absolute; inset: 0; background: linear-gradient(100deg, rgba(6,23,38,0.92) 0%, rgba(6,23,38,0.78) 45%, rgba(6,23,38,0.35) 100%);"></div>
+        <div style="position: relative; height: 100%; display: flex; align-items: center;">
+          <div style="max-width: 1180px; margin: 0 auto; padding: clamp(44px, 6vw, 76px) clamp(48px, 7vw, 92px); width: 100%; box-sizing: border-box;">
+            <div style="max-width: 640px;">
+              <div style="display: inline-block; border-left: 3px solid #C89B3C; padding: 2px 0 2px 12px; font-size: 12.5px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #E8CE9A; margin-bottom: 20px;">Practical, hands-on learning</div>
+              <h2 style="font-family: 'Source Serif 4', serif; font-weight: 700; font-size: clamp(29px, 4.2vw, 48px); line-height: 1.15; margin: 0 0 18px; color: #FFFFFF; text-wrap: pretty;">Laboratory Training That Employers Trust</h2>
+              <p style="font-size: clamp(15px, 1.5vw, 17.5px); line-height: 1.7; color: #C2D2DC; margin: 0 0 30px; max-width: 54ch;">Four dedicated laboratories, weekly practical sessions and 500 hours of supervised training in real hospital and community pharmacy settings — the experience a pharmacist’s career is built on.</p>
+              <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                <a href="apply.dc.html" style="background: #C89B3C; color: #2A2109; font-weight: 700; font-size: 16px; padding: 14px 28px; border-radius: 4px;" style-hover="background: #DBB05B; color: #2A2109;">Apply Now</a>
+                <a href="dpharm.dc.html" style="background: transparent; color: #FFFFFF; font-weight: 600; font-size: 16px; padding: 14px 28px; border-radius: 4px; border: 1.5px solid rgba(255,255,255,0.5);" style-hover="background: rgba(255,255,255,0.14); color: #FFFFFF;">Know More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="position: absolute; inset: 0; opacity: {{ op2 }}; transition: opacity 0.9s ease; pointer-events: {{ pe2 }};">
+        <div style="position: absolute; inset: 0;"><image-slot id="hero-slide-3" shape="rect" fit="cover" style="width: 100%; height: 100%;" placeholder="Hero photograph — faculty teaching a class"></image-slot></div>
+        <div style="position: absolute; inset: 0; background: linear-gradient(100deg, rgba(6,23,38,0.92) 0%, rgba(6,23,38,0.78) 45%, rgba(6,23,38,0.35) 100%);"></div>
+        <div style="position: relative; height: 100%; display: flex; align-items: center;">
+          <div style="max-width: 1180px; margin: 0 auto; padding: clamp(44px, 6vw, 76px) clamp(48px, 7vw, 92px); width: 100%; box-sizing: border-box;">
+            <div style="max-width: 640px;">
+              <div style="display: inline-block; border-left: 3px solid #C89B3C; padding: 2px 0 2px 12px; font-size: 12.5px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #E8CE9A; margin-bottom: 20px;">Experienced, dedicated faculty</div>
+              <h2 style="font-family: 'Source Serif 4', serif; font-weight: 700; font-size: clamp(29px, 4.2vw, 48px); line-height: 1.15; margin: 0 0 18px; color: #FFFFFF; text-wrap: pretty;">Taught by Faculty Who Know You by Name</h2>
+              <p style="font-size: clamp(15px, 1.5vw, 17.5px); line-height: 1.7; color: #C2D2DC; margin: 0 0 30px; max-width: 54ch;">M.Pharm-qualified teachers across six departments, a 60-seat intake and small batches — so every student is guided personally through both years of the diploma.</p>
+              <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                <a href="apply.dc.html" style="background: #C89B3C; color: #2A2109; font-weight: 700; font-size: 16px; padding: 14px 28px; border-radius: 4px;" style-hover="background: #DBB05B; color: #2A2109;">Apply Now</a>
+                <a href="dpharm.dc.html" style="background: transparent; color: #FFFFFF; font-weight: 600; font-size: 16px; padding: 14px 28px; border-radius: 4px; border: 1.5px solid rgba(255,255,255,0.5);" style-hover="background: rgba(255,255,255,0.14); color: #FFFFFF;">Know More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="position: absolute; inset: 0; opacity: {{ op3 }}; transition: opacity 0.9s ease; pointer-events: {{ pe3 }};">
+        <div style="position: absolute; inset: 0;"><image-slot id="hero-slide-4" shape="rect" fit="cover" style="width: 100%; height: 100%;" placeholder="Hero photograph — graduates or hospital pharmacy"></image-slot></div>
+        <div style="position: absolute; inset: 0; background: linear-gradient(100deg, rgba(6,23,38,0.92) 0%, rgba(6,23,38,0.78) 45%, rgba(6,23,38,0.35) 100%);"></div>
+        <div style="position: relative; height: 100%; display: flex; align-items: center;">
+          <div style="max-width: 1180px; margin: 0 auto; padding: clamp(44px, 6vw, 76px) clamp(48px, 7vw, 92px); width: 100%; box-sizing: border-box;">
+            <div style="max-width: 640px;">
+              <div style="display: inline-block; border-left: 3px solid #C89B3C; padding: 2px 0 2px 12px; font-size: 12.5px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #E8CE9A; margin-bottom: 20px;">Career-oriented guidance</div>
+              <h2 style="font-family: 'Source Serif 4', serif; font-weight: 700; font-size: clamp(29px, 4.2vw, 48px); line-height: 1.15; margin: 0 0 18px; color: #FFFFFF; text-wrap: pretty;">A Clear Path Into Healthcare Careers</h2>
+              <p style="font-size: clamp(15px, 1.5vw, 17.5px); line-height: 1.7; color: #C2D2DC; margin: 0 0 30px; max-width: 54ch;">Graduates work as registered pharmacists in hospitals, run licensed community pharmacies, join pharmaceutical companies, or continue to B.Pharm through lateral entry.</p>
+              <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                <a href="apply.dc.html" style="background: #C89B3C; color: #2A2109; font-weight: 700; font-size: 16px; padding: 14px 28px; border-radius: 4px;" style-hover="background: #DBB05B; color: #2A2109;">Apply Now</a>
+                <a href="dpharm.dc.html" style="background: transparent; color: #FFFFFF; font-weight: 600; font-size: 16px; padding: 14px 28px; border-radius: 4px; border: 1.5px solid rgba(255,255,255,0.5);" style-hover="background: rgba(255,255,255,0.14); color: #FFFFFF;">Know More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <button onClick="{{ prev }}" aria-label="Previous slide" style="position: absolute; left: 14px; top: 50%; transform: translateY(-50%); width: 46px; height: 46px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.35); background: rgba(6,23,38,0.45); color: #FFFFFF; font-size: 19px; cursor: pointer; display: flex; align-items: center; justify-content: center; font-family: 'Public Sans', sans-serif;" style-hover="background: rgba(6,23,38,0.8); color: #FFFFFF;">‹</button>
+    <button onClick="{{ next }}" aria-label="Next slide" style="position: absolute; right: 14px; top: 50%; transform: translateY(-50%); width: 46px; height: 46px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.35); background: rgba(6,23,38,0.45); color: #FFFFFF; font-size: 19px; cursor: pointer; display: flex; align-items: center; justify-content: center; font-family: 'Public Sans', sans-serif;" style-hover="background: rgba(6,23,38,0.8); color: #FFFFFF;">›</button>
+    <div style="position: absolute; left: 0; right: 0; bottom: 18px; display: flex; justify-content: center; gap: 9px;">
+      <sc-for list="{{ dots }}" as="d" hint-placeholder-count="4">
+        <button onClick="{{ d.go }}" aria-label="Go to slide" style="width: {{ d.w }}; height: 5px; border-radius: 3px; border: none; padding: 0; cursor: pointer; background: {{ d.bg }}; transition: width 0.3s ease, background 0.3s ease;"></button>
+      </sc-for>
+    </div>
+  </div>
+  <div style="border-top: 1px solid rgba(255,255,255,0.14); background: #061726;">
+    <div style="max-width: 1180px; margin: 0 auto; padding: 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 18px;">
+      <div><div style="font-family: 'Source Serif 4', serif; font-weight: 700; font-size: 27px; color: #FFFFFF; line-height: 1.1;">{{ seatCount }}</div><div style="font-size: 13px; color: #A9C3D1; margin-top: 3px;">Sanctioned seats per year</div></div>
+      <div><div style="font-family: 'Source Serif 4', serif; font-weight: 700; font-size: 27px; color: #FFFFFF; line-height: 1.1;">2 years</div><div style="font-size: 13px; color: #A9C3D1; margin-top: 3px;">Plus 500 hours training</div></div>
+      <div><div style="font-family: 'Source Serif 4', serif; font-weight: 700; font-size: 27px; color: #FFFFFF; line-height: 1.1;">{{ deptCount }}</div><div style="font-size: 13px; color: #A9C3D1; margin-top: 3px;">Teaching departments</div></div>
+      <div><div style="font-family: 'Source Serif 4', serif; font-weight: 700; font-size: 27px; color: #FFFFFF; line-height: 1.1;">94%</div><div style="font-size: 13px; color: #A9C3D1; margin-top: 3px;">Board pass rate, 2026</div></div>
+    </div>
+  </div>
+</div>
+
+<div style="background: #FFFFFF; border-bottom: 1px solid #D7DFE5;">
+  <div style="max-width: 1180px; margin: 0 auto; padding: 22px 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px;">
+    <div style="display: flex; gap: 12px; align-items: flex-start;"><div style="width: 8px; height: 8px; border-radius: 50%; background: #C89B3C; margin-top: 7px; flex-shrink: 0;"></div><div><div style="font-weight: 700; font-size: 14.5px; color: #0B2545;">Approved by PCI, New Delhi</div><div style="font-size: 13px; color: #5A6B78;">Pharmacy Council of India recognition</div></div></div>
+    <div style="display: flex; gap: 12px; align-items: flex-start;"><div style="width: 8px; height: 8px; border-radius: 50%; background: #C89B3C; margin-top: 7px; flex-shrink: 0;"></div><div><div style="font-weight: 700; font-size: 14.5px; color: #0B2545;">Affiliated to WBSCT&amp;VE&amp;SD</div><div style="font-size: 13px; color: #5A6B78;">West Bengal state technical council</div></div></div>
+    <div style="display: flex; gap: 12px; align-items: flex-start;"><div style="width: 8px; height: 8px; border-radius: 50%; background: #C89B3C; margin-top: 7px; flex-shrink: 0;"></div><div><div style="font-weight: 700; font-size: 14.5px; color: #0B2545;">Experienced Faculty</div><div style="font-size: 13px; color: #5A6B78;">M.Pharm-qualified, dedicated teachers</div></div></div>
+    <div style="display: flex; gap: 12px; align-items: flex-start;"><div style="width: 8px; height: 8px; border-radius: 50%; background: #C89B3C; margin-top: 7px; flex-shrink: 0;"></div><div><div style="font-weight: 700; font-size: 14.5px; color: #0B2545;">Career-Oriented Training</div><div style="font-size: 13px; color: #5A6B78;">Placement guidance and industry exposure</div></div></div>
+  </div>
+</div>
+
+<div style="max-width: 1180px; margin: 0 auto; padding: clamp(50px, 7vw, 80px) 20px;">
+  <div class="about-split">
+    <div>
+      <div style="color: #C89B3C; font-weight: 700; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 10px;">About the College</div>
+      <h2 style="font-family: 'Source Serif 4', serif; font-weight: 700; font-size: clamp(26px, 3.4vw, 38px); color: #0B2545; line-height: 1.18; margin: 0 0 18px; text-wrap: pretty;">A premier institute dedicated to excellence in pharmacy education</h2>
+      <p style="font-size: 16px; line-height: 1.75; color: #35424D; margin: 0 0 14px;">Muktir Siksha College of Education &amp; Pharmacy provides high-quality pharmacy education that combines strong theoretical knowledge with practical, hands-on training — nurturing skilled and responsible professionals for the healthcare and pharmaceutical industries.</p>
+      <p style="font-size: 16px; line-height: 1.75; color: #35424D; margin: 0 0 26px;">Our vision is to be recognised as a leading institute in pharmacy education, fostering innovation, research and continuous learning.</p>
+      <div style="display: flex; gap: 26px; flex-wrap: wrap; align-items: center;">
+        <a href="about.dc.html" style="font-weight: 700; font-size: 15px; color: #0B2545; border-bottom: 2px solid #C89B3C; padding-bottom: 3px;">Learn more about us →</a>
+        <a href="principal-message.dc.html" style="font-weight: 600; font-size: 15px; color: #5A6B78;" style-hover="color: #0B2545;">Principal’s message</a>
+      </div>
+    </div>
+    <figure class="about-media">
+      <image-slot id="about-home" shape="rect" fit="cover" style="width: 100%; height: 100%;" placeholder="College campus photograph"></image-slot>
+      <figcaption class="about-media__card">
+        <span style="font-family: 'Source Serif 4', serif; font-size: 34px; font-weight: 700; line-height: 1; display: block;">60</span>
+        <span style="font-size: 13.5px; color: #A9C3D1; display: block; margin-top: 6px;">sanctioned D.Pharm seats each session — small batches, taught by name</span>
+      </figcaption>
+    </figure>
+  </div>
+
+  <div class="pillars">
+    <div class="pillar">
+      <span class="pillar__ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="4" width="14" height="16" rx="2"></rect><line x1="9.5" y1="4" x2="9.5" y2="20"></line><line x1="13" y1="9" x2="16" y2="9"></line></svg></span>
+      <h3>Quality education</h3>
+      <p>A curriculum aligned with industry standards and the PCI’s Education Regulations 2020.</p>
+    </div>
+    <div class="pillar">
+      <span class="pillar__ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="9" r="3.2"></circle><circle cx="16.5" cy="10.5" r="2.4"></circle><path d="M4,19.5c0-3.1 2.4-4.8 5-4.8s5,1.7 5,4.8"></path><path d="M15.5,15.6c2.4,0 4.5,1.5 4.5,3.9"></path></svg></span>
+      <h3>Experienced, dedicated faculty</h3>
+      <p>Teachers who know their students by name and mentor them through both years.</p>
+    </div>
+    <div class="pillar">
+      <span class="pillar__ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7.5h16v11a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 18.5z"></path><path d="M9 7.5V6a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v1.5"></path><line x1="4" y1="12.5" x2="20" y2="12.5"></line></svg></span>
+      <h3>Career-oriented training</h3>
+      <p>Professional guidance, hospital training and preparation for registration as a pharmacist.</p>
+    </div>
+  </div>
+</div>
+
+<div style="background: #FFFFFF; border-top: 1px solid #D7DFE5; border-bottom: 1px solid #D7DFE5;">
+  <div style="max-width: 1180px; margin: 0 auto; padding: clamp(50px, 7vw, 80px) 20px;">
+    <div style="text-align: center; max-width: 640px; margin: 0 auto 40px;">
+      <div style="color: #C89B3C; font-weight: 700; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 10px;">Our Programme</div>
+      <h2 style="font-family: 'Source Serif 4', serif; font-weight: 700; font-size: clamp(26px, 3.2vw, 36px); color: #0B2545; margin: 0 0 12px;">Diploma in Pharmacy (D.Pharm)</h2>
+      <p style="font-size: 15.5px; line-height: 1.7; color: #5A6B78; margin: 0;">One programme, done properly. Drug formulation, dispensing and patient care — with emphasis on ethical practice, healthcare regulations and industry standards.</p>
+    </div>
+    <div class="course-card" style="background: #FFFFFF; border: 1px solid #D7DFE5; border-radius: 14px; overflow: hidden; box-shadow: 0 14px 40px rgba(11,37,69,0.09); display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
+      <div style="position: relative; min-height: 340px; background: #E2EFEC;">
+        <image-slot id="course-dpharm" shape="rect" fit="cover" style="position: absolute; inset: 0; width: 100%; height: 100%;" placeholder="Pharmacy practice photograph"></image-slot>
+        <span style="position: absolute; left: 18px; top: 18px; background: #2F7E78; color: #FFFFFF; font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 6px 12px; border-radius: 4px;">Admissions open 2026–27</span>
+      </div>
+      <div style="padding: clamp(26px, 3.4vw, 40px);">
+        <div style="color: #2F7E78; font-weight: 700; font-size: 12.5px; letter-spacing: 0.22em; text-transform: uppercase; margin-bottom: 8px;">Diploma</div>
+        <h3 style="font-family: 'Source Serif 4', serif; font-weight: 700; font-size: clamp(30px, 3.6vw, 42px); color: #0B2545; margin: 0 0 16px; line-height: 1.1;">D.Pharm</h3>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 22px;">
+          <span class="chip"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><polyline points="12,7 12,12 15.5,14"></polyline></svg>2 Years</span>
+          <span class="chip"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12,4 21,8.5 12,13 3,8.5"></polygon><path d="M7,11v4c0,1.5 2.2,2.8 5,2.8s5-1.3 5-2.8v-4"></path></svg>Diploma</span>
+          <span class="chip"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="9" r="3.2"></circle><path d="M4,19.5c0-3.1 2.4-4.8 5-4.8s5,1.7 5,4.8"></path><circle cx="16.5" cy="10.5" r="2.4"></circle></svg>60 Seats</span>
+          <span class="chip"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12,3.5l7,2.8v5.2c0,4.6-2.9,7.4-7,9.5-4.1-2.1-7-4.9-7-9.5V6.3z"></path><polyline points="9,11.8 11.2,14 15.2,9.8"></polyline></svg>PCI Approved</span>
+        </div>
+        <div class="factlist">
+          <div class="fact"><span class="fact__ico"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="4" width="14" height="16" rx="2"></rect><line x1="9.5" y1="4" x2="9.5" y2="20"></line><line x1="13" y1="9" x2="16" y2="9"></line></svg></span><span><strong>Covers:</strong> Pharmaceutical sciences, drug formulation, dispensing and patient care</span></div>
+          <div class="fact"><span class="fact__ico"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="9.5" y1="3.5" x2="14.5" y2="3.5"></line><path d="M10.5,3.5v5.5L5.5,18a1.6,1.6 0 0 0 1.4,2.5h10.2a1.6,1.6 0 0 0 1.4-2.5L13.5,9V3.5"></path><line x1="7.5" y1="15" x2="16.5" y2="15"></line></svg></span><span><strong>Learning:</strong> Theory with weekly laboratory practicals and 500 hours of supervised training</span></div>
+          <div class="fact"><span class="fact__ico"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="4.5"></circle><circle cx="12" cy="12" r="1"></circle></svg></span><span><strong>Focus:</strong> Ethical practice &nbsp;|&nbsp; <strong>Standards:</strong> Healthcare regulations</span></div>
+          <div class="fact"><span class="fact__ico"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3.5"></rect><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg></span><span><strong>Work in:</strong> Pharmacies, hospitals, clinics and other healthcare institutions</span></div>
+          <div class="fact"><span class="fact__ico"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><polyline points="8.5,12.5 11,15 15.5,9.5"></polyline></svg></span><span><strong>Eligibility:</strong> 10+2 with Physics, Chemistry &amp; Biology / Mathematics</span></div>
+          <div class="fact"><span class="fact__ico"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="9" r="5"></circle><circle cx="14.5" cy="15" r="5"></circle></svg></span><span><strong>Fees:</strong> ₹ 65,000 per year, instalments accepted — <a href="fees.dc.html">see full structure</a></span></div>
+        </div>
+        <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 26px;">
+          <a href="dpharm.dc.html" style="display: inline-flex; align-items: center; gap: 9px; background: #FFFFFF; color: #0B2545; font-weight: 700; font-size: 15px; padding: 13px 26px; border-radius: 30px; border: 1.5px solid #0B2545;" style-hover="background: #E2EFEC; color: #0B2545;">Read More <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" y1="12" x2="19" y2="12"></line><polyline points="13,6 19,12 13,18"></polyline></svg></a>
+          <a href="apply.dc.html" style="display: inline-flex; align-items: center; gap: 9px; background: #C89B3C; color: #2A2109; font-weight: 700; font-size: 15px; padding: 13px 26px; border-radius: 30px; box-shadow: 0 6px 18px rgba(200,155,60,0.35);" style-hover="background: #DBB05B; color: #2A2109;">Apply Now for Admission <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M21.4 2.6 2.9 10.2c-.9.4-.8 1.6.1 1.9l4.7 1.5 1.8 5.6c.3.9 1.5 1 2 .2l2.3-3.4 4.6 3.4c.7.5 1.7.1 1.9-.7l3-14.4c.2-.9-.7-1.6-1.5-1.2z"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div style="max-width: 1180px; margin: 0 auto; padding: clamp(50px, 7vw, 80px) 20px;">
+  <div class="why-grid">
+    <div class="why-aside">
+      <div style="color: #C89B3C; font-weight: 700; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 10px;">Why Pharmacy</div>
+      <h2 style="font-family: 'Source Serif 4', serif; font-weight: 700; font-size: clamp(26px, 3.2vw, 36px); color: #0B2545; margin: 0 0 14px; line-height: 1.2;">Eight reasons to study pharmacy</h2>
+      <p style="font-size: 15.5px; line-height: 1.7; color: #5A6B78; margin: 0 0 22px;">For students — and for the parents helping them decide. Two years, a regulated profession, and work that exists in every town of the state.</p>
+      <div style="border-left: 3px solid #C89B3C; padding: 4px 0 4px 16px; margin-bottom: 24px;">
+        <div style="font-family: 'Source Serif 4', serif; font-size: 30px; font-weight: 700; color: #0B2545; line-height: 1;">2 years</div>
+        <div style="font-size: 13.5px; color: #5A6B78; margin-top: 4px;">to a professional qualification and eligibility for registration as a pharmacist</div>
+      </div>
+      <a href="apply.dc.html" style="display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: 15px; color: #0B2545; border-bottom: 2px solid #C89B3C; padding-bottom: 3px;">Talk to our admissions desk →</a>
+    </div>
+    <div class="why-list">
+      <div class="why-item"><span class="why-ico"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="9.5" y1="3.5" x2="14.5" y2="3.5"></line><path d="M10.5,3.5v5.5L5.5,18a1.6,1.6 0 0 0 1.4,2.5h10.2a1.6,1.6 0 0 0 1.4-2.5L13.5,9V3.5"></path><line x1="7.5" y1="15" x2="16.5" y2="15"></line></svg></span><div><span class="why-num">01</span><h3>A strong scientific foundation</h3><p>Chemistry, biology and pharmaceutics taught from first principles — knowledge that lasts a career.</p></div></div>
+      <div class="why-item"><span class="why-ico"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12,20s-7-4.3-7-9a4,4 0 0 1 7-2.6A4,4 0 0 1 19,11c0,4.7-7,9-7,9z"></path></svg></span><div><span class="why-num">02</span><h3>A real role in patient care</h3><p>Pharmacists are often the first healthcare professional a family consults.</p></div></div>
+      <div class="why-item"><span class="why-ico"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="5.5"></circle><line x1="14.7" y1="14.7" x2="20" y2="20"></line></svg></span><div><span class="why-num">03</span><h3>Practical, industry-ready training</h3><p>Laboratory work and 500 hours of supervised practical training in real settings.</p></div></div>
+      <div class="why-item"><span class="why-ico"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 18V9l4-3 4 3 4-3 4 3v9"></path><line x1="3" y1="20.5" x2="21" y2="20.5"></line></svg></span><div><span class="why-num">04</span><h3>Many career paths</h3><p>Hospitals, clinics, community pharmacies, and pharmaceutical companies.</p></div></div>
+      <div class="why-item"><span class="why-ico"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12,3.5l7,2.8v5.2c0,4.6-2.9,7.4-7,9.5-4.1-2.1-7-4.9-7-9.5V6.3z"></path><polyline points="9,11.8 11.2,14 15.2,9.8"></polyline></svg></span><div><span class="why-num">05</span><h3>Professional discipline</h3><p>A registered, regulated profession with a code of ethics and lifelong standing.</p></div></div>
+      <div class="why-item"><span class="why-ico"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="3,12 8,12 10.2,6.5 13.5,17.5 15.5,12 21,12"></polyline></svg></span><div><span class="why-num">06</span><h3>Serve public health</h3><p>Safe dispensing and medicine awareness directly improve community health.</p></div></div>
+      <div class="why-item"><span class="why-ico"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="9" r="5"></circle><circle cx="14.5" cy="15" r="5"></circle></svg></span><div><span class="why-num">07</span><h3>Affordable route into healthcare</h3><p>Two years to a professional qualification — far shorter and cheaper than MBBS.</p></div></div>
+      <div class="why-item"><span class="why-ico"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12,4 21,8.5 12,13 3,8.5"></polygon><path d="M7,11v4c0,1.5 2.2,2.8 5,2.8s5-1.3 5-2.8v-4"></path><line x1="21" y1="8.5" x2="21" y2="14"></line></svg></span><div><span class="why-num">08</span><h3>A stepping stone to higher study</h3><p>Direct lateral entry to B.Pharm, then M.Pharm, Pharm.D and research.</p></div></div>
+    </div>
+  </div>
+</div>
+
+<div style="background: #061726; color: #FFFFFF;">
+  <div style="max-width: 1180px; margin: 0 auto; padding: clamp(50px, 7vw, 76px) 20px;">
+    <div style="max-width: 640px; margin-bottom: 40px;">
+      <div style="color: #C89B3C; font-weight: 700; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 10px;">Admissions 2026–27</div>
+      <h2 style="font-family: 'Source Serif 4', serif; font-weight: 700; font-size: clamp(26px, 3.2vw, 36px); margin: 0 0 12px;">How to take admission — four steps</h2>
+      <p style="font-size: 15.5px; line-height: 1.7; color: #A9C3D1; margin: 0;">No agents, no donation. The office does this with you, in person or over the phone.</p>
+    </div>
+    <ol class="steps">
+      <li class="step"><span class="step__num">1</span><h3>Send an enquiry</h3><p>Fill the short form or call the admissions desk. We call back within one working day.</p><a href="apply.dc.html">Enquiry form →</a></li>
+      <li class="step"><span class="step__num">2</span><h3>Visit &amp; verify documents</h3><p>Bring your Madhyamik and H.S. marksheets, Aadhaar and photographs for verification.</p><a href="documents.dc.html">Document list →</a></li>
+      <li class="step"><span class="step__num">3</span><h3>Seat confirmation</h3><p>Merit is assessed on 10+2 marks. Only 60 seats are sanctioned per session.</p><a href="eligibility.dc.html">Eligibility →</a></li>
+      <li class="step"><span class="step__num">4</span><h3>Fee payment &amp; classes</h3><p>Pay in instalments if needed, apply for scholarships, and join the session.</p><a href="fees.dc.html">Fee structure →</a></li>
+    </ol>
+    <div style="margin-top: 34px; display: flex; gap: 12px; flex-wrap: wrap; align-items: center;">
+      <a href="apply.dc.html" style="background: #C89B3C; color: #2A2109; font-weight: 700; font-size: 15px; padding: 13px 26px; border-radius: 30px;" style-hover="background: #DBB05B; color: #2A2109;">Start your application</a>
+      <span style="font-size: 14px; color: #A9C3D1;">Last date for the 2026–27 session: <strong style="color: #E8CE9A;">31 August 2026</strong></span>
+    </div>
+  </div>
+</div>
+
+<div style="background: #FFFFFF; border-bottom: 1px solid #D7DFE5;">
+  <div style="max-width: 1180px; margin: 0 auto; padding: clamp(40px, 5vw, 56px) 20px;">
+    <h2 style="font-family: 'Source Serif 4', serif; font-weight: 700; font-size: clamp(22px, 2.6vw, 27px); color: #0B2545; margin: 0 0 22px;">Quick links</h2>
+    <div class="quick-grid">
+      <a class="quick" href="syllabus.dc.html"><span class="quick__ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="9" y1="6.5" x2="19" y2="6.5"></line><line x1="9" y1="12" x2="19" y2="12"></line><line x1="9" y1="17.5" x2="19" y2="17.5"></line><line x1="5" y1="6.5" x2="5.01" y2="6.5"></line><line x1="5" y1="12" x2="5.01" y2="12"></line><line x1="5" y1="17.5" x2="5.01" y2="17.5"></line></svg></span>Syllabus</a>
+      <a class="quick" href="fees.dc.html"><span class="quick__ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="9" r="5"></circle><circle cx="14.5" cy="15" r="5"></circle></svg></span>Fee structure</a>
+      <a class="quick" href="scholarships.dc.html"><span class="quick__ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9.5" r="5"></circle><polyline points="9,13.8 8,20 12,17.5 16,20 15,13.8"></polyline></svg></span>Scholarships</a>
+      <a class="quick" href="documents.dc.html"><span class="quick__ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="4" width="12" height="16" rx="2"></rect><line x1="9.5" y1="9" x2="14.5" y2="9"></line><line x1="9.5" y1="13" x2="14.5" y2="13"></line></svg></span>Documents</a>
+      <a class="quick" href="academic-calendar.dc.html"><span class="quick__ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="6" width="16" height="14" rx="2"></rect><line x1="4" y1="10.5" x2="20" y2="10.5"></line><line x1="8.5" y1="3.5" x2="8.5" y2="7"></line><line x1="15.5" y1="3.5" x2="15.5" y2="7"></line></svg></span>Academic calendar</a>
+      <a class="quick" href="anti-ragging.dc.html"><span class="quick__ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12,3.5l7,2.8v5.2c0,4.6-2.9,7.4-7,9.5-4.1-2.1-7-4.9-7-9.5V6.3z"></path><polyline points="9,11.8 11.2,14 15.2,9.8"></polyline></svg></span>Anti-ragging</a>
+      <a class="quick" href="faq.dc.html"><span class="quick__ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M9.6,9.6a2.5,2.5 0 1 1 3.4,2.3c-.8.35-1,.9-1,1.7"></path><line x1="12" y1="16.8" x2="12.01" y2="16.8"></line></svg></span>FAQ</a>
+      <a class="quick" href="contact.dc.html"><span class="quick__ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="3" width="8" height="18" rx="2.5"></rect><line x1="11" y1="17.8" x2="13" y2="17.8"></line></svg></span>Contact &amp; directions</a>
+    </div>
+  </div>
+</div>
+
+<div style="background: #0B2545; color: #FFFFFF;">
+  <div style="max-width: 1180px; margin: 0 auto; padding: clamp(50px, 7vw, 76px) 20px;">
+    <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: 32px;">
+      <div>
+        <div style="color: #C89B3C; font-weight: 700; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 10px;">Campus</div>
+        <h2 style="font-family: 'Source Serif 4', serif; font-weight: 700; font-size: clamp(26px, 3.2vw, 36px); margin: 0;">Life at Muktir Siksha</h2>
+      </div>
+      <a href="gallery.dc.html" style="color: #E8CE9A; font-weight: 700; font-size: 15px; border-bottom: 2px solid #C89B3C; padding-bottom: 2px;">View full gallery →</a>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px;">
+      <a href="gallery.dc.html#library" class="gal-tile" style="color: #A9C3D1; display: block;"><div style="border-radius: 8px; overflow: hidden; position: relative;"><image-slot id="home-g1" shape="rect" style="width: 100%; height: 220px;" placeholder="Classroom photo"></image-slot><span class="gal-tile__badge">Library &amp; classrooms →</span></div><div style="padding: 10px 4px 0; font-size: 14px;">Smart classrooms</div></a>
+      <a href="gallery.dc.html#laboratories" class="gal-tile" style="color: #A9C3D1; display: block;"><div style="border-radius: 8px; overflow: hidden; position: relative;"><image-slot id="home-g2" shape="rect" style="width: 100%; height: 220px;" placeholder="Laboratory photo"></image-slot><span class="gal-tile__badge">Laboratories →</span></div><div style="padding: 10px 4px 0; font-size: 14px;">Well-equipped laboratories</div></a>
+      <a href="gallery.dc.html#library" class="gal-tile" style="color: #A9C3D1; display: block;"><div style="border-radius: 8px; overflow: hidden; position: relative;"><image-slot id="home-g3" shape="rect" style="width: 100%; height: 220px;" placeholder="Library photo"></image-slot><span class="gal-tile__badge">Library &amp; classrooms →</span></div><div style="padding: 10px 4px 0; font-size: 14px;">Library &amp; reading room</div></a>
+      <a href="gallery.dc.html#events" class="gal-tile" style="color: #A9C3D1; display: block;"><div style="border-radius: 8px; overflow: hidden; position: relative;"><image-slot id="home-g4" shape="rect" style="width: 100%; height: 220px;" placeholder="Students on campus"></image-slot><span class="gal-tile__badge">Events &amp; student life →</span></div><div style="padding: 10px 4px 0; font-size: 14px;">Campus life</div></a>
+    </div>
+  </div>
+</div>
+
+<div style="max-width: 1180px; margin: 0 auto; padding: clamp(50px, 7vw, 80px) 20px;">
+  <div style="max-width: 640px; margin-bottom: 36px;">
+    <div style="color: #C89B3C; font-weight: 700; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 10px;">After D.Pharm</div>
+    <h2 style="font-family: 'Source Serif 4', serif; font-weight: 700; font-size: clamp(26px, 3.2vw, 36px); color: #0B2545; margin: 0 0 12px;">Where our graduates go</h2>
+  </div>
+  <div class="paths">
+    <a class="path" href="dpharm.dc.html">
+      <span class="path__ico"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3.5"></rect><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg></span>
+      <h3>Hospital pharmacist</h3>
+      <p>Government and private hospitals, nursing homes and clinics across West Bengal.</p>
+      <span class="path__tag">Most common route</span>
+    </a>
+    <a class="path" href="dpharm.dc.html">
+      <span class="path__ico"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9.5 5.5 5h13L20 9.5"></path><path d="M5 9.5V19a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V9.5"></path><path d="M9.5 20v-5h5v5"></path></svg></span>
+      <h3>Community pharmacy</h3>
+      <p>Run or manage a licensed retail medicine shop — a steady livelihood close to home.</p>
+      <span class="path__tag">Own business</span>
+    </a>
+    <a class="path" href="dept-analysis.dc.html">
+      <span class="path__ico"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V9l4-3v3l4-3v3l4-3v3l4-3v11"></path><line x1="3" y1="20.5" x2="21" y2="20.5"></line><line x1="9" y1="16" x2="9" y2="16.01"></line><line x1="15" y1="16" x2="15" y2="16.01"></line></svg></span>
+      <h3>Pharmaceutical industry</h3>
+      <p>Production, quality control and marketing roles in pharmaceutical companies.</p>
+      <span class="path__tag">Industry</span>
+    </a>
+    <a class="path" href="syllabus.dc.html">
+      <span class="path__ico"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12,4 21,8.5 12,13 3,8.5"></polygon><path d="M7,11v4c0,1.5 2.2,2.8 5,2.8s5-1.3 5-2.8v-4"></path><line x1="21" y1="8.5" x2="21" y2="14"></line></svg></span>
+      <h3>Higher study</h3>
+      <p>Lateral entry to B.Pharm second year, and onwards to M.Pharm and beyond.</p>
+      <span class="path__tag">Lateral entry</span>
+    </a>
+  </div>
+</div>
+
+<div style="background: #FFFFFF; border-top: 1px solid #D7DFE5; border-bottom: 1px solid #D7DFE5;">
+  <div style="max-width: 1180px; margin: 0 auto; padding: clamp(50px, 7vw, 80px) 20px;">
+    <div style="max-width: 640px; margin-bottom: 36px;">
+      <div style="color: #C89B3C; font-weight: 700; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 10px;">Student Voices</div>
+      <h2 style="font-family: 'Source Serif 4', serif; font-weight: 700; font-size: clamp(26px, 3.2vw, 36px); color: #0B2545; margin: 0;">What our students say</h2>
+    </div>
+    <div class="voices">
+      <sc-for list="{{ testimonials }}" as="t" hint-placeholder-count="3">
+        <figure class="voice">
+          <blockquote>{{ t.quote }}</blockquote>
+          <figcaption>
+            <span class="voice__avatar">{{ t.initial }}</span>
+            <span><strong>{{ t.name }}</strong><em>{{ t.role }}</em></span>
+          </figcaption>
+        </figure>
+      </sc-for>
+    </div>
+  </div>
+</div>
+
+<div style="max-width: 1180px; margin: 0 auto; padding: clamp(50px, 7vw, 80px) 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); gap: 44px;">
+  <div>
+    <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 12px; margin-bottom: 22px;">
+      <h2 style="font-family: 'Source Serif 4', serif; font-weight: 700; font-size: 26px; color: #0B2545; margin: 0;">News &amp; notices</h2>
+      <a href="news.dc.html" style="font-weight: 700; font-size: 14px; color: #0B2545;">All news →</a>
+    </div>
+    <div style="display: flex; flex-direction: column;">
+      <sc-for list="{{ news }}" as="n" hint-placeholder-count="3">
+        <a href="news.dc.html" style="display: flex; gap: 16px; padding: 15px 4px; border-bottom: 1px solid #D7DFE5; color: #16232E; align-items: baseline;" style-hover="background: #E7EDF1; color: #16232E;">
+          <div style="font-size: 12.5px; font-weight: 700; color: #C89B3C; white-space: nowrap; width: 82px; flex-shrink: 0;">{{ n.date }}</div>
+          <div style="font-size: 14.5px; font-weight: 600; line-height: 1.5;">{{ n.title }}</div>
+        </a>
+      </sc-for>
+    </div>
+  </div>
+  <div>
+    <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 12px; margin-bottom: 22px;">
+      <h2 style="font-family: 'Source Serif 4', serif; font-weight: 700; font-size: 26px; color: #0B2545; margin: 0;">Upcoming events</h2>
+      <a href="events.dc.html" style="font-weight: 700; font-size: 14px; color: #0B2545;">All events →</a>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 12px;">
+      <sc-for list="{{ events }}" as="e" hint-placeholder-count="2">
+        <a href="events.dc.html" style="display: flex; gap: 16px; background: #FFFFFF; border: 1px solid #D7DFE5; border-radius: 8px; padding: 16px 18px; color: #16232E; align-items: center; transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;" style-hover="border: 1px solid #C89B3C; color: #16232E; box-shadow: 0 6px 18px rgba(11,37,69,0.08);">
+          <div style="width: 56px; text-align: center; flex-shrink: 0;"><div style="font-family: 'Source Serif 4', serif; font-weight: 700; font-size: 24px; color: #0B2545; line-height: 1;">{{ e.day }}</div><div style="font-size: 12px; font-weight: 700; letter-spacing: 0.06em; color: #C89B3C; text-transform: uppercase;">{{ e.month }}</div></div>
+          <div><div style="font-weight: 700; font-size: 15px; margin-bottom: 3px;">{{ e.title }}</div><div style="font-size: 13px; color: #5A6B78;">{{ e.meta }}</div></div>
+        </a>
+      </sc-for>
+    </div>
+  </div>
+</div>
+
+<div style="background: #FFFFFF; border-top: 1px solid #D7DFE5;">
+  <div style="max-width: 1180px; margin: 0 auto; padding: clamp(34px, 4vw, 46px) 20px;">
+    <div style="font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #5A6B78; margin-bottom: 20px;">Approvals &amp; Affiliations</div>
+    <div class="approvals">
+      <div class="approval">
+        <span class="approval__seal"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12,3.5l7,2.8v5.2c0,4.6-2.9,7.4-7,9.5-4.1-2.1-7-4.9-7-9.5V6.3z"></path><polyline points="9,11.8 11.2,14 15.2,9.8"></polyline></svg></span>
+        <div><strong>Pharmacy Council of India</strong><span>Course approved by PCI, New Delhi under ER-2020</span></div>
+      </div>
+      <div class="approval">
+        <span class="approval__seal"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5.5" y="4" width="13" height="16" rx="1.5"></rect><line x1="3.5" y1="20" x2="20.5" y2="20"></line><line x1="9.5" y1="8.5" x2="14.5" y2="8.5"></line><line x1="9.5" y1="12.5" x2="14.5" y2="12.5"></line></svg></span>
+        <div><strong>WBSCT&amp;VE&amp;SD</strong><span>Affiliated to the state technical council, Govt. of West Bengal</span></div>
+      </div>
+      <div class="approval">
+        <span class="approval__seal"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9.5" r="5"></circle><polyline points="9,13.8 8,20 12,17.5 16,20 15,13.8"></polyline></svg></span>
+        <div><strong>Dept. of Health &amp; Family Welfare</strong><span>Recognised by the Government of West Bengal</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="visit">
+  <div class="visit__panel">
+    <div style="color: #C89B3C; font-weight: 700; font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 12px;">Find Us</div>
+    <h2 style="font-family: 'Source Serif 4', serif; font-weight: 700; font-size: clamp(26px, 3.2vw, 36px); color: #FFFFFF; margin: 0 0 20px;">Visit Our Campus</h2>
+    <p style="font-size: 16px; line-height: 1.85; color: #A9C3D1; margin: 0 0 6px;">Jogen Mondal Colony, Vill. Kuchlia,<br>P.O. &amp; P.S. Gobardanga, Dist. North 24 Parganas,<br>West Bengal — 743252</p>
+    <p style="font-size: 14.5px; line-height: 1.7; color: #7E97A8; margin: 0 0 22px;">About 10 minutes by auto or toto from Gobardanga railway station (Sealdah–Bongaon line).</p>
+    <div class="visit__rows">
+      <a href="tel:+919830236143"><span class="visit__ico"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.6 15.6 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.7.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C11.3 21 3 12.7 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.7.1.3 0 .7-.2 1z"/></svg></span>+91 98302 36143</a>
+      <a href="mailto:muktirshikshacollegeofpharnacy@gmail.com"><span class="visit__ico"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"></rect><polyline points="3.6,7.2 12,12.8 20.4,7.2"></polyline></svg></span>muktirshikshacollegeofpharnacy@gmail.com</a>
+    </div>
+    <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 28px;">
+      <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Muktir+Shiksha+College+Of+Education&amp;destination_place_id=ChIJRVmMSbuz-DkR_Iqo1VXfNTQ" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 9px; background: #C89B3C; color: #2A2109; font-weight: 700; font-size: 15px; padding: 14px 26px; border-radius: 8px;" style-hover="background: #DBB05B; color: #2A2109;"><svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>Get Directions</a>
+      <a href="contact.dc.html" style="display: inline-flex; align-items: center; background: transparent; color: #FFFFFF; font-weight: 600; font-size: 15px; padding: 14px 26px; border-radius: 8px; border: 1.5px solid rgba(255,255,255,0.4);" style-hover="background: rgba(255,255,255,0.12); color: #FFFFFF;">Contact page</a>
+    </div>
+  </div>
+  <div class="visit__map">
+    <iframe src="https://maps.google.com/maps?q=Muktir+Shiksha+College+Of+Education,+Gobardanga,+West+Bengal&amp;z=16&amp;hl=en&amp;output=embed" title="Map — Muktir Shiksha College of Education &amp; Pharmacy, Gobardanga" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+  </div>
+</div>
+
+<dc-import name="SiteFooter" hint-size="100%,520px"></dc-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;: {&quot;width&quot;: &quot;100%&quot;, &quot;height&quot;: &quot;900px&quot;}}">
+class Component extends DCLogic {
+  state = { seat: 0, dept: 0, slide: 0 };
+  componentDidMount() {
+    const t0 = Date.now();
+    this._anim = setInterval(() => {
+      const p = Math.min(1, (Date.now() - t0) / 1400);
+      const e = 1 - Math.pow(1 - p, 3);
+      this.setState({ seat: Math.round(60 * e), dept: Math.round(6 * e) });
+      if (p >= 1) clearInterval(this._anim);
+    }, 40);
+    this.startAuto();
+  }
+  startAuto() { clearInterval(this._slide); this._slide = setInterval(() => this.setState(s => ({ slide: (s.slide + 1) % 4 })), 6000); }
+  go(n) { this.setState({ slide: (n + 4) % 4 }); this.startAuto(); }
+  componentWillUnmount() { clearInterval(this._anim); clearInterval(this._slide); }
+  renderVals() {
+    const cur = this.state.slide;
+    const out = {
+      prev: () => this.go(cur - 1),
+      next: () => this.go(cur + 1),
+      dots: [0,1,2,3].map(i => ({ w: i === cur ? '30px' : '10px', bg: i === cur ? '#C89B3C' : 'rgba(255,255,255,0.45)', go: () => this.go(i) })),
+      seatCount: this.state.seat,
+      deptCount: this.state.dept,
+      reasons: [
+        { num: '01', title: 'A strong scientific foundation', text: 'Chemistry, biology and pharmaceutics taught from first principles — knowledge that lasts a career.' },
+        { num: '02', title: 'A real role in patient care', text: 'Pharmacists are often the first healthcare professional a family consults.' },
+        { num: '03', title: 'Practical, industry-ready training', text: 'Laboratory work and 500 hours of supervised practical training in real settings.' },
+        { num: '04', title: 'Many career paths', text: 'Hospitals, clinics, community pharmacies, and pharmaceutical companies.' },
+        { num: '05', title: 'Professional discipline', text: 'A registered, regulated profession with a code of ethics and lifelong standing.' },
+        { num: '06', title: 'Serve public health', text: 'Safe dispensing and medicine awareness directly improve community health.' },
+        { num: '07', title: 'Affordable route into healthcare', text: 'Two years to a professional qualification — far shorter and cheaper than MBBS.' },
+        { num: '08', title: 'A stepping stone to higher study', text: 'Direct lateral entry to B.Pharm, then M.Pharm, Pharm.D and research.' }
+      ],
+      testimonials: [
+        { initial: 'S', name: 'Sudipta Mondal', role: 'D.Pharm, Batch of 2025 · Hospital pharmacist, Barasat', quote: 'The teachers here explained everything twice if we needed it. The lab practice made the board exams feel easy, and the college helped me find my hospital training placement.' },
+        { initial: 'P', name: 'Priyanka Sarkar', role: 'D.Pharm, 2nd year', quote: 'I travel from Habra daily. Classes run on time, the library stays open till evening, and madam in the office helped my father understand the fee instalments clearly.' },
+        { initial: 'R', name: 'Rakib Hossain', role: 'D.Pharm, Batch of 2024 · Own medicine shop, Swarupnagar', quote: 'After registration I opened our family medicine shop properly, with a licence. What I learned about dispensing and drug storage I use every single day.' }
+      ],
+      news: [
+        { date: '18 Jul 2026', title: 'Admission for the 2026–27 D.Pharm session is now open — apply before 31 August' },
+        { date: '02 Jul 2026', title: 'D.Pharm Part-II board examination results declared — 94% pass rate' },
+        { date: '15 Jun 2026', title: 'New instruments installed in the Pharmaceutical Analysis laboratory' }
+      ],
+      events: [
+        { day: '09', month: 'Aug', title: 'Campus open day for students & parents', meta: '10:00 AM – 2:00 PM · Free entry, no registration needed' },
+        { day: '25', month: 'Sep', title: 'World Pharmacists Day celebration', meta: 'Seminar and poster session · Main hall' }
+      ]
+    };
+    [0,1,2,3].forEach(i => { out['op' + i] = i === cur ? 1 : 0; out['pe' + i] = i === cur ? 'auto' : 'none'; });
+    return out;
+  }
+}
+</script>
+</body>
+</html>

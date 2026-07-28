@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+  body { margin: 0; background: #EEF2F5; color: #16232E; font-family: 'Public Sans', system-ui, sans-serif; }
+  a { color: #0B2545; text-decoration: none; }
+  a:hover { color: #2F7E78; }
+</style>
+</helmet>
+<dc-import name="SiteHeader" active="infrastructure" hint-size="100%,180px"></dc-import>
+<div style="background: #0B2545; color: #FFFFFF;">
+  <div style="max-width: 1180px; margin: 0 auto; padding: 38px 20px 42px;">
+    <div style="font-size: 13px; color: #7E97A8; margin-bottom: 10px;"><a href="index.dc.html" style="color: #A9C3D1;">Home</a> &nbsp;/&nbsp; <a href="infrastructure.dc.html" style="color: #A9C3D1;">Infrastructure</a> &nbsp;/&nbsp; <span style="color: #E8CE9A;">Computer Lab</span></div>
+    <h1 style="font-family: 'Source Serif 4', serif; font-weight: 700; font-size: clamp(28px, 4vw, 42px); margin: 0 0 10px;">Computer Lab</h1>
+    <p style="font-size: 15.5px; color: #C2D2DC; max-width: 62ch; line-height: 1.65; margin: 0;">Digital skills are part of modern pharmacy practice.</p>
+  </div>
+</div>
+<div style="max-width: 1180px; margin: 0 auto; padding: clamp(36px, 5vw, 60px) 20px; display: flex; flex-direction: column; gap: clamp(34px, 5vw, 52px);">
+<div><p style="font-size: 15.5px; line-height: 1.75; color: #35424D; margin: 0 0 14px; max-width: 75ch;">The computer laboratory gives students internet-enabled systems for computer-assisted learning modules, drug-information lookup and the digital record-keeping now expected in hospital and retail pharmacy.</p><p style="font-size: 15.5px; line-height: 1.75; color: #35424D; margin: 0 0 14px; max-width: 75ch;">The lab is also where our office staff help students file their scholarship applications on the government portals each year.</p></div>
+<div><h2 style="font-family: 'Source Serif 4', serif; font-weight: 700; font-size: clamp(22px, 3vw, 28px); color: #0B2545; margin: 0 0 18px;">Facilities</h2><div style="background: #FFFFFF; border: 1px solid #D7DFE5; border-radius: 8px; padding: 10px 24px;"><div style="display: flex; gap: 13px; padding: 13px 0; border-bottom: 1px solid #E6ECEF; align-items: flex-start;"><div style="width: 22px; height: 22px; border-radius: 50%; background: #E2EFEC; color: #0B2545; font-weight: 700; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px;">✓</div><div style="font-size: 14.5px; line-height: 1.6; color: #35424D;">Internet-enabled desktop systems.</div></div><div style="display: flex; gap: 13px; padding: 13px 0; border-bottom: 1px solid #E6ECEF; align-items: flex-start;"><div style="width: 22px; height: 22px; border-radius: 50%; background: #E2EFEC; color: #0B2545; font-weight: 700; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px;">✓</div><div style="font-size: 14.5px; line-height: 1.6; color: #35424D;">Computer-assisted learning modules for pharmacology.</div></div><div style="display: flex; gap: 13px; padding: 13px 0; border-bottom: 1px solid #E6ECEF; align-items: flex-start;"><div style="width: 22px; height: 22px; border-radius: 50%; background: #E2EFEC; color: #0B2545; font-weight: 700; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px;">✓</div><div style="font-size: 14.5px; line-height: 1.6; color: #35424D;">Printing and scanning support for student documents.</div></div><div style="display: flex; gap: 13px; padding: 13px 0; border-bottom: none; align-items: flex-start;"><div style="width: 22px; height: 22px; border-radius: 50%; background: #E2EFEC; color: #0B2545; font-weight: 700; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px;">✓</div><div style="font-size: 14.5px; line-height: 1.6; color: #35424D;">Supervised access during college hours.</div></div></div></div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px;"><div><div style="border-radius: 8px; overflow: hidden;"><image-slot id="comp-1" shape="rect" style="width: 100%; height: 230px;" placeholder="Computer lab photo"></image-slot></div><div style="padding: 9px 2px 0; font-size: 13.5px; color: #5A6B78;">Computer laboratory</div></div></div>
+<div><div style="display: flex; gap: 12px; flex-wrap: wrap;"><a href="infrastructure.dc.html" style="background: #FFFFFF; color: #0B2545; font-weight: 700; font-size: 15px; padding: 13px 26px; border-radius: 4px; border: 1.5px solid #0B2545;" style-hover="background: #E2EFEC; color: #0B2545;">Back to infrastructure</a><a href="apply.dc.html" style="background: #C89B3C; color: #2A2109; font-weight: 700; font-size: 15px; padding: 13px 26px; border-radius: 4px;" style-hover="background: #DBB05B; color: #2A2109;">Visit the campus — enquire</a></div></div>
+</div>
+<dc-import name="SiteFooter" hint-size="100%,520px"></dc-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;: {&quot;width&quot;: &quot;100%&quot;, &quot;height&quot;: &quot;900px&quot;}}"></script>
+</body>
+</html>

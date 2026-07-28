@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+  body { margin: 0; background: #EEF2F5; color: #16232E; font-family: 'Public Sans', system-ui, sans-serif; }
+  a { color: #0B2545; text-decoration: none; }
+  a:hover { color: #2F7E78; }
+</style>
+</helmet>
+<dc-import name="SiteHeader" active="about" hint-size="100%,180px"></dc-import>
+<div style="background: #0B2545; color: #FFFFFF;">
+  <div style="max-width: 1180px; margin: 0 auto; padding: 38px 20px 42px;">
+    <div style="font-size: 13px; color: #7E97A8; margin-bottom: 10px;"><a href="index.dc.html" style="color: #A9C3D1;">Home</a> &nbsp;/&nbsp; <span style="color: #E8CE9A;">About the College</span></div>
+    <h1 style="font-family: 'Source Serif 4', serif; font-weight: 700; font-size: clamp(28px, 4vw, 42px); margin: 0 0 10px;">About the College</h1>
+    <p style="font-size: 15.5px; color: #C2D2DC; max-width: 62ch; line-height: 1.65; margin: 0;">Who we are, what we stand for, and why families across North 24 Parganas trust us with their children's education.</p>
+  </div>
+</div>
+<div style="max-width: 1180px; margin: 0 auto; padding: clamp(36px, 5vw, 60px) 20px;">
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); gap: 40px; align-items: center; margin-bottom: clamp(40px, 6vw, 64px);">
+    <div>
+      <h2 style="font-family: 'Source Serif 4', serif; font-weight: 700; font-size: clamp(24px, 3vw, 32px); color: #0B2545; margin: 0 0 16px;">A premier institute in Gobardanga</h2>
+      <p style="font-size: 15.5px; line-height: 1.75; color: #35424D; margin: 0 0 14px;">Muktir Siksha College of Education &amp; Pharmacy is a private institute at Jogen Mondal Colony, Kuchlia, Gobardanga, in the North 24 Parganas district of West Bengal. We are dedicated to excellence in pharmacy education — shaping skilled and ethical healthcare professionals through a single, carefully run programme: the Diploma in Pharmacy.</p>
+      <p style="font-size: 15.5px; line-height: 1.75; color: #35424D; margin: 0;">Because we run one programme, everything here — the laboratories, the library, the faculty's attention — is devoted to D.Pharm students. Batches are small, teachers know every student, and no one falls through the cracks.</p>
+    </div>
+    <div style="border-radius: 10px; overflow: hidden; box-shadow: 0 10px 30px rgba(11,37,69,0.12);">
+      <image-slot id="about-building" shape="rect" style="width: 100%; height: 320px;" placeholder="College building photo"></image-slot>
+    </div>
+  </div>
+  <div class="pillars" style="margin: 0 0 clamp(40px, 6vw, 64px);">
+    <div class="pillar">
+      <span class="pillar__ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="4" width="14" height="16" rx="2"></rect><line x1="9.5" y1="4" x2="9.5" y2="20"></line><line x1="13" y1="9" x2="16" y2="9"></line></svg></span>
+      <h3>Quality education</h3>
+      <p>A curriculum aligned with industry standards and the Pharmacy Council of India’s Education Regulations 2020, taught rigorously.</p>
+    </div>
+    <div class="pillar">
+      <span class="pillar__ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="9" r="3.2"></circle><circle cx="16.5" cy="10.5" r="2.4"></circle><path d="M4,19.5c0-3.1 2.4-4.8 5-4.8s5,1.7 5,4.8"></path><path d="M15.5,15.6c2.4,0 4.5,1.5 4.5,3.9"></path></svg></span>
+      <h3>Experienced faculty</h3>
+      <p>M.Pharm-qualified teachers across six subject areas, dedicated to teaching rather than divided across many programmes.</p>
+    </div>
+    <div class="pillar">
+      <span class="pillar__ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7.5h16v11a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 18.5z"></path><path d="M9 7.5V6a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v1.5"></path><line x1="4" y1="12.5" x2="20" y2="12.5"></line></svg></span>
+      <h3>Career-oriented training</h3>
+      <p>Hospital training placements, professional guidance, and preparation for pharmacist registration with the WB Pharmacy Council.</p>
+    </div>
+  </div>
+  <div id="approvals" style="background: #FFFFFF; border: 1px solid #D7DFE5; border-radius: 10px; padding: clamp(24px, 4vw, 36px); margin-bottom: clamp(40px, 6vw, 64px);">
+    <h2 style="font-family: 'Source Serif 4', serif; font-weight: 700; font-size: 24px; color: #0B2545; margin: 0 0 18px;">Approvals &amp; affiliations</h2>
+    <div style="display: flex; flex-direction: column; gap: 0;">
+      <div style="display: flex; gap: 14px; padding: 14px 0; border-bottom: 1px solid #E6ECEF; align-items: baseline; flex-wrap: wrap;"><div style="font-weight: 700; font-size: 14.5px; color: #0B2545; min-width: 280px;">Pharmacy Council of India (PCI), New Delhi</div><div style="font-size: 14px; color: #5A6B78;">Approved to conduct the D.Pharm programme (60 seats)</div></div>
+      <div style="display: flex; gap: 14px; padding: 14px 0; border-bottom: 1px solid #E6ECEF; align-items: baseline; flex-wrap: wrap;"><div style="font-weight: 700; font-size: 14.5px; color: #0B2545; min-width: 280px;">WBSCT&amp;VE&amp;SD</div><div style="font-size: 14px; color: #5A6B78;">Affiliated to the West Bengal State Council of Technical &amp; Vocational Education and Skill Development</div></div>
+      <div style="display: flex; gap: 14px; padding: 14px 0; align-items: baseline; flex-wrap: wrap;"><div style="font-weight: 700; font-size: 14.5px; color: #0B2545; min-width: 280px;">Government of West Bengal</div><div style="font-size: 14px; color: #5A6B78;">Recognised by the Department of Health &amp; Family Welfare</div></div>
+    </div>
+    <div style="margin-top: 16px; font-size: 13px; color: #7A5E1E; background: #F7F1E3; border-radius: 5px; padding: 10px 14px;">Approval certificates are available for inspection at the college office. Parents are encouraged to verify our approval on the PCI website.</div>
+  </div>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px;">
+    <a href="mission-vision.dc.html" style="background: #0B2545; color: #FFFFFF; border-radius: 8px; padding: 24px; display: block;" style-hover="background: #16456F; color: #FFFFFF;"><div style="font-family: 'Source Serif 4', serif; font-weight: 700; font-size: 18px; margin-bottom: 6px;">Mission &amp; Vision →</div><div style="font-size: 13.5px; color: #C2D2DC; line-height: 1.6;">What drives us, and where we are headed.</div></a>
+    <a href="principal-message.dc.html" style="background: #0B2545; color: #FFFFFF; border-radius: 8px; padding: 24px; display: block;" style-hover="background: #16456F; color: #FFFFFF;"><div style="font-family: 'Source Serif 4', serif; font-weight: 700; font-size: 18px; margin-bottom: 6px;">Principal's Message →</div><div style="font-size: 13.5px; color: #C2D2DC; line-height: 1.6;">A word from Dr. A. K. Bhattacharya.</div></a>
+    <a href="governing-body.dc.html" style="background: #0B2545; color: #FFFFFF; border-radius: 8px; padding: 24px; display: block;" style-hover="background: #16456F; color: #FFFFFF;"><div style="font-family: 'Source Serif 4', serif; font-weight: 700; font-size: 18px; margin-bottom: 6px;">Governing Body →</div><div style="font-size: 13.5px; color: #C2D2DC; line-height: 1.6;">The people responsible for the institute.</div></a>
+  </div>
+</div>
+<dc-import name="SiteFooter" hint-size="100%,520px"></dc-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;: {&quot;width&quot;: &quot;100%&quot;, &quot;height&quot;: &quot;900px&quot;}}"></script>
+</body>
+</html>

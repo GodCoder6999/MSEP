@@ -1,0 +1,10 @@
+# OS / editor junk
+Thumbs.db
+desktop.ini
+.DS_Store
+*.swp
+.vscode/
+.idea/
+
+# dependencies (none checked in today, but keep it out if added later)
+node_modules/

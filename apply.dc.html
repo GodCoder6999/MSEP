@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  body { margin: 0; background: #EEF2F5; color: #16232E; font-family: 'Public Sans', system-ui, sans-serif; }
+  a { color: #0B2545; text-decoration: none; }
+  a:hover { color: #2F7E78; }
+</style>
+</helmet>
+<dc-import name="SiteHeader" active="admissions" hint-size="100%,180px"></dc-import>
+<div style="background: #0B2545; color: #FFFFFF;">
+  <div style="max-width: 1180px; margin: 0 auto; padding: 38px 20px 42px;">
+    <div style="font-size: 13px; color: #7E97A8; margin-bottom: 10px;"><a href="index.dc.html" style="color: #A9C3D1;">Home</a> &nbsp;/&nbsp; Admissions &nbsp;/&nbsp; <span style="color: #E8CE9A;">Admission Enquiry</span></div>
+    <h1 style="font-family: 'Source Serif 4', serif; font-weight: 700; font-size: clamp(28px, 4vw, 42px); margin: 0 0 10px;">Admission Enquiry</h1>
+    <p style="font-size: 15.5px; color: #C2D2DC; max-width: 60ch; line-height: 1.65; margin: 0;">Fill in the form and our admissions desk will call you back within one working day. You can also call or WhatsApp us directly — whichever is easier.</p>
+  </div>
+</div>
+<div style="max-width: 1180px; margin: 0 auto; padding: clamp(36px, 5vw, 60px) 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; align-items: start;">
+  <div style="background: #FFFFFF; border: 1px solid #D7DFE5; border-radius: 10px; padding: clamp(22px, 4vw, 34px); box-shadow: 0 6px 24px rgba(11,37,69,0.07);">
+    <sc-if value="{{ notSubmitted }}" hint-placeholder-val="{{ true }}">
+      <div style="display: flex; flex-direction: column; gap: 18px;">
+        <div>
+          <label for="enq-name" style="display: block; font-weight: 700; font-size: 14px; color: #0B2545; margin-bottom: 7px;">Student's full name <span style="color: #256A65;">*</span></label>
+          <input id="enq-name" type="text" value="{{ name }}" onChange="{{ setName }}" placeholder="As per Madhyamik certificate" style="width: 100%; box-sizing: border-box; padding: 12px 14px; border: 1.5px solid #C7D3DA; border-radius: 5px; font-size: 15px; font-family: 'Public Sans', sans-serif; background: #EEF2F5; color: #16232E;" style-focus="border: 1.5px solid #0B2545; background: #FFFFFF; outline: none;">
+        </div>
+        <div>
+          <label for="enq-phone" style="display: block; font-weight: 700; font-size: 14px; color: #0B2545; margin-bottom: 7px;">Mobile number <span style="color: #256A65;">*</span></label>
+          <input id="enq-phone" type="tel" value="{{ phone }}" onChange="{{ setPhone }}" placeholder="10-digit mobile number" style="width: 100%; box-sizing: border-box; padding: 12px 14px; border: 1.5px solid #C7D3DA; border-radius: 5px; font-size: 15px; font-family: 'Public Sans', sans-serif; background: #EEF2F5; color: #16232E;" style-focus="border: 1.5px solid #0B2545; background: #FFFFFF; outline: none;">
+          <div style="font-size: 12.5px; color: #5A6B78; margin-top: 5px;">We will call this number. WhatsApp number preferred.</div>
+        </div>
+        <div>
+          <label for="enq-qual" style="display: block; font-weight: 700; font-size: 14px; color: #0B2545; margin-bottom: 7px;">Highest qualification <span style="color: #256A65;">*</span></label>
+          <select id="enq-qual" value="{{ qual }}" onChange="{{ setQual }}" style="width: 100%; box-sizing: border-box; padding: 12px 14px; border: 1.5px solid #C7D3DA; border-radius: 5px; font-size: 15px; font-family: 'Public Sans', sans-serif; background: #EEF2F5; color: #16232E;">
+            <option value="">Select…</option>
+            <option value="12-science-passed">Higher Secondary (10+2) Science — passed</option>
+            <option value="12-science-appearing">Higher Secondary (10+2) Science — appearing in 2027</option>
+            <option value="12-other">Higher Secondary (10+2) — other stream</option>
+            <option value="10">Madhyamik (Class 10)</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div>
+          <label for="enq-district" style="display: block; font-weight: 700; font-size: 14px; color: #0B2545; margin-bottom: 7px;">Village / town &amp; district</label>
+          <input id="enq-district" type="text" value="{{ place }}" onChange="{{ setPlace }}" placeholder="e.g. Habra, North 24 Parganas" style="width: 100%; box-sizing: border-box; padding: 12px 14px; border: 1.5px solid #C7D3DA; border-radius: 5px; font-size: 15px; font-family: 'Public Sans', sans-serif; background: #EEF2F5; color: #16232E;" style-focus="border: 1.5px solid #0B2545; background: #FFFFFF; outline: none;">
+        </div>
+        <div>
+          <label for="enq-msg" style="display: block; font-weight: 700; font-size: 14px; color: #0B2545; margin-bottom: 7px;">Your question (optional)</label>
+          <textarea id="enq-msg" value="{{ msg }}" onChange="{{ setMsg }}" rows="3" placeholder="e.g. fee instalments, hostel, last date to apply…" style="width: 100%; box-sizing: border-box; padding: 12px 14px; border: 1.5px solid #C7D3DA; border-radius: 5px; font-size: 15px; font-family: 'Public Sans', sans-serif; background: #EEF2F5; color: #16232E; resize: vertical;" style-focus="border: 1.5px solid #0B2545; background: #FFFFFF; outline: none;"></textarea>
+        </div>
+        <sc-if value="{{ error }}" hint-placeholder-val="{{ false }}">
+          <div style="background: #FBEFE9; border: 1px solid #E3B7A2; color: #8A3517; font-size: 14px; padding: 11px 14px; border-radius: 5px;">{{ error }}</div>
+        </sc-if>
+        <button onClick="{{ submit }}" style="background: #C89B3C; color: #2A2109; font-weight: 700; font-size: 16px; padding: 14px; border: none; border-radius: 5px; cursor: pointer; font-family: 'Public Sans', sans-serif;" style-hover="background: #DBB05B;">Send enquiry</button>
+        <div style="font-size: 12.5px; color: #5A6B78; line-height: 1.6;">By sending, you agree that the college may contact you about admission. We do not share your details with anyone else. See our <a href="privacy.dc.html">privacy policy</a>.</div>
+      </div>
+    </sc-if>
+    <sc-if value="{{ submitted }}" hint-placeholder-val="{{ false }}">
+      <div style="text-align: center; padding: 24px 8px;">
+        <div style="width: 64px; height: 64px; border-radius: 50%; background: #E2EFEC; color: #0B2545; display: flex; align-items: center; justify-content: center; font-size: 30px; margin: 0 auto 18px;">✓</div>
+        <h2 style="font-family: 'Source Serif 4', serif; font-weight: 700; font-size: 26px; color: #0B2545; margin: 0 0 10px;">Thank you, {{ firstName }}!</h2>
+        <p style="font-size: 15px; line-height: 1.7; color: #35424D; max-width: 44ch; margin: 0 auto 24px;">Your enquiry has been received. Our admissions desk will call <strong>{{ phone }}</strong> within one working day (Mon–Sat, 10 AM – 5 PM).</p>
+        <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+          <a href="{{ waLink }}" style="background: #25D366; color: #073B14; font-weight: 700; font-size: 14.5px; padding: 12px 22px; border-radius: 5px;"><svg class="ico" viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M12 2.2A9.7 9.7 0 0 0 3.6 16.8L2.2 21.8l5.1-1.3A9.7 9.7 0 1 0 12 2.2zm0 1.8a7.9 7.9 0 1 1-4 14.7l-.3-.2-3 .8.8-2.9-.2-.3A7.9 7.9 0 0 1 12 4zm-3.6 4c-.2 0-.5.1-.7.4-.2.3-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.7 2.7 4.2 3.7 2 .8 2.5.7 2.9.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2l-.5-.3-1.6-.8c-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1-.2-.1-1.1-.4-2-1.2-.7-.6-1.2-1.4-1.4-1.7-.1-.2 0-.4.1-.5l.4-.5c.1-.2.2-.3.2-.5s0-.3-.1-.5l-.8-1.8c-.2-.4-.4-.4-.6-.4z"/></svg> Continue on WhatsApp</a>
+          <a href="dpharm.dc.html" style="background: #FFFFFF; color: #0B2545; font-weight: 700; font-size: 14.5px; padding: 12px 22px; border-radius: 5px; border: 1.5px solid #0B2545;">Read about the course</a>
+        </div>
+        <button onClick="{{ reset }}" style="background: none; border: none; color: #5A6B78; font-size: 13px; margin-top: 20px; cursor: pointer; text-decoration: underline; font-family: 'Public Sans', sans-serif;">Send another enquiry</button>
+      </div>
+    </sc-if>
+  </div>
+  <div style="display: flex; flex-direction: column; gap: 16px;">
+    <div style="background: #0B2545; color: #FFFFFF; border-radius: 10px; padding: 26px;">
+      <div style="font-family: 'Source Serif 4', serif; font-weight: 700; font-size: 20px; margin-bottom: 8px;">Prefer to talk?</div>
+      <p style="font-size: 14px; line-height: 1.65; color: #C2D2DC; margin: 0 0 18px;">Call the admissions desk directly. Bengali and English both fine.</p>
+      <div style="display: flex; flex-direction: column; gap: 9px;">
+        <a href="tel:+919830236143" style="background: #FFFFFF; color: #0B2545; font-weight: 700; font-size: 15px; padding: 12px; border-radius: 5px; text-align: center;"><svg class="ico" viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.6 15.6 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.7.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C11.3 21 3 12.7 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.7.1.3 0 .7-.2 1z"/></svg> (+91) 9830 236143</a>
+        <a href="tel:+918172078807" style="background: #FFFFFF; color: #0B2545; font-weight: 700; font-size: 15px; padding: 12px; border-radius: 5px; text-align: center;"><svg class="ico" viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.6 15.6 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.7.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C11.3 21 3 12.7 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.7.1.3 0 .7-.2 1z"/></svg> (+91) 8172 078807</a>
+        <a href="https://wa.me/919830236143?text=Hello%2C%20I%20want%20to%20know%20about%20D.Pharm%20admission." style="background: #25D366; color: #073B14; font-weight: 700; font-size: 15px; padding: 12px; border-radius: 5px; text-align: center;"><svg class="ico" viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M12 2.2A9.7 9.7 0 0 0 3.6 16.8L2.2 21.8l5.1-1.3A9.7 9.7 0 1 0 12 2.2zm0 1.8a7.9 7.9 0 1 1-4 14.7l-.3-.2-3 .8.8-2.9-.2-.3A7.9 7.9 0 0 1 12 4zm-3.6 4c-.2 0-.5.1-.7.4-.2.3-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.7 2.7 4.2 3.7 2 .8 2.5.7 2.9.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2l-.5-.3-1.6-.8c-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1-.2-.1-1.1-.4-2-1.2-.7-.6-1.2-1.4-1.4-1.7-.1-.2 0-.4.1-.5l.4-.5c.1-.2.2-.3.2-.5s0-.3-.1-.5l-.8-1.8c-.2-.4-.4-.4-.6-.4z"/></svg> WhatsApp us</a>
+      </div>
+    </div>
+    <div style="background: #FFFFFF; border: 1px solid #D7DFE5; border-radius: 10px; padding: 26px;">
+      <div style="font-weight: 700; font-size: 15px; color: #0B2545; margin-bottom: 14px;">What happens next</div>
+      <div style="display: flex; flex-direction: column; gap: 13px; font-size: 14px; color: #35424D; line-height: 1.55;">
+        <div style="display: flex; gap: 12px;"><div style="width: 24px; height: 24px; border-radius: 50%; background: #E2EFEC; color: #0B2545; font-weight: 700; font-size: 12.5px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div><div>We call you back and answer your questions.</div></div>
+        <div style="display: flex; gap: 12px;"><div style="width: 24px; height: 24px; border-radius: 50%; background: #E2EFEC; color: #0B2545; font-weight: 700; font-size: 12.5px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div><div>Visit the campus with your parents — see the labs and meet the faculty.</div></div>
+        <div style="display: flex; gap: 12px;"><div style="width: 24px; height: 24px; border-radius: 50%; background: #E2EFEC; color: #0B2545; font-weight: 700; font-size: 12.5px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div><div>Submit <a href="documents.dc.html">documents</a> and confirm your seat. Instalment options available.</div></div>
+      </div>
+    </div>
+    <div style="background: #F7F1E3; border: 1px solid #E2D2AC; border-radius: 10px; padding: 20px 24px; font-size: 14px; color: #6A511A; line-height: 1.6;"><strong>Last date to apply: 31 August 2026.</strong> Only 60 seats — early applicants get preference for the hostel.</div>
+  </div>
+</div>
+<dc-import name="SiteFooter" hint-size="100%,520px"></dc-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;: {&quot;width&quot;: &quot;100%&quot;, &quot;height&quot;: &quot;900px&quot;}}">
+class Component extends DCLogic {
+  state = { name: '', phone: '', qual: '', place: '', msg: '', error: '', submitted: false };
+  renderVals() {
+    const s = this.state;
+    const set = (k) => (e) => this.setState({ [k]: e.target.value, error: '' });
+    return {
+      name: s.name, phone: s.phone, qual: s.qual, place: s.place, msg: s.msg,
+      setName: set('name'), setPhone: set('phone'), setQual: set('qual'), setPlace: set('place'), setMsg: set('msg'),
+      error: s.error, notSubmitted: !s.submitted, submitted: s.submitted,
+      firstName: (s.name.trim().split(/\s+/)[0]) || 'student',
+      waLink: 'https://wa.me/919830236143?text=' + encodeURIComponent('Hello, I am ' + s.name + ' (' + (s.place || 'West Bengal') + '). I have sent an admission enquiry for D.Pharm. My question: ' + (s.msg || 'Please share admission details.')),
+      submit: () => {
+        if (!s.name.trim()) return this.setState({ error: 'Please enter the student\'s name.' });
+        const digits = s.phone.replace(/\D/g, '');
+        if (digits.length < 10) return this.setState({ error: 'Please enter a valid 10-digit mobile number.' });
+        if (!s.qual) return this.setState({ error: 'Please select the highest qualification.' });
+        this.setState({ submitted: true, error: '' });
+      },
+      reset: () => this.setState({ submitted: false, name: '', phone: '', qual: '', place: '', msg: '' })
+    };
+  }
+}
+</script>
+</body>
+</html>
