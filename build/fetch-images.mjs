@@ -10,7 +10,7 @@ mkdirSync(OUT, { recursive: true });
 
 // slot id -> [search query, extra terms to prefer]
 const SLOTS = {
-  'hero-campus': 'Pharmd students faculty hajvery university',
+  // hero slide 1 uses the college's own photograph (see COLLEGE_ASSETS in build.mjs)
   'hero-slide-2': 'chemistry laboratory practical work',
   'hero-slide-3': 'college lecture classroom teacher',
   'hero-slide-4': 'hospital pharmacy pharmacist dispensing',

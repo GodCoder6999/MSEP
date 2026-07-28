@@ -363,6 +363,21 @@ ${html.trim()}
 `;
 }
 
+// Photographs supplied by the college, copied straight from the repo root.
+// One source may feed several slots (each image-slot resolves id -> <id>.jpg).
+// This has to run BEFORE the pages render: renderImageSlots only emits an <img>
+// for a slot whose file already exists on disk.
+mkdirSync(join(SITE, 'assets', 'img'), { recursive: true });
+const COLLEGE_ASSETS = {
+  'cropped-LOGO_page-0001-e1770559635454.jpg': ['logo.jpg'],
+  'PP-e1770564409555.jpg': ['campus-front.jpg', 'gal-c0.jpg'],
+};
+for (const [src, targets] of Object.entries(COLLEGE_ASSETS)) {
+  const from = join(ROOT, src);
+  if (!existsSync(from)) { console.error(`WARN: missing college asset ${src}`); continue; }
+  for (const t of targets) copyFileSync(from, join(SITE, 'assets', 'img', t));
+}
+
 const pages = readdirSync(ROOT).filter((f) => f.endsWith('.dc.html') && !/^Site(Header|Footer)\./.test(f));
 for (const p of pages) {
   try { buildPage(p); } catch (e) { console.error(`FAIL ${p}: ${e.message}`); }
@@ -383,7 +398,7 @@ for (const p of pages) {
   <div style="max-width: 1180px; margin: 0 auto; padding: 38px 20px 42px;">
     <div style="font-size: 13px; color: #8E9BD1; margin-bottom: 10px;"><a href="index.html" style="color: #B9C3E8;">Home</a> &nbsp;/&nbsp; <span style="color: #FFD48A;">Image Credits</span></div>
     <h1 style="font-family: 'Source Serif 4', serif; font-weight: 700; font-size: clamp(28px, 4vw, 42px); margin: 0 0 10px;">Image Credits</h1>
-    <p style="font-size: 15.5px; color: #D6DEF6; max-width: 62ch; line-height: 1.65; margin: 0;">Photographs on this website are openly-licensed images sourced through <a href="https://openverse.org" style="color: #FFD48A;" rel="noopener">Openverse</a>, used as stand-ins until the college's own campus photography is published. Each is credited to its creator below under its Creative Commons licence.</p>
+    <p style="font-size: 15.5px; color: #D6DEF6; max-width: 62ch; line-height: 1.65; margin: 0;">Photographs on this website are openly-licensed images sourced through <a href="https://openverse.org" style="color: #FFD48A;" rel="noopener">Openverse</a>, used as stand-ins where the college's own photography is not yet available. Photographs supplied by the college — including the campus building — are not listed here. Each is credited to its creator below under its Creative Commons licence.</p>
   </div>
 </div>
 <div style="max-width: 1180px; margin: 0 auto; padding: clamp(36px, 5vw, 60px) 20px;">
@@ -411,8 +426,4 @@ mkdirSync(join(SITE, 'assets'), { recursive: true });
 writeFileSync(join(SITE, 'assets', 'site.css'), `${baseCss}\n/* generated from style-hover / style-focus */\n${cssText()}`);
 copyFileSync(join(ROOT, 'build', 'site.js'), join(SITE, 'assets', 'site.js'));
 
-// college logo (header, footer, favicon)
-const LOGO_SRC = join(ROOT, 'cropped-LOGO_page-0001-e1770559635454.jpg');
-if (existsSync(LOGO_SRC)) copyFileSync(LOGO_SRC, join(SITE, 'assets', 'img', 'logo.jpg'));
-else console.error('WARN: logo source missing, header/footer will show a broken image');
 console.log(`built ${pages.length} pages, ${cssRules.size} state-style rules`);
