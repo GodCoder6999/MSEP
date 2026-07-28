@@ -58,6 +58,37 @@ img { max-width: 100%; }
 @media (max-width: 1120px) { .hdr-action__txt span { display: none; } }
 @media (max-width: 1000px) { .hdr-action { display: none; } }
 
+/* ---------- phone layout ----------
+   The header stacks three full-width bars on a phone and ate most of the first
+   screen, so trim the utility bar, shorten the lock-up and shrink the floating
+   call buttons. */
+@media (max-width: 620px) {
+  .topbar__email, .topbar__social { display: none !important; }
+  .hdr-sub { display: none !important; }
+  .hdr-name { font-size: 15.5px !important; }
+  header img[src$="logo.jpg"] { width: 46px !important; height: 46px !important; }
+
+  /* carousel arrows sat on top of the hero copy — dots are enough here */
+  [data-on-click="prev"], [data-on-click="next"] { display: none !important; }
+
+  /* slides are absolutely positioned, so the wrapper needs a height that can
+     actually hold the copy — the desktop clamp bottomed out at 430px and cut
+     the "Know More" button off on a 360px phone */
+  .hero-wrap { height: min(92vh, 700px) !important; }
+  .hero-wrap h1, .hero-wrap h2 { font-size: 27px !important; line-height: 1.2 !important; }
+  .hero-wrap p { font-size: 14.5px !important; line-height: 1.6 !important; margin-bottom: 22px !important; }
+  .hero-wrap .hero-slide > div:last-child > div { padding: 26px 20px !important; }
+
+  /* the two pills covered body copy; on a phone they become icon buttons */
+  .floatbtns { right: 12px !important; bottom: 12px !important; gap: 8px !important; }
+  .floatbtns a {
+    font-size: 0 !important; padding: 0 !important; border-radius: 50% !important;
+    width: 48px; height: 48px; display: flex !important; align-items: center; justify-content: center;
+  }
+  .floatbtns a .ico { margin-right: 0 !important; }
+  .floatbtns a .ico svg, .floatbtns a > svg { width: 20px; height: 20px; }
+}
+
 /* ---------- desktop dropdown menus ---------- */
 [data-on-mouseenter] > [data-if="g.open"] { display: none; }
 [data-on-mouseenter]:hover > [data-if="g.open"],

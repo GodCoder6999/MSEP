@@ -245,6 +245,10 @@ const footerSrc = splitDc(readPage('SiteFooter.dc.html'));
 
 function renderHeader(active) {
   const desktopVals = runLogic(headerSrc.js, { active }, { width: 1200 });
+  // two mobile renders: one closed (gives the "☰ Menu" trigger) and one open
+  // (gives the slide-out sheet markup). Taking both from the open render would
+  // stamp the trigger with its open-state "✕" label.
+  const mobileClosedVals = runLogic(headerSrc.js, { active }, { width: 500, menuOpen: false });
   const mobileVals = runLogic(headerSrc.js, { active }, { width: 500, menuOpen: true });
   const opts = { forceIf: { 'g.open': true } };
   const desktop = expand(headerSrc.template, desktopVals, opts);
@@ -252,7 +256,8 @@ function renderHeader(active) {
   // desktop render keeps everything except the mobile-only pieces; take the mobile
   // nav sheet + hamburger from the mobile render and let CSS decide which shows.
   const menuBlock = /(<div style="position: fixed; inset: 0; z-index: 200;[\s\S]*?)(?=\s*$)/.exec(mobile);
-  const hamburger = /<button data-on-click="toggleMenu"[\s\S]*?<\/button>/.exec(mobile);
+  const hamburger = /<button data-on-click="toggleMenu"[\s\S]*?<\/button>/
+    .exec(expand(headerSrc.template, mobileClosedVals, opts));
   let html = desktop.trim();
   // the desktop action cluster and the mobile hamburger swap at the CSS breakpoint
   html = html.replace(/<div class="hdr-actions">[\s\S]*?<\/div>/,
