@@ -491,6 +491,87 @@ img { max-width: 100%; }
   font-size: 13.5px; color: #5A6B78; text-decoration: underline;
 }
 
+/* ---------- decorative texture ----------
+   Quiet geometry so large flat bands are not empty: a dot field on the navy
+   sections, a rule grid on the admissions band, and outline rings that catch
+   the edge of a section. All are ::before/::after so no extra markup is needed,
+   and all sit behind content via z-index. */
+.pattern-dots, .pattern-grid, .pattern-rings { position: relative; isolation: isolate; }
+/* the ring is deliberately hung off the right edge — clip it, or it widens the page */
+.pattern-rings { overflow: hidden; }
+.pattern-dots > *, .pattern-grid > *, .pattern-rings > * { position: relative; z-index: 1; }
+
+.pattern-dots::before {
+  content: ''; position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.16) 1px, transparent 1px);
+  background-size: 22px 22px;
+  -webkit-mask-image: linear-gradient(105deg, #000 0%, transparent 62%);
+  mask-image: linear-gradient(105deg, #000 0%, transparent 62%);
+}
+.pattern-grid::before {
+  content: ''; position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  background-size: 56px 56px;
+  -webkit-mask-image: radial-gradient(120% 90% at 85% 0%, #000 0%, transparent 70%);
+  mask-image: radial-gradient(120% 90% at 85% 0%, #000 0%, transparent 70%);
+}
+.pattern-rings::after {
+  content: ''; position: absolute; z-index: 0; pointer-events: none;
+  right: -120px; top: -90px; width: 420px; height: 420px; border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  box-shadow: 0 0 0 60px rgba(255, 255, 255, 0.035) inset;
+}
+@media (max-width: 700px) { .pattern-rings::after { display: none; } }
+
+/* light bands get a faint diagonal wash instead */
+.band-wash { background-image: linear-gradient(120deg, rgba(11, 37, 69, 0.045) 0%, transparent 45%); }
+
+/* ---------- meter (single ratio against a limit) ---------- */
+.meter { margin-top: 10px; }
+.meter__track {
+  height: 5px; border-radius: 3px; background: rgba(255, 255, 255, 0.18); overflow: hidden;
+}
+.meter__fill { height: 100%; border-radius: 3px; background: #C89B3C; }
+.meter__note { font-size: 11.5px; color: #A9C3D1; margin-top: 6px; }
+
+/* ---------- fee composition bar ---------- */
+.feechart { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 0.95fr); gap: clamp(26px, 4vw, 52px); align-items: center; }
+@media (max-width: 860px) { .feechart { grid-template-columns: 1fr; } }
+.feechart__total { font-family: 'Source Serif 4', serif; font-weight: 700; font-size: clamp(38px, 6vw, 54px); color: #0B2545; line-height: 1; }
+.feechart__sub { font-size: 14px; color: #5A6B78; margin-top: 8px; }
+
+.feebar { display: flex; gap: 2px; height: 34px; margin: 22px 0 6px; }
+.feebar__seg {
+  position: relative; height: 100%; border: 0; padding: 0; cursor: default;
+  transition: filter 0.15s ease;
+}
+.feebar__seg:first-child { border-radius: 4px 0 0 4px; }
+.feebar__seg:last-child { border-radius: 0 4px 4px 0; }
+.feebar__seg:hover, .feebar__seg:focus-visible { filter: brightness(1.12); }
+.feebar__seg::after {
+  content: attr(data-label) ' · ' attr(data-value);
+  position: absolute; left: 50%; bottom: calc(100% + 9px); transform: translateX(-50%);
+  background: #0B2545; color: #FFFFFF; font-size: 12px; font-weight: 600;
+  padding: 6px 10px; border-radius: 5px; white-space: nowrap;
+  opacity: 0; pointer-events: none; transition: opacity 0.15s ease;
+  box-shadow: 0 6px 18px rgba(11, 37, 69, 0.3);
+}
+.feebar__seg:hover::after, .feebar__seg:focus-visible::after { opacity: 1; }
+.feebar__scale { display: flex; justify-content: space-between; font-size: 11.5px; color: #5A6B78; }
+
+.feekey { list-style: none; margin: 0; padding: 0; }
+.feekey li {
+  display: grid; grid-template-columns: 12px 1fr auto auto; align-items: center; gap: 12px;
+  padding: 11px 0; border-bottom: 1px solid #E6ECEF; font-size: 14.5px;
+}
+.feekey li:last-child { border-bottom: 0; }
+.feekey__swatch { width: 12px; height: 12px; border-radius: 3px; }
+.feekey__head { color: #16232E; }
+.feekey__amt { font-weight: 700; color: #0B2545; font-variant-numeric: tabular-nums; }
+.feekey__pct { color: #5A6B78; font-size: 12.5px; width: 42px; text-align: right; font-variant-numeric: tabular-nums; }
+
 /* ---------- misc ---------- */
 button { font-family: 'Public Sans', system-ui, sans-serif; }
 a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
