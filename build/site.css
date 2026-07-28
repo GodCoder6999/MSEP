@@ -65,6 +65,24 @@ img { max-width: 100%; }
 /* below the desktop breakpoint the chips move into the mobile menu (.menu-chips) */
 @media (max-width: 919px) { .hdr-action { display: none; } }
 
+/* ---------- desktop header metrics ----------
+   Matched strip-for-strip to futureeducation.in/fiem at 1440px:
+   utility bar 38 · logo bar 141 · nav 45 · notice ticker 45 = 269 before the
+   banner. Heights are set on the inner containers so the content stays
+   vertically centred. */
+@media (min-width: 920px) {
+  .topbar > div { min-height: 38px; padding-top: 0; padding-bottom: 0; }
+  .logobar { min-height: 141px; padding-top: 10px; padding-bottom: 10px; }
+  header img[src$="logo.jpg"] { width: 92px !important; height: 92px !important; }
+  .hdr-name { font-size: clamp(17px, 1.9vw, 24px) !important; }
+  .hdr-sub { font-size: 13px !important; margin-top: 5px !important; }
+  nav a[href$="index.html"], [data-on-mouseenter] > a { padding-top: 12px !important; padding-bottom: 12px !important; }
+  /* specificity has to beat the base .ticker__* rules further down the file */
+  .ticker { min-height: 45px; }
+  .ticker .ticker__track { padding-top: 13px; padding-bottom: 13px; }
+  .ticker .ticker__label, .ticker .ticker__all, .ticker .ticker__toggle { padding-top: 13px; padding-bottom: 13px; }
+}
+
 /* ---------- phone layout ----------
    The header stacks three full-width bars on a phone and ate most of the first
    screen, so trim the utility bar, shorten the lock-up and shrink the floating
