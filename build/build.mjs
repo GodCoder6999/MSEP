@@ -376,6 +376,8 @@ mkdirSync(join(SITE, 'assets', 'img'), { recursive: true });
 const COLLEGE_ASSETS = {
   'cropped-LOGO_page-0001-e1770559635454.jpg': ['logo.jpg'],
   'PP-e1770564409555.jpg': ['campus-front.jpg', 'gal-c0.jpg'],
+  'Pharmacy_Council_of_India_Logo.png': ['accred-pci.png'],
+  'logo.png': ['accred-wbsctvesd.png'],
 };
 for (const [src, targets] of Object.entries(COLLEGE_ASSETS)) {
   const from = join(ROOT, src);

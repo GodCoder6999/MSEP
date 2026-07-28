@@ -61,9 +61,21 @@ img { max-width: 100%; }
   .hdr-action__txt strong { font-size: 12.5px; }
   .hdr-action__txt span { font-size: 10px; }
   .hdr-apply { padding: 10px 16px !important; font-size: 13.5px !important; }
+  /* keep the bar at 141px once the name and affiliation line start wrapping */
+  .hdr-sub { font-size: 13px !important; margin-top: 2px !important; gap: 3px 8px !important; }
+  .hdr-name { line-height: 1.1 !important; }
+  .accred img { width: 22px !important; height: 22px !important; }
 }
 /* below the desktop breakpoint the chips move into the mobile menu (.menu-chips) */
 @media (max-width: 919px) { .hdr-action { display: none; } }
+
+/* ---------- accreditation marks in the header line ---------- */
+.hdr-sub { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 9px; }
+.accred { display: inline-flex; align-items: center; gap: 7px; }
+.accred img { width: 26px; height: 26px; object-fit: contain; flex-shrink: 0; }
+.accred__sep { color: #A9B6C0; }
+@media (min-width: 920px) { .accred img { width: 26px; height: 26px; } }
+@media (max-width: 620px) { .accred img { width: 22px; height: 22px; } .hdr-sub { gap: 4px 7px; } }
 
 /* ---------- desktop header metrics ----------
    Matched strip-for-strip to futureeducation.in/fiem at 1440px:
@@ -74,8 +86,8 @@ img { max-width: 100%; }
   .topbar > div { min-height: 38px; padding-top: 0; padding-bottom: 0; }
   .logobar { min-height: 141px; padding-top: 10px; padding-bottom: 10px; }
   header img[src$="logo.jpg"] { width: 104px !important; height: 104px !important; }
-  .hdr-name { font-size: clamp(21px, 2.45vw, 33px) !important; line-height: 1.15 !important; }
-  .hdr-sub { font-size: 15px !important; margin-top: 7px !important; }
+  .hdr-name { font-size: clamp(20px, 2.25vw, 30px) !important; line-height: 1.15 !important; }
+  .hdr-sub { font-size: 15px !important; margin-top: 4px !important; }
   nav a[href$="index.html"], [data-on-mouseenter] > a { padding-top: 12px !important; padding-bottom: 12px !important; }
   /* specificity has to beat the base .ticker__* rules further down the file */
   .ticker { min-height: 45px; }
