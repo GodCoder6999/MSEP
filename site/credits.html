@@ -21,7 +21,7 @@
 </head>
 <body>
 <header>
-<div style="background: #0B2545; color: #C2D2DC; font-size: 13px;">
+<div class="topbar" style="background: #0B2545; color: #C2D2DC; font-size: 13px;">
   <div style="max-width: 1180px; margin: 0 auto; padding: 7px 20px; display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap;">
     <div style="display: flex; gap: 18px; flex-wrap: wrap; align-items: center;">
       <a href="tel:+919830236143" style="color: #C2D2DC;"><svg class="ico" viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.6 15.6 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.7.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C11.3 21 3 12.7 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.7.1.3 0 .7-.2 1z"/></svg> (+91) 9830 236143</a>
@@ -35,12 +35,12 @@
         <a href="#" aria-label="YouTube" class="social-ico h3" style="width: 22px; height: 22px; border-radius: 50%; background: rgba(255,255,255,0.14); color: #FFFFFF; display: flex; align-items: center; justify-content: center;"><svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor" aria-hidden="true"><path d="M21.6 7.6a2.5 2.5 0 0 0-1.8-1.8C18.2 5.4 12 5.4 12 5.4s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.6C2 9.2 2 12 2 12s0 2.8.4 4.4a2.5 2.5 0 0 0 1.8 1.8c1.6.4 7.8.4 7.8.4s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8c.4-1.6.4-4.4.4-4.4s0-2.8-.4-4.4zM10.1 15V9l5.2 3z"/></svg></a>
         <a href="https://wa.me/919830236143" aria-label="WhatsApp" class="social-ico h4" style="width: 22px; height: 22px; border-radius: 50%; background: rgba(255,255,255,0.14); color: #FFFFFF; display: flex; align-items: center; justify-content: center;"><svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor" aria-hidden="true"><path d="M12 2.2A9.7 9.7 0 0 0 3.6 16.8L2.2 21.8l5.1-1.3A9.7 9.7 0 1 0 12 2.2zm0 1.8a7.9 7.9 0 1 1-4 14.7l-.3-.2-3 .8.8-2.9-.2-.3A7.9 7.9 0 0 1 12 4zm-3.6 4c-.2 0-.5.1-.7.4-.2.3-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.7 2.7 4.2 3.7 2 .8 2.5.7 2.9.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2l-.5-.3-1.6-.8c-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1-.2-.1-1.1-.4-2-1.2-.7-.6-1.2-1.4-1.4-1.7-.1-.2 0-.4.1-.5l.4-.5c.1-.2.2-.3.2-.5s0-.3-.1-.5l-.8-1.8c-.2-.4-.4-.4-.6-.4z"/></svg></a>
       </div>
-      <span style="background: #C89B3C; color: #0B2545; font-weight: 700; padding: 2px 10px; border-radius: 3px; letter-spacing: 0.02em;">Admissions Open 2026–27</span>
+      <span class="topbar__badge" style="background: #C89B3C; color: #0B2545; font-weight: 700; padding: 2px 10px; border-radius: 3px; letter-spacing: 0.02em;">Admissions Open 2026–27</span>
     </div>
   </div>
 </div>
 <div style="background: #FFFFFF; border-bottom: 1px solid #D7DFE5;">
-  <div style="max-width: 1180px; margin: 0 auto; padding: 9px 20px; display: flex; align-items: center; gap: 14px;">
+  <div class="logobar" style="max-width: 1180px; margin: 0 auto; padding: 9px 20px; display: flex; align-items: center; gap: 14px;">
     <a href="index.html" style="display: flex; align-items: center; gap: 14px; min-width: 0; flex: 1;">
       <img src="assets/img/logo.jpg" alt="Muktir Shiksha College of Education &amp; Pharmacy" style="width: 58px; height: 58px; object-fit: contain; flex-shrink: 0;">
       <div style="min-width: 0;">
@@ -361,6 +361,16 @@
       <button data-on-click="toggleMenu" style="background: #16456F; color: #FFFFFF; border: none; border-radius: 6px; padding: 9px 16px; font-size: 15px; font-weight: 600; font-family: 'Public Sans', sans-serif; cursor: pointer;">✕ Close</button>
     </div>
     <a href="apply.html" style="display: block; text-align: center; background: #C89B3C; color: #2A2109; font-weight: 700; padding: 13px; border-radius: 8px; font-size: 16px; margin-bottom: 14px;">Apply Now — Admissions Open 2026–27</a>
+    <div class="menu-chips">
+      <a href="dpharm.html">
+        <span class="menu-chips__ico"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12,4 21,8.5 12,13 3,8.5"></polygon><path d="M7,11v4c0,1.5 2.2,2.8 5,2.8s5-1.3 5-2.8v-4"></path><line x1="21" y1="8.5" x2="21" y2="14"></line></svg></span>
+        <span><strong>Courses</strong><em>D.Pharm · 2 years</em></span>
+      </a>
+      <a href="apply.html">
+        <span class="menu-chips__ico"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 15.5a2.5 2.5 0 0 1-2.5 2.5H8l-4 3V6.5A2.5 2.5 0 0 1 6.5 4h11A2.5 2.5 0 0 1 20 6.5z"></path><path d="M10.1 9.3a2 2 0 1 1 2.7 1.9c-.6.3-.8.7-.8 1.3"></path><line x1="12" y1="14.6" x2="12.01" y2="14.6"></line></svg></span>
+        <span><strong>Query</strong><em>We call back in a day</em></span>
+      </a>
+    </div>
     <a href="index.html" style="display: block; color: #FFFFFF; font-weight: 600; font-size: 16px; padding: 13px 4px; border-bottom: 1px solid #1B3E60;">Home</a>
     
       <details style="border-bottom: 1px solid #1B3E60;">
