@@ -74,7 +74,10 @@ img { max-width: 100%; }
 .accred { display: inline-flex; align-items: center; gap: 7px; }
 .accred img { width: 30px; height: 30px; object-fit: contain; flex-shrink: 0; }
 .accred__sep { color: #A9B6C0; }
-@media (min-width: 920px) { .accred img { width: 36px; height: 36px; } }
+/* the full postal address is long — let it take the whole second line */
+.accred--addr { flex-basis: 100%; align-items: flex-start; }
+.accred--addr svg { flex-shrink: 0; margin-top: 1px; color: #16456F; }
+@media (min-width: 920px) { .accred img { width: 32px; height: 32px; } }
 @media (max-width: 620px) { .accred img { width: 26px; height: 26px; } .hdr-sub { gap: 4px 7px; } }
 
 /* ---------- desktop header metrics ----------
@@ -89,8 +92,8 @@ img { max-width: 100%; }
      sit flush against the viewport edge — keep a gutter below that point */
   @media (max-width: 1240px) { .logobar { padding-left: 16px !important; } }
   header img[src$="logo.jpg"] { width: 104px !important; height: 104px !important; }
-  .hdr-name { font-size: clamp(20px, 2.1vw, 28px) !important; line-height: 1.12 !important; }
-  .hdr-sub { font-size: 14.5px !important; margin-top: 2px !important; }
+  .hdr-name { font-size: clamp(19px, 1.95vw, 26px) !important; line-height: 1.1 !important; }
+  .hdr-sub { font-size: 13.5px !important; margin-top: 2px !important; gap: 3px 8px !important; }
   nav a[href$="index.html"], [data-on-mouseenter] > a { padding-top: 12px !important; padding-bottom: 12px !important; }
   /* specificity has to beat the base .ticker__* rules further down the file */
   .ticker { min-height: 45px; }
