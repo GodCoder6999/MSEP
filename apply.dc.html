@@ -12,7 +12,7 @@
 <style>
   body { margin: 0; background: #EEF2F5; color: #16232E; font-family: 'Public Sans', system-ui, sans-serif; }
   a { color: #0B2545; text-decoration: none; }
-  a:hover { color: #2F7E78; }
+  a:hover { color: #16456F; }
 </style>
 </helmet>
 <dc-import name="SiteHeader" active="admissions" hint-size="100%,180px"></dc-import>
@@ -28,16 +28,16 @@
     <sc-if value="{{ notSubmitted }}" hint-placeholder-val="{{ true }}">
       <div style="display: flex; flex-direction: column; gap: 18px;">
         <div>
-          <label for="enq-name" style="display: block; font-weight: 700; font-size: 14px; color: #0B2545; margin-bottom: 7px;">Student's full name <span style="color: #256A65;">*</span></label>
+          <label for="enq-name" style="display: block; font-weight: 700; font-size: 14px; color: #0B2545; margin-bottom: 7px;">Student's full name <span style="color: #0F3556;">*</span></label>
           <input id="enq-name" type="text" value="{{ name }}" onChange="{{ setName }}" placeholder="As per Madhyamik certificate" style="width: 100%; box-sizing: border-box; padding: 12px 14px; border: 1.5px solid #C7D3DA; border-radius: 5px; font-size: 15px; font-family: 'Public Sans', sans-serif; background: #EEF2F5; color: #16232E;" style-focus="border: 1.5px solid #0B2545; background: #FFFFFF; outline: none;">
         </div>
         <div>
-          <label for="enq-phone" style="display: block; font-weight: 700; font-size: 14px; color: #0B2545; margin-bottom: 7px;">Mobile number <span style="color: #256A65;">*</span></label>
+          <label for="enq-phone" style="display: block; font-weight: 700; font-size: 14px; color: #0B2545; margin-bottom: 7px;">Mobile number <span style="color: #0F3556;">*</span></label>
           <input id="enq-phone" type="tel" value="{{ phone }}" onChange="{{ setPhone }}" placeholder="10-digit mobile number" style="width: 100%; box-sizing: border-box; padding: 12px 14px; border: 1.5px solid #C7D3DA; border-radius: 5px; font-size: 15px; font-family: 'Public Sans', sans-serif; background: #EEF2F5; color: #16232E;" style-focus="border: 1.5px solid #0B2545; background: #FFFFFF; outline: none;">
           <div style="font-size: 12.5px; color: #5A6B78; margin-top: 5px;">We will call this number. WhatsApp number preferred.</div>
         </div>
         <div>
-          <label for="enq-qual" style="display: block; font-weight: 700; font-size: 14px; color: #0B2545; margin-bottom: 7px;">Highest qualification <span style="color: #256A65;">*</span></label>
+          <label for="enq-qual" style="display: block; font-weight: 700; font-size: 14px; color: #0B2545; margin-bottom: 7px;">Highest qualification <span style="color: #0F3556;">*</span></label>
           <select id="enq-qual" value="{{ qual }}" onChange="{{ setQual }}" style="width: 100%; box-sizing: border-box; padding: 12px 14px; border: 1.5px solid #C7D3DA; border-radius: 5px; font-size: 15px; font-family: 'Public Sans', sans-serif; background: #EEF2F5; color: #16232E;">
             <option value="">Select…</option>
             <option value="12-science-passed">Higher Secondary (10+2) Science — passed</option>
@@ -64,7 +64,7 @@
     </sc-if>
     <sc-if value="{{ submitted }}" hint-placeholder-val="{{ false }}">
       <div style="text-align: center; padding: 24px 8px;">
-        <div style="width: 64px; height: 64px; border-radius: 50%; background: #E2EFEC; color: #0B2545; display: flex; align-items: center; justify-content: center; font-size: 30px; margin: 0 auto 18px;">✓</div>
+        <div style="width: 64px; height: 64px; border-radius: 50%; background: #E6EDF4; color: #0B2545; display: flex; align-items: center; justify-content: center; font-size: 30px; margin: 0 auto 18px;">✓</div>
         <h2 style="font-family: 'Source Serif 4', serif; font-weight: 700; font-size: 26px; color: #0B2545; margin: 0 0 10px;">Thank you, {{ firstName }}!</h2>
         <p style="font-size: 15px; line-height: 1.7; color: #35424D; max-width: 44ch; margin: 0 auto 24px;">Your enquiry has been received. Our admissions desk will call <strong>{{ phone }}</strong> within one working day (Mon–Sat, 10 AM – 5 PM).</p>
         <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
@@ -88,9 +88,9 @@
     <div style="background: #FFFFFF; border: 1px solid #D7DFE5; border-radius: 10px; padding: 26px;">
       <div style="font-weight: 700; font-size: 15px; color: #0B2545; margin-bottom: 14px;">What happens next</div>
       <div style="display: flex; flex-direction: column; gap: 13px; font-size: 14px; color: #35424D; line-height: 1.55;">
-        <div style="display: flex; gap: 12px;"><div style="width: 24px; height: 24px; border-radius: 50%; background: #E2EFEC; color: #0B2545; font-weight: 700; font-size: 12.5px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div><div>We call you back and answer your questions.</div></div>
-        <div style="display: flex; gap: 12px;"><div style="width: 24px; height: 24px; border-radius: 50%; background: #E2EFEC; color: #0B2545; font-weight: 700; font-size: 12.5px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div><div>Visit the campus with your parents — see the labs and meet the faculty.</div></div>
-        <div style="display: flex; gap: 12px;"><div style="width: 24px; height: 24px; border-radius: 50%; background: #E2EFEC; color: #0B2545; font-weight: 700; font-size: 12.5px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div><div>Submit <a href="documents.dc.html">documents</a> and confirm your seat. Instalment options available.</div></div>
+        <div style="display: flex; gap: 12px;"><div style="width: 24px; height: 24px; border-radius: 50%; background: #E6EDF4; color: #0B2545; font-weight: 700; font-size: 12.5px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div><div>We call you back and answer your questions.</div></div>
+        <div style="display: flex; gap: 12px;"><div style="width: 24px; height: 24px; border-radius: 50%; background: #E6EDF4; color: #0B2545; font-weight: 700; font-size: 12.5px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div><div>Visit the campus with your parents — see the labs and meet the faculty.</div></div>
+        <div style="display: flex; gap: 12px;"><div style="width: 24px; height: 24px; border-radius: 50%; background: #E6EDF4; color: #0B2545; font-weight: 700; font-size: 12.5px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div><div>Submit <a href="documents.dc.html">documents</a> and confirm your seat. Instalment options available.</div></div>
       </div>
     </div>
     <div style="background: #F7F1E3; border: 1px solid #E2D2AC; border-radius: 10px; padding: 20px 24px; font-size: 14px; color: #6A511A; line-height: 1.6;"><strong>Last date to apply: 31 August 2026.</strong> Only 60 seats — early applicants get preference for the hostel.</div>

@@ -15,7 +15,7 @@
   html { scroll-behavior: smooth; }
   body { margin: 0; background: #EEF2F5; color: #16232E; font-family: 'Public Sans', system-ui, sans-serif; }
   a { color: #0B2545; text-decoration: none; }
-  a:hover { color: #2F7E78; }
+  a:hover { color: #16456F; }
   @keyframes ddIn { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: translateY(0); } }
 </style>
 </helmet>
@@ -199,14 +199,14 @@ class Component extends DCLogic {
     const isDesktop = this.state.width >= 920;
     const active = this.props.active || '';
     const NAV = [
-      { key: 'about', label: 'About', href: 'about.dc.html', color: '#0B2545', tint: '#E2EFEC', mob: '#E8CE9A', items: [
+      { key: 'about', label: 'About', href: 'about.dc.html', color: '#0B2545', tint: '#E6EDF4', mob: '#E8CE9A', items: [
         ['About the College', 'about.dc.html', 'info', 'Who we are, at a glance'],
         ['Mission & Vision', 'mission-vision.dc.html', 'target', 'What drives us'],
         ["Principal's Message", 'principal-message.dc.html', 'message', 'From Dr. A. K. Bhattacharya'],
         ['Governing Body', 'governing-body.dc.html', 'users', 'The people responsible'],
         ['Administration', 'administration.dc.html', 'building', 'Offices & who to ask'],
         ['Approvals & Affiliations', 'about.dc.html#approvals', 'check', 'PCI · WBSCT&VE&SD']]},
-      { key: 'admissions', label: 'Admissions', href: 'dpharm.dc.html', color: '#0B2545', tint: '#E2EFEC', mob: '#E8CE9A',
+      { key: 'admissions', label: 'Admissions', href: 'dpharm.dc.html', color: '#0B2545', tint: '#E6EDF4', mob: '#E8CE9A',
         cta: true, ctaLabel: 'Admissions open — only 60 seats. Apply now', ctaHref: 'apply.dc.html', items: [
         ['D.Pharm Course', 'dpharm.dc.html', 'book', 'The full 2-year programme'],
         ['Eligibility', 'eligibility.dc.html', 'check', '10+2 science · 17+ years'],
@@ -214,19 +214,19 @@ class Component extends DCLogic {
         ['Documents Required', 'documents.dc.html', 'doc', 'What to bring at admission'],
         ['Scholarships', 'scholarships.dc.html', 'award', 'SVMCM · Aikyashree · OASIS'],
         ['Admission Enquiry', 'apply.dc.html', 'pen', 'We call you back in a day']]},
-      { key: 'academics', label: 'Academics', href: 'syllabus.dc.html', color: '#0B2545', tint: '#E2EFEC', mob: '#E8CE9A', items: [
+      { key: 'academics', label: 'Academics', href: 'syllabus.dc.html', color: '#0B2545', tint: '#E6EDF4', mob: '#E8CE9A', items: [
         ['Syllabus', 'syllabus.dc.html', 'list', 'All subjects · ER-2020'],
         ['Academic Calendar', 'academic-calendar.dc.html', 'calendar', 'Dates for 2026–27'],
         ['Faculty', 'faculty.dc.html', 'cap', 'M.Pharm-qualified teachers'],
         ['Non-Teaching Staff', 'staff.dc.html', 'users', 'Office, lab & campus team']]},
-      { key: 'departments', label: 'Departments', href: 'dept-pharmaceutics.dc.html', color: '#0B2545', tint: '#E2EFEC', mob: '#E8CE9A', items: [
+      { key: 'departments', label: 'Departments', href: 'dept-pharmaceutics.dc.html', color: '#0B2545', tint: '#E6EDF4', mob: '#E8CE9A', items: [
         ['Pharmaceutics', 'dept-pharmaceutics.dc.html', 'pill', 'Formulation & dispensing'],
         ['Pharmaceutical Chemistry', 'dept-chemistry.dc.html', 'flask', 'Medicinal compounds'],
         ['Pharmacology', 'dept-pharmacology.dc.html', 'pulse', 'How drugs act on the body'],
         ['Pharmacognosy', 'dept-pharmacognosy.dc.html', 'leaf', 'Drugs from natural sources'],
         ['Pharmaceutical Analysis', 'dept-analysis.dc.html', 'lens', 'Quality & testing'],
         ['Pharmacy Practice', 'dept-practice.dc.html', 'crossSq', 'Hospital & community practice']]},
-      { key: 'infrastructure', label: 'Infrastructure', href: 'infrastructure.dc.html', color: '#0B2545', tint: '#E2EFEC', mob: '#E8CE9A', wide: true,
+      { key: 'infrastructure', label: 'Infrastructure', href: 'infrastructure.dc.html', color: '#0B2545', tint: '#E6EDF4', mob: '#E8CE9A', wide: true,
         cta: true, ctaLabel: 'See it yourself — plan a campus visit', ctaHref: 'contact.dc.html', items: [
         ['Overview', 'infrastructure.dc.html', 'grid', 'All facilities at a glance'],
         ['Classrooms', 'classrooms.dc.html', 'door', 'Ventilated, AV-equipped'],
@@ -238,11 +238,11 @@ class Component extends DCLogic {
         ['Sports', 'sports.dc.html', 'ball', 'Ground & indoor games'],
         ['Hostel', 'hostel.dc.html', 'bed', 'Boys & girls, supervised'],
         ['Canteen', 'canteen.dc.html', 'cup', 'Fresh & affordable']]},
-      { key: 'campus', label: 'Campus Life', href: 'gallery.dc.html', color: '#0B2545', tint: '#E2EFEC', mob: '#E8CE9A', right: true, items: [
+      { key: 'campus', label: 'Campus Life', href: 'gallery.dc.html', color: '#0B2545', tint: '#E6EDF4', mob: '#E8CE9A', right: true, items: [
         ['Gallery', 'gallery.dc.html', 'image', 'Photos of campus life'],
         ['News', 'news.dc.html', 'news', 'Notices & announcements'],
         ['Events', 'events.dc.html', 'calendar', 'Open days & observances']]},
-      { key: 'contact', label: 'Contact', href: 'contact.dc.html', color: '#0B2545', tint: '#E2EFEC', mob: '#E8CE9A', right: true, items: [
+      { key: 'contact', label: 'Contact', href: 'contact.dc.html', color: '#0B2545', tint: '#E6EDF4', mob: '#E8CE9A', right: true, items: [
         ['Contact Us', 'contact.dc.html', 'phone', 'Phone, email & directions'],
         ['FAQ', 'faq.dc.html', 'question', 'Questions, answered plainly'],
         ['Anti-Ragging Policy', 'anti-ragging.dc.html', 'shield', 'Zero tolerance, real helplines']]}
