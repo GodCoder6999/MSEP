@@ -528,6 +528,78 @@ img { max-width: 100%; }
 /* light bands get a faint diagonal wash instead */
 .band-wash { background-image: linear-gradient(120deg, rgba(11, 37, 69, 0.045) 0%, transparent 45%); }
 
+/* ---------- department / facility tiles ---------- */
+.deptgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; }
+.dept {
+  display: block; padding: 22px; border: 1px solid #D7DFE5; border-radius: 10px;
+  background: #FFFFFF; color: #16232E;
+  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+.dept:hover, .dept:focus-visible {
+  color: #16232E; border-color: #C89B3C;
+  transform: translateY(-2px); box-shadow: 0 10px 26px rgba(11, 37, 69, 0.10);
+}
+.dept__ico {
+  display: flex; align-items: center; justify-content: center;
+  width: 42px; height: 42px; border-radius: 10px; margin-bottom: 14px;
+  background: #E6EDF4; color: #16456F;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+.dept:hover .dept__ico { background: #0B2545; color: #FFFFFF; }
+.dept__name { display: block; font-weight: 700; font-size: 15.5px; color: #0B2545; margin-bottom: 5px; }
+.dept__desc { display: block; font-size: 13.5px; line-height: 1.55; color: #5A6B78; }
+
+/* ---------- principal's message ---------- */
+.principal { display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.6fr); gap: clamp(28px, 5vw, 60px); align-items: start; }
+@media (max-width: 860px) { .principal { grid-template-columns: 1fr; } }
+.principal__aside { display: flex; align-items: center; gap: 16px; }
+.principal__avatar {
+  width: 76px; height: 76px; border-radius: 50%; flex-shrink: 0;
+  background: linear-gradient(150deg, #16456F, #0B2545); border: 2px solid #C89B3C;
+  color: #E8CE9A; font-family: 'Source Serif 4', serif; font-weight: 700; font-size: 26px;
+  display: flex; align-items: center; justify-content: center;
+}
+.principal__quote {
+  margin: 0 0 18px; padding: 0 0 0 22px; border-left: 3px solid #C89B3C;
+  font-family: 'Source Serif 4', serif; font-size: clamp(18px, 2.2vw, 23px);
+  line-height: 1.6; color: #FFFFFF;
+}
+
+/* ---------- FAQ accordion ---------- */
+.faqgrid { display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.4fr); gap: clamp(28px, 5vw, 56px); align-items: start; }
+@media (max-width: 860px) { .faqgrid { grid-template-columns: 1fr; } }
+.faq { border-bottom: 1px solid #D7DFE5; }
+.faq summary {
+  list-style: none; cursor: pointer; padding: 16px 34px 16px 0; position: relative;
+  font-size: 15.5px; font-weight: 700; color: #0B2545;
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq__mark { position: absolute; right: 4px; top: 50%; width: 13px; height: 13px; transform: translateY(-50%); }
+.faq__mark::before, .faq__mark::after {
+  content: ''; position: absolute; background: #C89B3C; border-radius: 1px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+.faq__mark::before { left: 0; top: 6px; width: 13px; height: 2px; }
+.faq__mark::after { left: 6px; top: 0; width: 2px; height: 13px; }
+.faq[open] .faq__mark::after { transform: rotate(90deg); opacity: 0; }
+.faq summary:hover { color: #16456F; }
+.faq__body { padding: 0 34px 18px 0; font-size: 14.5px; line-height: 1.7; color: #35424D; }
+
+/* ---------- scholarships band ---------- */
+.schol { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr) auto; gap: clamp(24px, 4vw, 44px); align-items: center; }
+@media (max-width: 980px) { .schol { grid-template-columns: 1fr; } }
+.schol__list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 12px 22px; }
+@media (max-width: 520px) { .schol__list { grid-template-columns: 1fr; } }
+.schol__list li { border-left: 2px solid #C89B3C; padding-left: 12px; }
+.schol__list strong { display: block; font-size: 14.5px; color: #0B2545; }
+.schol__list span { display: block; font-size: 12.5px; color: #6A511A; margin-top: 2px; }
+.schol__cta {
+  display: inline-flex; align-items: center; white-space: nowrap;
+  background: #0B2545; color: #FFFFFF; font-weight: 700; font-size: 14.5px;
+  padding: 13px 24px; border-radius: 8px;
+}
+.schol__cta:hover { background: #16456F; color: #FFFFFF; }
+
 /* ---------- meter (single ratio against a limit) ---------- */
 .meter { margin-top: 10px; }
 .meter__track {
