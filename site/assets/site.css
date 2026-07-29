@@ -1055,7 +1055,13 @@ header.is-stuck { box-shadow: var(--shadow-sm); }
   header.is-stuck .topbar { display: none; }
   header.is-stuck .logobar { min-height: 84px !important; transition: min-height var(--dur) var(--ease); }
   header.is-stuck .lockup__logo { height: 56px; }
-  header.is-stuck .hdr-sub { display: none !important; }
+  /* the approvals stay on screen while scrolling: the text column turns into
+     a row so the chips sit beside the name instead of under it, which is what
+     kept the condensed bar short when they were hidden */
+  header.is-stuck .lockup__text { flex-direction: row; align-items: center; gap: 16px; flex-wrap: wrap; }
+  header.is-stuck .hdr-sub { gap: 8px; }
+  header.is-stuck .accred { font-size: 11.5px; padding: 0 9px 0 2px; white-space: nowrap; }
+  header.is-stuck .accred img { width: 22px; height: 22px; }
   header.is-stuck .hdr-name {
     font-size: 17px !important;
     text-shadow: 0 -1px 0 rgba(255, 255, 255, 0.9), 0 1px 0 #C6D0DB, 0 2px 3px rgba(11, 37, 69, 0.24);
