@@ -55,40 +55,8 @@
           </div>
         </div>
       </div>
-      <div style="position: absolute; inset: 0; opacity: {{ op2 }}; transition: opacity 0.9s ease; pointer-events: {{ pe2 }};">
-        <div style="position: absolute; inset: 0;"><image-slot id="hero-slide-3" shape="rect" fit="cover" style="width: 100%; height: 100%;" placeholder="Hero photograph — faculty teaching a class"></image-slot></div>
-        <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,.65) 0%, rgba(0,0,0,.2) 50%, rgba(0,0,0,.35) 100%), linear-gradient(100deg, rgba(6,23,38,0.86) 0%, rgba(6,23,38,0.55) 48%, rgba(6,23,38,0.15) 100%);"></div>
-        <div style="position: relative; height: 100%; display: flex; align-items: center;">
-          <div style="max-width: var(--container); margin: 0 auto; padding: clamp(44px, 6vw, 76px) clamp(48px, 7vw, 92px); width: 100%; box-sizing: border-box;">
-            <div style="max-width: 640px;">
-              <div style="display: inline-block; border-left: 3px solid #C89B3C; padding: 2px 0 2px 12px; font-size: 12.5px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #E8CE9A; margin-bottom: 20px;">Experienced, dedicated faculty</div>
-              <h2 style="font-family: var(--font-head); font-weight: 700; font-size: clamp(29px, 4.2vw, 48px); line-height: 1.15; margin: 0 0 18px; color: #FFFFFF; text-wrap: pretty;">Taught by Faculty Who Know You by Name</h2>
-              <p style="font-size: clamp(15px, 1.5vw, 17.5px); line-height: 1.7; color: #C2D2DC; margin: 0 0 30px; max-width: 54ch;">M.Pharm-qualified teachers across six departments, a 60-seat intake and small batches — so every student is guided personally through both years of the diploma.</p>
-              <div style="display: flex; gap: 12px; flex-wrap: wrap;">
-                <a class="btn-primary" href="apply.dc.html"  style-hover="background: #DBB05B; color: #2A2109;">Apply Now</a>
-                <a href="dpharm.dc.html" style="background: transparent; color: #FFFFFF; font-weight: 600; font-size: 16px; padding: 14px 28px; border-radius: 4px; border: 1.5px solid rgba(255,255,255,0.5);" style-hover="background: rgba(255,255,255,0.14); color: #FFFFFF;">Know More</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div style="position: absolute; inset: 0; opacity: {{ op3 }}; transition: opacity 0.9s ease; pointer-events: {{ pe3 }};">
-        <div style="position: absolute; inset: 0;"><image-slot id="hero-slide-4" shape="rect" fit="cover" style="width: 100%; height: 100%;" placeholder="Hero photograph — graduates or hospital pharmacy"></image-slot></div>
-        <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,.65) 0%, rgba(0,0,0,.2) 50%, rgba(0,0,0,.35) 100%), linear-gradient(100deg, rgba(6,23,38,0.86) 0%, rgba(6,23,38,0.55) 48%, rgba(6,23,38,0.15) 100%);"></div>
-        <div style="position: relative; height: 100%; display: flex; align-items: center;">
-          <div style="max-width: var(--container); margin: 0 auto; padding: clamp(44px, 6vw, 76px) clamp(48px, 7vw, 92px); width: 100%; box-sizing: border-box;">
-            <div style="max-width: 640px;">
-              <div style="display: inline-block; border-left: 3px solid #C89B3C; padding: 2px 0 2px 12px; font-size: 12.5px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #E8CE9A; margin-bottom: 20px;">Career-oriented guidance</div>
-              <h2 style="font-family: var(--font-head); font-weight: 700; font-size: clamp(29px, 4.2vw, 48px); line-height: 1.15; margin: 0 0 18px; color: #FFFFFF; text-wrap: pretty;">A Clear Path Into Healthcare Careers</h2>
-              <p style="font-size: clamp(15px, 1.5vw, 17.5px); line-height: 1.7; color: #C2D2DC; margin: 0 0 30px; max-width: 54ch;">Graduates work as registered pharmacists in hospitals, run licensed community pharmacies, join pharmaceutical companies, or continue to B.Pharm through lateral entry.</p>
-              <div style="display: flex; gap: 12px; flex-wrap: wrap;">
-                <a class="btn-primary" href="apply.dc.html"  style-hover="background: #DBB05B; color: #2A2109;">Apply Now</a>
-                <a href="dpharm.dc.html" style="background: transparent; color: #FFFFFF; font-weight: 600; font-size: 16px; padding: 14px 28px; border-radius: 4px; border: 1.5px solid rgba(255,255,255,0.5);" style-hover="background: rgba(255,255,255,0.14); color: #FFFFFF;">Know More</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      
+      
     <button onClick="{{ prev }}" aria-label="Previous slide" style="position: absolute; left: 14px; top: 50%; transform: translateY(-50%); width: 46px; height: 46px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.35); background: rgba(6,23,38,0.45); color: #FFFFFF; font-size: 19px; cursor: pointer; display: flex; align-items: center; justify-content: center; font-family: var(--font-body);" style-hover="background: rgba(6,23,38,0.8); color: #FFFFFF;">‹</button>
     <button onClick="{{ next }}" aria-label="Next slide" style="position: absolute; right: 14px; top: 50%; transform: translateY(-50%); width: 46px; height: 46px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.35); background: rgba(6,23,38,0.45); color: #FFFFFF; font-size: 19px; cursor: pointer; display: flex; align-items: center; justify-content: center; font-family: var(--font-body);" style-hover="background: rgba(6,23,38,0.8); color: #FFFFFF;">›</button>
     <div style="position: absolute; left: 0; right: 0; bottom: 18px; display: flex; justify-content: center; gap: 9px;">
@@ -102,14 +70,7 @@
 </div>
 
 <div style="background: #FFFFFF; border-bottom: 1px solid #D7DFE5;">
-  <div class="trustbar">
-  <div class="trustbar__inner">
-    <span class="trustbar__item"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12,3.5l7,2.8v5.2c0,4.6-2.9,7.4-7,9.5-4.1-2.1-7-4.9-7-9.5V6.3z"></path><polyline points="9,11.8 11.2,14 15.2,9.8"></polyline></svg>Approved by PCI, New Delhi</span>
-    <span class="trustbar__item"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5.5" y="4" width="13" height="16" rx="1.5"></rect><line x1="3.5" y1="20" x2="20.5" y2="20"></line><line x1="9.5" y1="8.5" x2="14.5" y2="8.5"></line></svg>Affiliated to WBSCT&amp;VE&amp;SD</span>
-    <span class="trustbar__item"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="9" r="3.2"></circle><circle cx="16.5" cy="10.5" r="2.4"></circle><path d="M4,19.5c0-3.1 2.4-4.8 5-4.8s5,1.7 5,4.8"></path></svg>M.Pharm-qualified faculty</span>
-    <span class="trustbar__item"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7.5h16v11a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 18.5z"></path><path d="M9 7.5V6a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v1.5"></path></svg>Career-oriented training</span>
-  </div>
-</div>
+  
 
 <div style="max-width: var(--container); margin: 0 auto; padding: var(--space-8) var(--space-3);">
   <div style="text-align: center; max-width: 660px; margin: 0 auto 44px;">
@@ -217,7 +178,7 @@
   <div class="why-grid">
     <div class="why-aside">
       <div style="color: #C89B3C; font-weight: 700; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 10px;">Why Pharmacy</div>
-      <h2 style="font-family: var(--font-head); font-weight: 700; font-size: clamp(26px, 3.2vw, 36px); color: #0B2545; margin: 0 0 14px; line-height: 1.2;">Eight reasons to study pharmacy</h2>
+      <h2 style="font-family: var(--font-head); font-weight: 700; font-size: clamp(26px, 3.2vw, 36px); color: #0B2545; margin: 0 0 14px; line-height: 1.2;">Six reasons to study pharmacy</h2>
       <p style="font-size: 15.5px; line-height: 1.7; color: #5A6B78; margin: 0 0 22px;">For students — and for the parents helping them decide. Two years, a regulated profession, and work that exists in every town of the state.</p>
       <div style="border-left: 3px solid #C89B3C; padding: 4px 0 4px 16px; margin-bottom: 24px;">
         <div style="font-family: var(--font-head); font-size: 30px; font-weight: 700; color: #0B2545; line-height: 1;">2 years</div>
@@ -227,13 +188,13 @@
     </div>
     <div class="why-list">
       <div class="why-item"><span class="why-ico"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="9.5" y1="3.5" x2="14.5" y2="3.5"></line><path d="M10.5,3.5v5.5L5.5,18a1.6,1.6 0 0 0 1.4,2.5h10.2a1.6,1.6 0 0 0 1.4-2.5L13.5,9V3.5"></path><line x1="7.5" y1="15" x2="16.5" y2="15"></line></svg></span><div><span class="why-num">01</span><h3>A strong scientific foundation</h3><p>Chemistry, biology and pharmaceutics taught from first principles — knowledge that lasts a career.</p></div></div>
-      <div class="why-item"><span class="why-ico"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12,20s-7-4.3-7-9a4,4 0 0 1 7-2.6A4,4 0 0 1 19,11c0,4.7-7,9-7,9z"></path></svg></span><div><span class="why-num">02</span><h3>A real role in patient care</h3><p>Pharmacists are often the first healthcare professional a family consults.</p></div></div>
+      <div class="why-item"><span class="why-ico"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12,20s-7-4.3-7-9a4,4 0 0 1 7-2.6A4,4 0 0 1 19,11c0,4.7-7,9-7,9z"></path></svg></span><div><span class="why-num">02</span><h3>A real role in public health</h3><p>Pharmacists are often the first healthcare professional a family consults, and safe dispensing directly improves community health.</p></div></div>
       <div class="why-item"><span class="why-ico"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="5.5"></circle><line x1="14.7" y1="14.7" x2="20" y2="20"></line></svg></span><div><span class="why-num">03</span><h3>Practical, industry-ready training</h3><p>Laboratory work and 500 hours of supervised practical training in real settings.</p></div></div>
-      <div class="why-item"><span class="why-ico"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 18V9l4-3 4 3 4-3 4 3v9"></path><line x1="3" y1="20.5" x2="21" y2="20.5"></line></svg></span><div><span class="why-num">04</span><h3>Many career paths</h3><p>Hospitals, clinics, community pharmacies, and pharmaceutical companies.</p></div></div>
-      <div class="why-item"><span class="why-ico"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12,3.5l7,2.8v5.2c0,4.6-2.9,7.4-7,9.5-4.1-2.1-7-4.9-7-9.5V6.3z"></path><polyline points="9,11.8 11.2,14 15.2,9.8"></polyline></svg></span><div><span class="why-num">05</span><h3>Professional discipline</h3><p>A registered, regulated profession with a code of ethics and lifelong standing.</p></div></div>
-      <div class="why-item"><span class="why-ico"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="3,12 8,12 10.2,6.5 13.5,17.5 15.5,12 21,12"></polyline></svg></span><div><span class="why-num">06</span><h3>Serve public health</h3><p>Safe dispensing and medicine awareness directly improve community health.</p></div></div>
-      <div class="why-item"><span class="why-ico"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="9" r="5"></circle><circle cx="14.5" cy="15" r="5"></circle></svg></span><div><span class="why-num">07</span><h3>Affordable route into healthcare</h3><p>Two years to a professional qualification — far shorter and cheaper than MBBS.</p></div></div>
-      <div class="why-item"><span class="why-ico"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12,4 21,8.5 12,13 3,8.5"></polygon><path d="M7,11v4c0,1.5 2.2,2.8 5,2.8s5-1.3 5-2.8v-4"></path><line x1="21" y1="8.5" x2="21" y2="14"></line></svg></span><div><span class="why-num">08</span><h3>A stepping stone to higher study</h3><p>Direct lateral entry to B.Pharm, then M.Pharm, Pharm.D and research.</p></div></div>
+      
+      <div class="why-item"><span class="why-ico"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12,3.5l7,2.8v5.2c0,4.6-2.9,7.4-7,9.5-4.1-2.1-7-4.9-7-9.5V6.3z"></path><polyline points="9,11.8 11.2,14 15.2,9.8"></polyline></svg></span><div><span class="why-num">04</span><h3>Professional discipline</h3><p>A registered, regulated profession with a code of ethics and lifelong standing.</p></div></div>
+      
+      <div class="why-item"><span class="why-ico"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="9" r="5"></circle><circle cx="14.5" cy="15" r="5"></circle></svg></span><div><span class="why-num">05</span><h3>Affordable route into healthcare</h3><p>Two years to a professional qualification — far shorter and cheaper than MBBS.</p></div></div>
+      <div class="why-item"><span class="why-ico"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12,4 21,8.5 12,13 3,8.5"></polygon><path d="M7,11v4c0,1.5 2.2,2.8 5,2.8s5-1.3 5-2.8v-4"></path><line x1="21" y1="8.5" x2="21" y2="14"></line></svg></span><div><span class="why-num">06</span><h3>A stepping stone to higher study</h3><p>Direct lateral entry to B.Pharm, then M.Pharm, Pharm.D and research.</p></div></div>
     </div>
   </div>
 </div>
@@ -275,22 +236,21 @@
       <a href="scholarships.dc.html" class="schol__cta">Check what you qualify for &rarr;</a>
     </div>
   </div>
-<div style="background: #FFFFFF; border-bottom: 1px solid #D7DFE5;">
-  <div style="max-width: var(--container); margin: 0 auto; padding: var(--space-6) var(--space-3);">
-    <h2 style="font-family: var(--font-head); font-weight: 700; font-size: clamp(22px, 2.6vw, 27px); color: #0B2545; margin: 0 0 22px;">Quick links</h2>
-    <ul class="linklist">
-      <li><a href="syllabus.dc.html"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="9" y1="6.5" x2="19" y2="6.5"></line><line x1="9" y1="12" x2="19" y2="12"></line><line x1="9" y1="17.5" x2="19" y2="17.5"></line><line x1="5" y1="6.5" x2="5.01" y2="6.5"></line><line x1="5" y1="12" x2="5.01" y2="12"></line><line x1="5" y1="17.5" x2="5.01" y2="17.5"></line></svg><span>Syllabus</span></a></li>
-      <li><a href="fees.dc.html"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="9" r="5"></circle><circle cx="14.5" cy="15" r="5"></circle></svg><span>Fee structure</span></a></li>
-      <li><a href="scholarships.dc.html"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9.5" r="5"></circle><polyline points="9,13.8 8,20 12,17.5 16,20 15,13.8"></polyline></svg><span>Scholarships</span></a></li>
-      <li><a href="documents.dc.html"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="4" width="12" height="16" rx="2"></rect><line x1="9.5" y1="9" x2="14.5" y2="9"></line><line x1="9.5" y1="13" x2="14.5" y2="13"></line></svg><span>Documents</span></a></li>
-      <li><a href="academic-calendar.dc.html"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="6" width="16" height="14" rx="2"></rect><line x1="4" y1="10.5" x2="20" y2="10.5"></line><line x1="8.5" y1="3.5" x2="8.5" y2="7"></line><line x1="15.5" y1="3.5" x2="15.5" y2="7"></line></svg><span>Academic calendar</span></a></li>
-      <li><a href="anti-ragging.dc.html"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12,3.5l7,2.8v5.2c0,4.6-2.9,7.4-7,9.5-4.1-2.1-7-4.9-7-9.5V6.3z"></path><polyline points="9,11.8 11.2,14 15.2,9.8"></polyline></svg><span>Anti-ragging</span></a></li>
-      <li><a href="faq.dc.html"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M9.6,9.6a2.5,2.5 0 1 1 3.4,2.3c-.8.35-1,.9-1,1.7"></path><line x1="12" y1="16.8" x2="12.01" y2="16.8"></line></svg><span>FAQ</span></a></li>
-      <li><a href="contact.dc.html"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="3" width="8" height="18" rx="2.5"></rect><line x1="11" y1="17.8" x2="13" y2="17.8"></line></svg><span>Contact &amp; directions</span></a></li>
-    </ul>
-  </div>
+
+
+
 </div>
 
+<div style="max-width: var(--container); margin: 0 auto; padding: var(--space-8) var(--space-3);">
+  <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: 32px;">
+    <div style="max-width: 640px;">
+      <div style="color: #C89B3C; font-weight: 700; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 10px;">Infrastructure</div>
+      <h2 style="font-family: var(--font-head); font-weight: 700; font-size: clamp(26px, 3.2vw, 36px); color: #0B2545; margin: 0 0 12px;">Everything the course needs, on one campus</h2>
+    </div>
+    <a href="infrastructure.dc.html" style="font-weight: 700; font-size: 15px; color: #0B2545; border-bottom: 2px solid #C89B3C; padding-bottom: 3px;">See all facilities &rarr;</a>
+  </div>
+<div class="deptgrid"><a class="dept" href="classrooms.dc.html"><span class="dept__ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6.5" y="4" width="11" height="16" rx="1.5"></rect><line x1="14.5" y1="12" x2="14.51" y2="12"></line><line x1="4" y1="20" x2="20" y2="20"></line></svg></span><span class="dept__name">Classrooms</span><span class="dept__desc">Ventilated, AV-equipped</span></a><a class="dept" href="laboratory.dc.html"><span class="dept__ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="9.5" y1="3.5" x2="14.5" y2="3.5"></line><path d="M10.5,3.5v5.5L5.5,18a1.6,1.6 0 0 0 1.4,2.5h10.2a1.6,1.6 0 0 0 1.4-2.5L13.5,9V3.5"></path><line x1="7.5" y1="15" x2="16.5" y2="15"></line></svg></span><span class="dept__name">Laboratories</span><span class="dept__desc">Four labs, PCI norms</span></a><a class="dept" href="library.dc.html"><span class="dept__ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="4" width="14" height="16" rx="2"></rect><line x1="9.5" y1="4" x2="9.5" y2="20"></line><line x1="13" y1="9" x2="16" y2="9"></line></svg></span><span class="dept__name">Library</span><span class="dept__desc">2,000+ books &amp; book bank</span></a><a class="dept" href="computer-lab.dc.html"><span class="dept__ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="11.5" rx="2"></rect><line x1="12" y1="16" x2="12" y2="19.5"></line><line x1="8" y1="19.5" x2="16" y2="19.5"></line></svg></span><span class="dept__name">Computer lab</span><span class="dept__desc">Internet-enabled systems</span></a><a class="dept" href="herbal-garden.dc.html"><span class="dept__ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6,18.5C6,10.5 12,5 19.5,4.5c0.5,7.5-5,13.5-13.5,14"></path><path d="M6,18.5C8,14.5 11,11 15,8.5"></path></svg></span><span class="dept__name">Herbal garden</span><span class="dept__desc">40+ medicinal plants</span></a><a class="dept" href="drug-museum.dc.html"><span class="dept__ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="3.5,9 12,4 20.5,9"></polygon><line x1="6" y1="9" x2="6" y2="18.5"></line><line x1="12" y1="9" x2="12" y2="18.5"></line><line x1="18" y1="9" x2="18" y2="18.5"></line><line x1="3.5" y1="18.5" x2="20.5" y2="18.5"></line></svg></span><span class="dept__name">Drug museum</span><span class="dept__desc">Specimens &amp; exhibits</span></a><a class="dept" href="hostel.dc.html"><span class="dept__ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="6" rx="2"></rect><line x1="3" y1="17" x2="3" y2="19.5"></line><line x1="21" y1="17" x2="21" y2="19.5"></line><circle cx="7" cy="8" r="2"></circle></svg></span><span class="dept__name">Hostel</span><span class="dept__desc">Boys &amp; girls, supervised</span></a><a class="dept" href="sports.dc.html"><span class="dept__ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"></circle><line x1="3.5" y1="12" x2="20.5" y2="12"></line><path d="M12,3.5a12,12 0 0 1 0,17"></path></svg></span><span class="dept__name">Sports &amp; canteen</span><span class="dept__desc">Ground and fresh food</span></a></div>
+</div>
 <div class="pattern-dots" style="background: #0B2545; color: #FFFFFF;">
   <div style="max-width: var(--container); margin: 0 auto; padding: var(--space-8) var(--space-3);">
     <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: 32px;">
@@ -320,18 +280,6 @@
     </div></a>
     </div>
   </div>
-</div>
-
-<div style="max-width: var(--container); margin: 0 auto; padding: var(--space-8) var(--space-3);">
-  <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: 32px;">
-    <div style="max-width: 640px;">
-      <div style="color: #C89B3C; font-weight: 700; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 10px;">Infrastructure</div>
-      <h2 style="font-family: var(--font-head); font-weight: 700; font-size: clamp(26px, 3.2vw, 36px); color: #0B2545; margin: 0 0 12px;">Everything the course needs, on one campus</h2>
-    </div>
-    <a href="infrastructure.dc.html" style="font-weight: 700; font-size: 15px; color: #0B2545; border-bottom: 2px solid #C89B3C; padding-bottom: 3px;">See all facilities &rarr;</a>
-  </div>
-<div class="deptgrid"><a class="dept" href="classrooms.dc.html"><span class="dept__ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6.5" y="4" width="11" height="16" rx="1.5"></rect><line x1="14.5" y1="12" x2="14.51" y2="12"></line><line x1="4" y1="20" x2="20" y2="20"></line></svg></span><span class="dept__name">Classrooms</span><span class="dept__desc">Ventilated, AV-equipped</span></a><a class="dept" href="laboratory.dc.html"><span class="dept__ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="9.5" y1="3.5" x2="14.5" y2="3.5"></line><path d="M10.5,3.5v5.5L5.5,18a1.6,1.6 0 0 0 1.4,2.5h10.2a1.6,1.6 0 0 0 1.4-2.5L13.5,9V3.5"></path><line x1="7.5" y1="15" x2="16.5" y2="15"></line></svg></span><span class="dept__name">Laboratories</span><span class="dept__desc">Four labs, PCI norms</span></a><a class="dept" href="library.dc.html"><span class="dept__ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="4" width="14" height="16" rx="2"></rect><line x1="9.5" y1="4" x2="9.5" y2="20"></line><line x1="13" y1="9" x2="16" y2="9"></line></svg></span><span class="dept__name">Library</span><span class="dept__desc">2,000+ books &amp; book bank</span></a><a class="dept" href="computer-lab.dc.html"><span class="dept__ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="11.5" rx="2"></rect><line x1="12" y1="16" x2="12" y2="19.5"></line><line x1="8" y1="19.5" x2="16" y2="19.5"></line></svg></span><span class="dept__name">Computer lab</span><span class="dept__desc">Internet-enabled systems</span></a><a class="dept" href="herbal-garden.dc.html"><span class="dept__ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6,18.5C6,10.5 12,5 19.5,4.5c0.5,7.5-5,13.5-13.5,14"></path><path d="M6,18.5C8,14.5 11,11 15,8.5"></path></svg></span><span class="dept__name">Herbal garden</span><span class="dept__desc">40+ medicinal plants</span></a><a class="dept" href="drug-museum.dc.html"><span class="dept__ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="3.5,9 12,4 20.5,9"></polygon><line x1="6" y1="9" x2="6" y2="18.5"></line><line x1="12" y1="9" x2="12" y2="18.5"></line><line x1="18" y1="9" x2="18" y2="18.5"></line><line x1="3.5" y1="18.5" x2="20.5" y2="18.5"></line></svg></span><span class="dept__name">Drug museum</span><span class="dept__desc">Specimens &amp; exhibits</span></a><a class="dept" href="hostel.dc.html"><span class="dept__ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="6" rx="2"></rect><line x1="3" y1="17" x2="3" y2="19.5"></line><line x1="21" y1="17" x2="21" y2="19.5"></line><circle cx="7" cy="8" r="2"></circle></svg></span><span class="dept__name">Hostel</span><span class="dept__desc">Boys &amp; girls, supervised</span></a><a class="dept" href="sports.dc.html"><span class="dept__ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"></circle><line x1="3.5" y1="12" x2="20.5" y2="12"></line><path d="M12,3.5a12,12 0 0 1 0,17"></path></svg></span><span class="dept__name">Sports &amp; canteen</span><span class="dept__desc">Ground and fresh food</span></a></div>
-</div>
 <div style="max-width: var(--container); margin: 0 auto; padding: var(--space-8) var(--space-3);">
   <div style="max-width: 640px; margin-bottom: 36px;">
     <div style="color: #C89B3C; font-weight: 700; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 10px;">After D.Pharm</div>
@@ -342,26 +290,6 @@
     <a class="outcome" href="dpharm.dc.html"><span class="outcome__lead"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9.5 5.5 5h13L20 9.5"></path><path d="M5 9.5V19a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V9.5"></path><path d="M9.5 20v-5h5v5"></path></svg><strong>Community pharmacy</strong><em>Own business</em></span><span class="outcome__body">Run or manage a licensed retail medicine shop — a steady livelihood close to home.</span></a>
     <a class="outcome" href="dept-analysis.dc.html"><span class="outcome__lead"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V9l4-3v3l4-3v3l4-3v3l4-3v11"></path><line x1="3" y1="20.5" x2="21" y2="20.5"></line><line x1="9" y1="16" x2="9" y2="16.01"></line><line x1="15" y1="16" x2="15" y2="16.01"></line></svg><strong>Pharmaceutical industry</strong><em>Industry</em></span><span class="outcome__body">Production, quality control and marketing roles in pharmaceutical companies.</span></a>
     <a class="outcome" href="syllabus.dc.html"><span class="outcome__lead"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12,4 21,8.5 12,13 3,8.5"></polygon><path d="M7,11v4c0,1.5 2.2,2.8 5,2.8s5-1.3 5-2.8v-4"></path><line x1="21" y1="8.5" x2="21" y2="14"></line></svg><strong>Higher study</strong><em>Lateral entry</em></span><span class="outcome__body">Lateral entry to B.Pharm second year, and onwards to M.Pharm and beyond.</span></a>
-  </div>
-</div>
-
-<div style="background: #FFFFFF; border-top: 1px solid #D7DFE5; border-bottom: 1px solid #D7DFE5;">
-  <div style="max-width: var(--container); margin: 0 auto; padding: var(--space-8) var(--space-3);">
-    <div style="max-width: 640px; margin-bottom: 36px;">
-      <div style="color: #C89B3C; font-weight: 700; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 10px;">Student Voices</div>
-      <h2 style="font-family: var(--font-head); font-weight: 700; font-size: clamp(26px, 3.2vw, 36px); color: #0B2545; margin: 0;">What our students say</h2>
-    </div>
-    <div class="voices">
-      <sc-for list="{{ testimonials }}" as="t" hint-placeholder-count="3">
-        <figure class="voice">
-          <blockquote>{{ t.quote }}</blockquote>
-          <figcaption>
-            <span class="voice__avatar">{{ t.initial }}</span>
-            <span><strong>{{ t.name }}</strong><em>{{ t.role }}</em></span>
-          </figcaption>
-        </figure>
-      </sc-for>
-    </div>
   </div>
 </div>
 
@@ -384,6 +312,27 @@
     </div>
   </div>
 </div>
+<div style="background: #FFFFFF; border-top: 1px solid #D7DFE5; border-bottom: 1px solid #D7DFE5;">
+  <div style="max-width: var(--container); margin: 0 auto; padding: var(--space-8) var(--space-3);">
+    <div style="max-width: 640px; margin-bottom: 36px;">
+      <div style="color: #C89B3C; font-weight: 700; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 10px;">Student Voices</div>
+      <h2 style="font-family: var(--font-head); font-weight: 700; font-size: clamp(26px, 3.2vw, 36px); color: #0B2545; margin: 0;">What our students say</h2>
+    </div>
+    <div class="voices">
+      <sc-for list="{{ testimonials }}" as="t" hint-placeholder-count="3">
+        <figure class="voice">
+          <blockquote>{{ t.quote }}</blockquote>
+          <figcaption>
+            <span class="voice__avatar">{{ t.initial }}</span>
+            <span><strong>{{ t.name }}</strong><em>{{ t.role }}</em></span>
+          </figcaption>
+        </figure>
+      </sc-for>
+    </div>
+  </div>
+</div>
+
+
 
 <div class="band-wash" style="background: #FFFFFF; border-top: 1px solid #D7DFE5; border-bottom: 1px solid #D7DFE5;">
   <div style="max-width: var(--container); margin: 0 auto; padding: var(--space-8) var(--space-3);">
@@ -398,53 +347,27 @@
     </div>
   </div>
 </div>
-<div style="max-width: var(--container); margin: 0 auto; padding: var(--space-8) var(--space-3); display: grid; grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); gap: 44px;">
-  <div>
-    <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 12px; margin-bottom: 22px;">
-      <h2 style="font-family: var(--font-head); font-weight: 700; font-size: 26px; color: #0B2545; margin: 0;">News &amp; notices</h2>
-      <a href="news.dc.html" style="font-weight: 700; font-size: 14px; color: #0B2545;">All news →</a>
+<div style="max-width: var(--container); margin: 0 auto; padding: var(--space-8) var(--space-3);">
+  <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: var(--space-3);">
+    <div>
+      <div style="color: #C89B3C; font-weight: 700; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 10px;">Noticeboard</div>
+      <h2 style="font-family: var(--font-head); font-weight: 700; font-size: clamp(26px, 3.2vw, 36px); color: #0B2545; margin: 0;">News &amp; events</h2>
     </div>
-    <div style="display: flex; flex-direction: column;">
-      <sc-for list="{{ news }}" as="n" hint-placeholder-count="3">
-        <a href="news.dc.html" style="display: flex; gap: 16px; padding: 15px 4px; border-bottom: 1px solid #D7DFE5; color: #16232E; align-items: baseline;" style-hover="background: #E7EDF1; color: #16232E;">
-          <div style="font-size: 12.5px; font-weight: 700; color: #C89B3C; white-space: nowrap; width: 82px; flex-shrink: 0;">{{ n.date }}</div>
-          <div style="font-size: 14.5px; font-weight: 600; line-height: 1.5;">{{ n.title }}</div>
-        </a>
-      </sc-for>
+    <div style="display: flex; gap: var(--space-3);">
+      <a href="news.dc.html" style="font-weight: 700; font-size: 14px; color: #0B2545;">All news &rarr;</a>
+      <a href="events.dc.html" style="font-weight: 700; font-size: 14px; color: #0B2545;">All events &rarr;</a>
     </div>
   </div>
-  <div>
-    <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 12px; margin-bottom: 22px;">
-      <h2 style="font-family: var(--font-head); font-weight: 700; font-size: 26px; color: #0B2545; margin: 0;">Upcoming events</h2>
-      <a href="events.dc.html" style="font-weight: 700; font-size: 14px; color: #0B2545;">All events →</a>
-    </div>
-    <div style="display: flex; flex-direction: column; gap: 12px;">
-      <sc-for list="{{ events }}" as="e" hint-placeholder-count="2">
-        <a class="datedrow" href="events.dc.html"><span class="datedrow__date"><strong>{{ e.day }}</strong><em>{{ e.month }}</em></span><span class="datedrow__body"><strong>{{ e.title }}</strong><em>{{ e.meta }}</em></span></a>
-      </sc-for>
-    </div>
+  <div class="datedlist datedlist--two">
+    <a class="datedrow" href="events.dc.html"><span class="datedrow__date"><strong>09</strong><em>Aug</em></span><span class="datedrow__body"><strong>Campus open day for students &amp; parents</strong><em>10:00 AM &ndash; 2:00 PM &middot; Free entry, no registration needed</em></span><span class="datedrow__tag">Event</span></a>
+    <a class="datedrow" href="events.dc.html"><span class="datedrow__date"><strong>25</strong><em>Sep</em></span><span class="datedrow__body"><strong>World Pharmacists Day celebration</strong><em>Seminar and poster session &middot; Main hall</em></span><span class="datedrow__tag">Event</span></a>
+    <a class="datedrow" href="news.dc.html"><span class="datedrow__date"><strong>18</strong><em>Jul</em></span><span class="datedrow__body"><strong>Admission for the 2026&ndash;27 D.Pharm session is now open</strong><em>Apply before 31 August</em></span><span class="datedrow__tag datedrow__tag--news">Notice</span></a>
+    <a class="datedrow" href="news.dc.html"><span class="datedrow__date"><strong>02</strong><em>Jul</em></span><span class="datedrow__body"><strong>D.Pharm Part-II board examination results declared</strong><em>94% pass rate</em></span><span class="datedrow__tag datedrow__tag--news">Notice</span></a>
+    <a class="datedrow" href="news.dc.html"><span class="datedrow__date"><strong>15</strong><em>Jun</em></span><span class="datedrow__body"><strong>New instruments installed in the Pharmaceutical Analysis laboratory</strong><em>&nbsp;</em></span><span class="datedrow__tag datedrow__tag--news">Notice</span></a>
   </div>
 </div>
 
-<div style="background: #FFFFFF; border-top: 1px solid #D7DFE5;">
-  <div style="max-width: var(--container); margin: 0 auto; padding: clamp(34px, 4vw, 46px) 20px;">
-    <div style="font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #5A6B78; margin-bottom: 20px;">Approvals &amp; Affiliations</div>
-    <div class="approvals">
-      <div class="approval">
-        <span class="approval__seal"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12,3.5l7,2.8v5.2c0,4.6-2.9,7.4-7,9.5-4.1-2.1-7-4.9-7-9.5V6.3z"></path><polyline points="9,11.8 11.2,14 15.2,9.8"></polyline></svg></span>
-        <div><strong>Pharmacy Council of India</strong><span>Course approved by PCI, New Delhi under ER-2020</span></div>
-      </div>
-      <div class="approval">
-        <span class="approval__seal"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5.5" y="4" width="13" height="16" rx="1.5"></rect><line x1="3.5" y1="20" x2="20.5" y2="20"></line><line x1="9.5" y1="8.5" x2="14.5" y2="8.5"></line><line x1="9.5" y1="12.5" x2="14.5" y2="12.5"></line></svg></span>
-        <div><strong>WBSCT&amp;VE&amp;SD</strong><span>Affiliated to the state technical council, Govt. of West Bengal</span></div>
-      </div>
-      <div class="approval">
-        <span class="approval__seal"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9.5" r="5"></circle><polyline points="9,13.8 8,20 12,17.5 16,20 15,13.8"></polyline></svg></span>
-        <div><strong>Dept. of Health &amp; Family Welfare</strong><span>Recognised by the Government of West Bengal</span></div>
-      </div>
-    </div>
-  </div>
-</div>
+
 
 <div class="visit pattern-dots">
   <div class="visit__panel">
@@ -481,15 +404,15 @@ class Component extends DCLogic {
     }, 40);
     this.startAuto();
   }
-  startAuto() { clearInterval(this._slide); this._slide = setInterval(() => this.setState(s => ({ slide: (s.slide + 1) % 4 })), 6000); }
-  go(n) { this.setState({ slide: (n + 4) % 4 }); this.startAuto(); }
+  startAuto() { clearInterval(this._slide); this._slide = setInterval(() => this.setState(s => ({ slide: (s.slide + 1) % 2 })), 6000); }
+  go(n) { this.setState({ slide: (n + 2) % 2 }); this.startAuto(); }
   componentWillUnmount() { clearInterval(this._anim); clearInterval(this._slide); }
   renderVals() {
     const cur = this.state.slide;
     const out = {
       prev: () => this.go(cur - 1),
       next: () => this.go(cur + 1),
-      dots: [0,1,2,3].map(i => ({ w: i === cur ? '30px' : '10px', bg: i === cur ? '#C89B3C' : 'rgba(255,255,255,0.45)', go: () => this.go(i) })),
+      dots: [0,1].map(i => ({ w: i === cur ? '30px' : '10px', bg: i === cur ? '#C89B3C' : 'rgba(255,255,255,0.45)', go: () => this.go(i) })),
       seatCount: this.state.seat,
       deptCount: this.state.dept,
       reasons: [
@@ -517,7 +440,7 @@ class Component extends DCLogic {
         { day: '25', month: 'Sep', title: 'World Pharmacists Day celebration', meta: 'Seminar and poster session · Main hall' }
       ]
     };
-    [0,1,2,3].forEach(i => { out['op' + i] = i === cur ? 1 : 0; out['pe' + i] = i === cur ? 'auto' : 'none'; });
+    [0,1].forEach(i => { out['op' + i] = i === cur ? 1 : 0; out['pe' + i] = i === cur ? 'auto' : 'none'; });
     return out;
   }
 }
