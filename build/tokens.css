@@ -7,6 +7,7 @@
 :root {
   /* ---- colour: 4 roles + support -------------------------------------- */
   --color-primary: #0B2545;          /* brand, links, primary buttons       */
+  --color-navy: #12294B;             /* college name, matches the top bar   */
   --color-primary-dark: #061726;     /* hover / pressed                     */
   --color-primary-soft: #16456F;     /* lighter navy for icons, nav hover   */
   --color-primary-tint: #E6EDF4;     /* icon tiles, hover fills             */

@@ -62,23 +62,54 @@ img { max-width: 100%; }
   .hdr-action__txt span { font-size: 10px; }
   .hdr-apply { padding: 10px 16px !important; font-size: 13.5px !important; }
   /* keep the bar at 141px once the name and affiliation line start wrapping */
-  .hdr-sub { font-size: 13px !important; margin-top: 2px !important; gap: 3px 8px !important; }
-  .hdr-name { line-height: 1.1 !important; }
-  .accred img { width: 28px !important; height: 28px !important; }
 }
 /* below the desktop breakpoint the chips move into the mobile menu (.menu-chips) */
 @media (max-width: 919px) { .hdr-action { display: none; } }
 
-/* ---------- accreditation marks in the header line ---------- */
-.hdr-sub { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 9px; }
-.accred { display: inline-flex; align-items: center; gap: 7px; }
-.accred img { width: 30px; height: 30px; object-fit: contain; flex-shrink: 0; }
-.accred__sep { color: #A9B6C0; }
-/* the full postal address is long — let it take the whole second line */
-.accred--addr { flex-basis: 100%; align-items: flex-start; }
-.accred--addr svg { flex-shrink: 0; margin-top: 1px; color: var(--color-primary-soft); }
-@media (min-width: 920px) { .accred img { width: 32px; height: 32px; } }
-@media (max-width: 620px) { .accred img { width: 26px; height: 26px; } .hdr-sub { gap: 4px 7px; } }
+/* ---------- header lock-up ----------
+   Two aligned columns: the crest, then a text column holding the college name
+   above a single accreditation row. The crest centres against the whole text
+   block, and name + badges share one left edge because they are siblings in
+   that column. The postal address lives in the footer, not here. */
+.lockup {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-width: 0;
+  flex: 1;
+}
+.lockup__logo { width: auto; height: 68px; object-fit: contain; flex-shrink: 0; }
+.lockup__text { display: flex; flex-direction: column; gap: var(--space-1); min-width: 0; }
+
+.hdr-name {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: clamp(1.4rem, 3.2vw, 2rem);
+  line-height: 1.15;
+  color: var(--color-navy);
+}
+.hdr-sub {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-1) var(--space-2);
+  font-size: var(--fs-small);
+  font-weight: 500;
+  color: var(--color-muted);
+}
+.accred { display: inline-flex; align-items: center; gap: 0.5em; }
+/* both marks are cropped to the same circle so the row reads as one style */
+.accred img { width: 20px; height: 20px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
+.accred__sep { width: 1px; height: 14px; background: var(--color-border); }
+
+@media (max-width: 600px) {
+  .lockup { gap: var(--space-2); }
+  .lockup__logo { height: 48px; }
+  .hdr-name { font-size: 1.4rem; }
+  .accred img { width: 18px; height: 18px; }
+  .accred__sep { display: none; }      /* badges stack, so the rule would dangle */
+  .hdr-sub { gap: 4px var(--space-1); }
+}
 
 /* ---------- desktop header metrics ----------
    Matched strip-for-strip to futureeducation.in/fiem at 1440px:
@@ -87,17 +118,13 @@ img { max-width: 100%; }
    vertically centred. */
 @media (min-width: 920px) {
   .topbar > div { min-height: 38px; padding-top: 0; padding-bottom: 0; }
-  .logobar { min-height: 141px; padding: 8px 20px 8px 0 !important; }
+  .logobar { padding: var(--space-2) var(--space-3) !important; }
   /* once the 1180px container stops having side margin, the lock-up would
      sit flush against the viewport edge — keep a gutter below that point */
   @media (max-width: 1240px) { .logobar { padding-left: 16px !important; } }
   /* crest + name pull out to the far left; the accreditation line is pushed
      back by the same amount so it keeps the position it already had */
   .logobar > a { margin-left: calc(-1 * var(--gutter-pull)); }
-  .hdr-sub { margin-left: var(--gutter-pull); }
-  header img[src$="logo.jpg"] { width: 104px !important; height: 104px !important; }
-  .hdr-name { font-size: clamp(19px, 1.95vw, 26px) !important; line-height: 1.1 !important; }
-  .hdr-sub { font-size: 13.5px !important; margin-top: 2px !important; gap: 3px 8px !important; }
   nav a[href$="index.html"], [data-on-mouseenter] > a { padding-top: 12px !important; padding-bottom: 12px !important; }
   /* specificity has to beat the base .ticker__* rules further down the file */
   .ticker { min-height: 45px; }
@@ -119,9 +146,6 @@ img { max-width: 100%; }
   .topbar__social a { width: 24px !important; height: 24px !important; }
   .topbar__badge { font-size: 11px !important; padding: 2px 8px !important; }
   .logobar { padding: 7px 14px !important; gap: 10px !important; }
-  .hdr-sub { font-size: 10px !important; line-height: 1.35 !important; }
-  .hdr-name { font-size: 15px !important; line-height: 1.15 !important; }
-  header img[src$="logo.jpg"] { width: 44px !important; height: 44px !important; }
 
   /* arrows move down to the corners so they no longer sit over the copy */
   [data-on-click="prev"], [data-on-click="next"] {
@@ -809,7 +833,7 @@ header.is-stuck { box-shadow: var(--shadow-sm); }
 @media (min-width: 920px) {
   header.is-stuck .topbar { display: none; }
   header.is-stuck .logobar { min-height: 84px !important; transition: min-height var(--dur) var(--ease); }
-  header.is-stuck img[src$="logo.jpg"] { width: 60px !important; height: 60px !important; }
+  header.is-stuck .lockup__logo { height: 48px; }
   header.is-stuck .hdr-sub { display: none !important; }
   header.is-stuck .hdr-name { font-size: 20px !important; }
 }
