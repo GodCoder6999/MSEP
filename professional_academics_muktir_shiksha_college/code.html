@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Academics - Muktir Shiksha College of Education &amp; Pharmacy</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#800000",
+                        "on-primary": "#ffffff",
+                        "primary-container": "#ffd9d6",
+                        "on-primary-container": "#410002",
+                        "secondary": "#775652",
+                        "on-secondary": "#ffffff",
+                        "secondary-container": "#ffd9d6",
+                        "on-secondary-container": "#2c1512",
+                        "tertiary": "#705c2e",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-container": "#fce0a6",
+                        "on-tertiary-container": "#251a00",
+                        "error": "#ba1a1a",
+                        "on-error": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "on-error-container": "#410002",
+                        "background": "#f8f9fa",
+                        "on-background": "#191c1d",
+                        "surface": "#f8f9fa",
+                        "on-surface": "#191c1d",
+                        "surface-variant": "#e1e3e4",
+                        "on-surface-variant": "#454652",
+                        "outline": "#767683",
+                        "outline-variant": "#c6c5d3",
+                        "inverse-surface": "#2e3132",
+                        "inverse-on-surface": "#f0f1f2",
+                        "inverse-primary": "#ffb4ab",
+                        "surface-dim": "#d9dadb",
+                        "surface-bright": "#f8f9fa",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-low": "#f3f4f5",
+                        "surface-container": "#edeeef",
+                        "surface-container-high": "#e7e8e9",
+                        "surface-container-highest": "#e1e3e4"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "4px",
+                        "lg": "4px",
+                        "xl": "4px",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "xl": "80px",
+                        "margin-mobile": "16px",
+                        "lg": "48px",
+                        "base": "8px",
+                        "md": "24px",
+                        "margin-desktop": "64px",
+                        "sm": "12px",
+                        "gutter": "24px",
+                        "xs": "4px"
+                    },
+                    "fontFamily": {
+                        "body-sm": ["Plus Jakarta Sans", "sans-serif"],
+                        "body-md": ["Plus Jakarta Sans", "sans-serif"],
+                        "body-lg": ["Plus Jakarta Sans", "sans-serif"],
+                        "headline-lg": ["Playfair Display", "serif"],
+                        "headline-lg-mobile": ["Playfair Display", "serif"],
+                        "headline-md": ["Playfair Display", "serif"],
+                        "label-md": ["Plus Jakarta Sans", "sans-serif"],
+                        "headline-xl": ["Playfair Display", "serif"]
+                    },
+                    "fontSize": {
+                        "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-lg": ["36px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "headline-lg-mobile": ["30px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "headline-md": ["28px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "label-md": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "headline-xl": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .editorial-img-mask {
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+        }
+        .subtle-shadow {
+            box-shadow: 0 4px 20px -2px rgba(0,0,0,0.05);
+        }
+        .academic-border {
+            border-left: 3px solid #800000;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md">
+<!-- TopNavBar -->
+<header class="bg-white sticky top-0 z-50 border-b border-outline-variant w-full transition-all duration-300">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-7xl mx-auto">
+<div class="font-headline-md text-headline-md font-bold text-primary flex items-center gap-3">
+<a class="flex items-center gap-3" href="{{DATA:SCREEN:SCREEN_7}}">
+<span class="material-symbols-outlined text-4xl" data-icon="school">school</span>
+<span class="hidden md:inline uppercase tracking-tight">Muktir Shiksha College</span>
+<span class="md:hidden">MSC</span>
+</a>
+</div>
+<nav class="hidden lg:flex items-center gap-8">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="{{DATA:SCREEN:SCREEN_7}}">Home</a>
+<a class="font-label-md text-label-md text-primary border-b-2 border-primary" href="#">Academics</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="{{DATA:SCREEN:SCREEN_5}}">Admissions</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Departments</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="{{DATA:SCREEN:SCREEN_3}}">Student Life</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Placements</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Contact</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="hidden sm:flex items-center justify-center p-2 rounded-full hover:bg-surface-container-high transition-all">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+<a class="bg-primary text-on-primary px-6 py-2.5 rounded font-label-md text-label-md hover:bg-primary/90 transition-all inline-block uppercase tracking-wider" href="{{DATA:SCREEN:SCREEN_5}}">Apply Now</a>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative py-24 overflow-hidden bg-on-primary-container">
+<div class="absolute inset-0 opacity-30">
+<div class="absolute top-0 left-0 w-full h-full bg-cover bg-center" data-alt="University building facade" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCqc7H4byYXV3GVpD0c74yRC1vULB28H2odEgO8jZiglniWm4jPl3JdaUcnbau3jww2CMx5VwSx80NV9c7ez6BZHHIWqAVQNwkovInxXQnlbMs0qfbYXsoz3n9h5MS2vA4R8bVbxJOWPNgXG_g8pjEE-LZFuSE6QtZZidkgeNkj3QQPVdutOM3fnSA0001cu7Dq5vUgWl3l9So4InrnhSsQ2J1JPiyc4E3e4i0lqAfG9CwBQT_NET-iwg')"></div>
+</div>
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
+<div class="max-w-3xl">
+<span class="text-on-primary font-label-md text-label-md bg-primary/80 backdrop-blur-sm px-4 py-1.5 rounded-full inline-block mb-8 uppercase tracking-widest border border-white/20">Academic Excellence</span>
+<h1 class="font-headline-xl text-headline-xl text-white mb-8 leading-tight italic">Nurturing Future Educators &amp; Pharmacists</h1>
+<p class="font-body-lg text-body-lg text-white/90 mb-12 max-w-2xl leading-relaxed">Discover our comprehensive range of degree and diploma programs designed to empower the next generation of professional leaders through innovative curriculum and practical training.</p>
+<div class="flex flex-wrap gap-6">
+<a class="bg-white text-primary px-8 py-4 rounded font-label-md text-label-md hover:bg-surface-container-lowest transition-all shadow-xl uppercase tracking-widest flex items-center gap-3" href="#courses">
+                        Explore Courses <span class="material-symbols-outlined text-xl" data-icon="arrow_downward">arrow_downward</span>
+</a>
+<a class="text-white border-2 border-white/30 px-8 py-4 rounded font-label-md text-label-md hover:bg-white/10 transition-all uppercase tracking-widest flex items-center gap-3" href="#facilities">
+                        Virtual Campus Tour <span class="material-symbols-outlined text-xl" data-icon="visibility">visibility</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Our Academic Programs Section -->
+<section class="py-xl bg-white" id="courses">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex flex-col md:flex-row items-end justify-between mb-16 gap-6">
+<div class="max-w-2xl">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-6 relative inline-block">
+                        Our Academic Programs
+                        <span class="absolute -bottom-2 left-0 w-24 h-1 bg-primary"></span>
+</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Providing world-class education in Teacher Training and Pharmaceutical Sciences with a focus on holistic development and professional outcomes.</p>
+</div>
+<div class="hidden md:block">
+<div class="flex items-center gap-3 text-primary font-bold">
+<span class="h-px w-12 bg-primary/30"></span>
+<span class="uppercase tracking-widest text-xs">Curriculum Focus</span>
+</div>
+</div>
+</div>
+<!-- Redesigned Program Layout: List-based with Editorial Feel -->
+<div class="space-y-16">
+<!-- Program Block 1: Education -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start border-b border-outline-variant pb-16">
+<div class="lg:col-span-5">
+<div class="relative">
+<img class="w-full h-[400px] object-cover rounded shadow-2xl" data-alt="Students in classroom" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcdSIDBXSUXhH7J-gDMZPaXQk428AmBYfLiJfu5vJCQs0Vzr3sZPXRsMSBSr_rsuS5s2jKBha29fY9uN4WD0IfPmFYphhz234SZisEg6-ub9z3n6eoIH9xdu7ytp9mdaaBywr_18ewu9ZMvUZbF6AidLi502q_AB0d_sqYKsL7DjC2gSfIprcluBsuI6VpinvGTMCnQZYKb-VDp_ptYRqE6pYaaiPU9TbImt7kf7ZVy0z-fFmMhw4V2g"/>
+<div class="absolute -bottom-6 -right-6 bg-primary text-white p-6 rounded shadow-lg hidden md:block">
+<span class="material-symbols-outlined text-4xl" data-icon="history_edu">history_edu</span>
+</div>
+</div>
+</div>
+<div class="lg:col-span-7 flex flex-col justify-center h-full">
+<div class="uppercase text-primary font-bold tracking-[0.2em] text-xs mb-4">Department of Teacher Education</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-6">Bachelor of Education (B.Ed)</h3>
+<p class="text-on-surface-variant body-md mb-8 leading-relaxed max-w-xl">Preparing the next generation of visionary educators through a rigorous 2-year undergraduate professional degree. Our curriculum emphasizes pedagogical mastery, educational psychology, and technological integration in the classroom.</p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8 mb-10">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="check_circle">check_circle</span>
+<div>
+<h4 class="font-bold text-sm">NCTE Recognized</h4>
+<p class="text-xs text-on-surface-variant">Full compliance with national standards.</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="verified">verified</span>
+<div>
+<h4 class="font-bold text-sm">State Affiliation</h4>
+<p class="text-xs text-on-surface-variant">Affiliated with prestigious State University.</p>
+</div>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-6">
+<a class="text-primary font-bold uppercase tracking-widest text-xs flex items-center gap-2 group" href="#">
+                                Program Details <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform" data-icon="trending_flat">trending_flat</span>
+</a>
+<a class="text-on-surface-variant font-bold uppercase tracking-widest text-xs flex items-center gap-2" href="#">
+                                Download Syllabus <span class="material-symbols-outlined" data-icon="download">download</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Program Block 2: Pharmacy -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start pt-4 border-b border-outline-variant pb-16">
+<div class="lg:col-span-7 order-2 lg:order-1 flex flex-col justify-center h-full">
+<div class="uppercase text-primary font-bold tracking-[0.2em] text-xs mb-4">Pharmaceutical Sciences</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-6">B.Pharm &amp; D.Pharm Programs</h3>
+<p class="text-on-surface-variant body-md mb-8 leading-relaxed max-w-xl">Our pharmacy division bridges the gap between pharmaceutical theory and clinical application. Students gain hands-on experience in modern drug analysis, medicinal chemistry, and pharmacognosy.</p>
+<div class="space-y-6 mb-10">
+<div class="academic-border pl-6 py-1">
+<h4 class="font-bold text-lg text-primary mb-1">Bachelor of Pharmacy (4 Years)</h4>
+<p class="text-sm text-on-surface-variant">Focus on pharmaceutical research, manufacturing, and quality control. Requires 10+2 with PCM/PCB.</p>
+</div>
+<div class="academic-border pl-6 py-1">
+<h4 class="font-bold text-lg text-primary mb-1">Diploma in Pharmacy (2 Years)</h4>
+<p class="text-sm text-on-surface-variant">Essential skills for hospital and community pharmacy practice. Career-focused training.</p>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<a class="bg-primary text-on-primary px-10 py-3 rounded uppercase tracking-widest text-xs font-bold hover:bg-primary/90 transition-all shadow-md" href="{{DATA:SCREEN:SCREEN_5}}">Apply Now</a>
+<span class="text-xs text-on-surface-variant italic font-body-sm">Admissions open for 2024-25 session</span>
+</div>
+</div>
+<div class="lg:col-span-5 order-1 lg:order-2">
+<div class="relative">
+<img class="w-full h-[400px] object-cover rounded shadow-2xl" data-alt="Pharmacy lab interior" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoEzwOGuyhm9ni-d6F4dJUYtci7kwIrEMfIayfXpRmv2_LDDJ3BqPNr2n2EQTQlbZlPafEQt7hHaNEMhPZ--b5ZXziyAc7n5bI0q7CoCDgcQsgkWs-eG8tIFsGpkPWLZckbGLpIetfNXLwcISbecL_GYSeUkSgW_6q-Bb8uHZYk_0aJBnNt4XpKFirsF5EDvaUg3Dd3l3sQVmWpdJ58s1UyqJDGGXQEDKoMOWQAu7S1P-7k_0MbmYx9g"/>
+<div class="absolute top-0 right-0 -translate-y-4 translate-x-4 bg-tertiary-container text-on-tertiary-container p-6 rounded shadow-lg hidden md:block border border-tertiary/20">
+<span class="material-symbols-outlined text-4xl" data-icon="medication">medication</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Program Block 3: D.El.Ed & Support -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 pt-4">
+<div class="p-10 bg-surface-container-low border-l-4 border-primary">
+<div class="flex items-center gap-4 mb-6">
+<span class="material-symbols-outlined text-3xl text-primary" data-icon="child_care">child_care</span>
+<h3 class="font-headline-md text-headline-md text-on-surface text-2xl">D.El.Ed Program</h3>
+</div>
+<p class="text-on-surface-variant mb-8 leading-relaxed">A specialized Diploma in Elementary Education focusing on foundational learning and child psychology. Preparing specialists for primary school education.</p>
+<div class="flex items-center justify-between border-t border-outline-variant pt-6">
+<span class="font-bold text-xs uppercase tracking-widest text-primary">2 Years Full-Time</span>
+<a class="text-xs font-bold uppercase tracking-widest border-b-2 border-primary hover:text-primary transition-all" href="#">Curriculum Overview</a>
+</div>
+</div>
+<div class="p-10 bg-on-primary-container text-white relative overflow-hidden flex flex-col justify-center">
+<div class="absolute -right-10 -bottom-10 opacity-10">
+<span class="material-symbols-outlined text-[140px]" data-icon="help_center">help_center</span>
+</div>
+<h3 class="font-headline-md text-white mb-4 italic">Academic Counseling</h3>
+<p class="text-white/80 mb-8 max-w-sm">Not sure which path to choose? Our counselors provide expert guidance to align your education with your career aspirations.</p>
+<a class="inline-block w-fit bg-white text-primary px-8 py-3 rounded font-bold uppercase tracking-widest text-xs hover:bg-surface-container-lowest transition-all" href="#">Schedule a Call</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Faculty Profiles Section -->
+<section class="py-xl bg-surface-container-lowest border-t border-outline-variant">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center mb-16">
+<span class="uppercase tracking-[0.3em] text-primary font-bold text-xs mb-4 block">Meet Our Mentors</span>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4 italic">Renowned Academic Faculty</h2>
+<div class="w-24 h-1 bg-primary mx-auto mb-8"></div>
+<p class="font-body-md text-on-surface-variant max-w-2xl mx-auto">Led by industry veterans and PhD scholars committed to academic rigor and student mentorship.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Faculty member 1 -->
+<div class="group bg-white border border-outline-variant p-1 hover:border-primary transition-all duration-500">
+<div class="overflow-hidden relative aspect-[4/5]">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Dr. Rajesh Kumar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADlm9PL1d0f5zXzj3xal1-2x2QPNXCZEja6K1mRqqyHF9gdpjvScNxgw9ToB5uSQ6giPn3zzIf0KLWe8WLnY8Sl9Qq44Y1DL4eA4xY57K6HEIpnwH75K2BRVvuhad_kgL5G6KU6jVvQCe3G7ycG2eND28rHv3MLmgN77V3bGpog-eZ1CDwa1zN1M9uR36qG-64zORU2ssPZFkw7dfQxmNcQofCw88yY-YNM6JaXdJkWZbFa8SLq125Vw"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<div class="p-6 text-center">
+<h4 class="font-headline-md text-on-surface text-xl mb-1">Dr. Rajesh Kumar</h4>
+<p class="text-xs uppercase tracking-widest text-primary font-bold mb-4">Head of Pharmacy Dept.</p>
+<p class="text-xs text-on-surface-variant italic line-clamp-3 mb-6">"Empowering students with pharmaceutical innovation and ethical research practices."</p>
+<div class="flex justify-center gap-4 border-t border-outline-variant pt-4">
+<a class="text-outline hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-lg" data-icon="mail">mail</span></a>
+<a class="text-outline hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-lg" data-icon="description">description</span></a>
+</div>
+</div>
+</div>
+<!-- Faculty 2 -->
+<div class="group bg-white border border-outline-variant p-1 hover:border-primary transition-all duration-500">
+<div class="overflow-hidden relative aspect-[4/5]">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Prof. Anjali Sharma" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDliS-6dSN9sAJ-62JsJuT9IKC8YD7coHr0ECRA9OUq2iDz3FYGhaNC-ATWvhAYNdArRVa37Tr970m94mq0qEe5AoLBsJA85bobSZ_WrQrYelqrfMpOzyebl9Ry3aG-MM5nX5adTJriXmGSvWXAZiqd5nubJr9n9OcyjB8o0dhOblplFFiRoOhN8XI1FRFumD33yKRDFknzsNuO6_fdw6IGuWXPOB9vgJIbMhA5E0shc6yre_pP4hBdyg"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<div class="p-6 text-center">
+<h4 class="font-headline-md text-on-surface text-xl mb-1">Prof. Anjali Sharma</h4>
+<p class="text-xs uppercase tracking-widest text-primary font-bold mb-4">Director (Education)</p>
+<p class="text-xs text-on-surface-variant italic line-clamp-3 mb-6">"Creating teachers who don't just teach, but inspire the next generation to dream."</p>
+<div class="flex justify-center gap-4 border-t border-outline-variant pt-4">
+<a class="text-outline hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-lg" data-icon="mail">mail</span></a>
+<a class="text-outline hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-lg" data-icon="description">description</span></a>
+</div>
+</div>
+</div>
+<!-- Faculty 3 -->
+<div class="group bg-white border border-outline-variant p-1 hover:border-primary transition-all duration-500">
+<div class="overflow-hidden relative aspect-[4/5]">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Dr. Amit Verma" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVhntNJ7eLgg7K__NqjtdlAbulYrQusGEFX3Eg6-5py6WCpBU8Y8wJS4TLZ1UvU3fZIMTT1aBuHdKEN5QCjwTDDKyIU-yz9G71fmh2hc5RQechm1j9fhiXL0hnOIuHG251gpSKyE9VStNgV5yjnC2QMNKzbAbVUR8xzEXZ96QnVyKcucwD-Vtvhy7Lu_wydM-8weRyEfiCKmR8hLd-Bc_DfH5Dq9z1hiiZZRW7wJZ0gsdzF-GzoNG_Vw"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<div class="p-6 text-center">
+<h4 class="font-headline-md text-on-surface text-xl mb-1">Dr. Amit Verma</h4>
+<p class="text-xs uppercase tracking-widest text-primary font-bold mb-4">Asst. Professor</p>
+<p class="text-xs text-on-surface-variant italic line-clamp-3 mb-6">"Bridging the gap between theoretical medicine and clinical application through hands-on labs."</p>
+<div class="flex justify-center gap-4 border-t border-outline-variant pt-4">
+<a class="text-outline hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-lg" data-icon="mail">mail</span></a>
+<a class="text-outline hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-lg" data-icon="description">description</span></a>
+</div>
+</div>
+</div>
+<!-- Faculty 4 -->
+<div class="group bg-white border border-outline-variant p-1 hover:border-primary transition-all duration-500">
+<div class="overflow-hidden relative aspect-[4/5]">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Dr. Meera Singh" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtELjuFJVY0ODwy7cOJaG3dcyMhzOJoOb415cAtLFs3cXdlaa_NC-RkqsCZ0_yOhHxDY6ZsecFOw8ZBMX8ZMpquOtKSyWpzbyqdBvMv2zUQewlzSOIRA00FYhEoCJNmYHd9oQ1QRMoRtzrmFJyIHd6oarKtJTm3rXTYdC5hX7MA79XCxj2FfNPO-JPZxISA-wWU7GF07P_y43RFB0cxo79Cxh00RlUkMF3VIZvqMJAEF4bJzwA_ZqMfw"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<div class="p-6 text-center">
+<h4 class="font-headline-md text-on-surface text-xl mb-1">Dr. Meera Singh</h4>
+<p class="text-xs uppercase tracking-widest text-primary font-bold mb-4">HOD (Education)</p>
+<p class="text-xs text-on-surface-variant italic line-clamp-3 mb-6">"Pedagogy is an art that requires constant refinement and deep human connection."</p>
+<div class="flex justify-center gap-4 border-t border-outline-variant pt-4">
+<a class="text-outline hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-lg" data-icon="mail">mail</span></a>
+<a class="text-outline hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-lg" data-icon="description">description</span></a>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 text-center">
+<a class="inline-flex items-center gap-3 text-primary font-bold uppercase tracking-widest text-xs group" href="#">
+                    View Full Faculty Directory <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform" data-icon="east">east</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Advanced Learning & Training Labs Section -->
+<section class="py-xl bg-surface" id="facilities">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+<!-- Editorial Image Grid -->
+<div class="lg:col-span-6 grid grid-cols-2 gap-4">
+<div class="space-y-4">
+<img class="w-full h-80 object-cover rounded shadow-lg transition-transform hover:scale-[1.02]" data-alt="University Library" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOJgmlfmA5ozvYcNKdix3dyhpgshxZKW0Oox067GQYJDSjDuKD15cOuHBkjZfRvmW2rzPg1wvdS3lKKnIY6-GYMADU_2ZoRaVgokZpbTjZYkgfEA7lVQoSEdkHGNBaK-JYj6P9j82c0lm_KQnZmw1-FGbNjJrHveJrMQ4s-IVOB5bEMziUQy-Oy7QW-B6DbRSRR3HUAfGcPokeWf6_drQBOYvnJzdC6GoM5Vs_10oYqPr7I6Enq5UC_A"/>
+<img class="w-full h-56 object-cover rounded shadow-lg transition-transform hover:scale-[1.02]" data-alt="Computer Lab" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfmI5yGJFm1I5IY4Y5OGduPigChp2EC6S0_Io1DbDpfuGdPSFWDtMSwX-868aCkzYyAKouWZnfRN5Vu9G50etldMTqTQ64Va5m8t88dOTkpFy3QUXnE2g2mRJOQ0V1ReIVRdKzhs1bWswvA-qKtZT0qlI44OVyc4et34uEVkd84OgOg0HXK1Jl7DhAVkPtKckWyaxEXQt2gff_dla2F28R1kX_2kJbCVAAAoJGqH1UpZXrhvFdfpxUTw"/>
+</div>
+<div class="space-y-4 pt-12">
+<img class="w-full h-56 object-cover rounded shadow-lg transition-transform hover:scale-[1.02]" data-alt="Pharmacy Lab" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgS8hyGlatAvOOioRqQKPCc30fbzbItjKiIQ0uJ182URJ8FRrjlQXbuuY6flRa2rx1uyUKjy3u6AwUnHwV2adpe_1t0TaLrOrGy3MCRqgH_RnmatXT62vd8WEzoy2qTS8UMiZC8jcR1NIxaw8GVpdAk5p9NMrPMQOV6URcMT3khhI1kozPx4jSsX_11sYM_RgUIT96pQN1PLKEnfUt3tc2Z8QA-_BhYQ5UvE2VDJmevpQNn8uaIz790Q"/>
+<img class="w-full h-80 object-cover rounded shadow-lg transition-transform hover:scale-[1.02]" data-alt="Campus Courtyard" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFnEeIcop7RGfulmmOnpVKRxLbS1GrbSzHPXtX0nkyyot0VGYBZ7DqY1h3ANE1rHHH2YUQNHJouFDjSpQ9PEFeU5KKeTkuaH5WuXhs1hl-c9FjQP8bhHP7aQvCFuhKP4ZFHRESUo9XKCjrPhrloDQj7AY7pgt4BMGFTNAWEJVZ6PrTKQujFIXvWifr-3pNQHoY6d09UBUBhLuYEywMpX609-Xi02awLfQcM5l2A3oYZqWhZw3TeeQ6Cw"/>
+</div>
+</div>
+<!-- Text Content -->
+<div class="lg:col-span-6 lg:pl-8">
+<span class="uppercase tracking-[0.2em] text-secondary font-bold text-xs mb-4 block">World Class Infrastructure</span>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-10 leading-tight italic">Advanced Learning &amp; Training Labs</h2>
+<div class="space-y-12">
+<div class="flex gap-6 group">
+<div class="bg-primary text-on-primary w-14 h-14 shrink-0 rounded flex items-center justify-center shadow-md group-hover:rotate-6 transition-transform">
+<span class="material-symbols-outlined text-2xl" data-icon="biotech">biotech</span>
+</div>
+<div>
+<h4 class="font-bold text-lg text-on-surface mb-2">Modern Pharmaceutical Labs</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">Equipped with sophisticated instruments for drug analysis, organic synthesis, and microbial testing to ensure industry-readiness.</p>
+</div>
+</div>
+<div class="flex gap-6 group">
+<div class="bg-primary/10 text-primary w-14 h-14 shrink-0 rounded flex items-center justify-center border border-primary/20 group-hover:rotate-6 transition-transform">
+<span class="material-symbols-outlined text-2xl" data-icon="book_2">book_2</span>
+</div>
+<div>
+<h4 class="font-bold text-lg text-on-surface mb-2">Centralized Digital Library</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">Access to over 10,000+ titles, international journals, and e-learning resources for both Education and Pharmacy streams.</p>
+</div>
+</div>
+<div class="flex gap-6 group">
+<div class="bg-primary/10 text-primary w-14 h-14 shrink-0 rounded flex items-center justify-center border border-primary/20 group-hover:rotate-6 transition-transform">
+<span class="material-symbols-outlined text-2xl" data-icon="psychology">psychology</span>
+</div>
+<div>
+<h4 class="font-bold text-lg text-on-surface mb-2">Educational Psychology Lab</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">Specialized lab for B.Ed and D.El.Ed students to conduct behavioral experiments and psychological assessments.</p>
+</div>
+</div>
+</div>
+<button class="mt-12 bg-primary text-on-primary px-10 py-4 rounded font-bold uppercase tracking-widest text-xs hover:bg-primary/90 transition-all flex items-center gap-3 shadow-xl">
+                        Explore All Facilities <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-xl px-margin-mobile bg-surface-container-low border-t border-outline-variant">
+<div class="max-w-5xl mx-auto bg-white border border-outline-variant p-10 md:p-16 rounded shadow-2xl text-center relative overflow-hidden">
+<div class="absolute top-0 right-0 p-8 opacity-5 text-primary">
+<span class="material-symbols-outlined text-9xl" data-icon="history_edu">history_edu</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-6 italic">Ready to start your journey?</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-12 max-w-2xl mx-auto">Join a legacy of excellence and shape your career with India's leading educators and pharmacy specialists.</p>
+<div class="flex flex-col sm:row gap-6 justify-center">
+<a class="bg-primary text-on-primary px-12 py-4 rounded font-bold uppercase tracking-widest text-xs shadow-lg hover:scale-[1.02] transition-transform" href="{{DATA:SCREEN:SCREEN_5}}">Start Admission Process</a>
+<button class="bg-transparent border-2 border-primary text-primary px-12 py-4 rounded font-bold uppercase tracking-widest text-xs hover:bg-primary/5 transition-all">Download Brochure</button>
+</div>
+<div class="mt-12 flex flex-col md:flex-row items-center justify-center gap-8 text-sm text-on-surface-variant border-t border-outline-variant pt-8">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="call">call</span>
+<span>Admission Helpline: <strong>+91 12345 67890</strong></span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="mail">mail</span>
+<span>Email: <strong>admission@muktirshiksha.edu</strong></span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-on-primary-container text-white border-t border-white/10">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop py-xl max-w-7xl mx-auto">
+<div class="space-y-8">
+<div class="font-headline-md text-on-primary flex items-center gap-3">
+<span class="material-symbols-outlined text-3xl" data-icon="school">school</span>
+<span class="uppercase tracking-tighter italic">MSC College</span>
+</div>
+<p class="font-body-sm text-body-sm text-white/70 leading-relaxed">
+                Muktir Shiksha College of Education &amp; Pharmacy is committed to delivering quality education through modern pedagogy and cutting-edge laboratory training.
+            </p>
+<div class="flex gap-4">
+<a class="bg-white/10 w-10 h-10 rounded flex items-center justify-center hover:bg-primary transition-all" href="#"><span class="material-symbols-outlined text-sm" data-icon="public">public</span></a>
+<a class="bg-white/10 w-10 h-10 rounded flex items-center justify-center hover:bg-primary transition-all" href="#"><span class="material-symbols-outlined text-sm" data-icon="alternate_email">alternate_email</span></a>
+<a class="bg-white/10 w-10 h-10 rounded flex items-center justify-center hover:bg-primary transition-all" href="#"><span class="material-symbols-outlined text-sm" data-icon="location_on">location_on</span></a>
+</div>
+</div>
+<div>
+<h4 class="font-label-md text-white border-b border-white/20 pb-4 mb-8 uppercase tracking-widest text-xs">Academic Links</h4>
+<ul class="space-y-4">
+<li><a class="text-white/70 hover:text-white transition-all flex items-center gap-2 text-sm" href="{{DATA:SCREEN:SCREEN_5}}"><span class="material-symbols-outlined text-xs" data-icon="chevron_right">chevron_right</span> Admissions 2024</a></li>
+<li><a class="text-white/70 hover:text-white transition-all flex items-center gap-2 text-sm" href="#"><span class="material-symbols-outlined text-xs" data-icon="chevron_right">chevron_right</span> Academic Calendar</a></li>
+<li><a class="text-white/70 hover:text-white transition-all flex items-center gap-2 text-sm" href="#"><span class="material-symbols-outlined text-xs" data-icon="chevron_right">chevron_right</span> Faculty Directory</a></li>
+<li><a class="text-white/70 hover:text-white transition-all flex items-center gap-2 text-sm" href="#"><span class="material-symbols-outlined text-xs" data-icon="chevron_right">chevron_right</span> Examination Results</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-white border-b border-white/20 pb-4 mb-8 uppercase tracking-widest text-xs">Compliance</h4>
+<ul class="space-y-4">
+<li><a class="text-white/70 hover:text-white transition-all text-sm" href="#">Privacy Policy</a></li>
+<li><a class="text-white/70 hover:text-white transition-all text-sm" href="#">Terms of Service</a></li>
+<li><a class="text-white/70 hover:text-white transition-all text-sm" href="#">Accreditation Info</a></li>
+<li><a class="text-white/70 hover:text-white transition-all text-sm" href="#">NCTE Public Notice</a></li>
+<li><a class="text-white/70 hover:text-white transition-all text-sm" href="#">PCI Disclosure</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-white border-b border-white/20 pb-4 mb-8 uppercase tracking-widest text-xs">Contact Us</h4>
+<div class="space-y-6 text-sm text-white/70">
+<p class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary-container" data-icon="location_on">location_on</span>
+<span>Campus: NH-31, Near Green Valley, Modern Road, PIN-700XXX</span>
+</p>
+<p class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary-container" data-icon="call">call</span>
+<span>+91 98765 43210</span>
+</p>
+<p class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary-container" data-icon="mail">mail</span>
+<span>info@muktirshiksha.edu</span>
+</p>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop py-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/50">
+<p>© 2024 Muktir Shiksha College of Education &amp; Pharmacy. All rights reserved.</p>
+<p class="uppercase tracking-widest">Excellence in Higher Learning</p>
+</div>
+</footer>
+<script>
+    // Header scroll behavior
+    let lastScroll = 0;
+    const header = document.querySelector('header');
+    window.addEventListener('scroll', () => {
+        const currentScroll = window.pageYOffset;
+        if (currentScroll > 50) {
+            header.classList.add('shadow-lg', 'py-2');
+            header.classList.remove('py-4');
+        } else {
+            header.classList.remove('shadow-lg', 'py-2');
+            header.classList.add('py-4');
+        }
+        lastScroll = currentScroll;
+    });
+
+    // Add staggered animation to sections
+    const observerOptions = { threshold: 0.1 };
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('opacity-100', 'translate-y-0');
+                entry.target.classList.remove('opacity-0', 'translate-y-10');
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('section').forEach(el => {
+        el.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+        observer.observe(el);
+    });
+</script>
+</body></html>

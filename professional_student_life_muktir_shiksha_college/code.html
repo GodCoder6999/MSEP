@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Student Life &amp; Placements | Muktir Shiksha College</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed-variant": "#303e95",
+                        "surface-tint": "#4957ae",
+                        "error": "#ba1a1a",
+                        "on-tertiary-fixed": "#00210b",
+                        "on-tertiary": "#ffffff",
+                        "surface-variant": "#e1e3e4",
+                        "surface-container": "#edeeef",
+                        "inverse-surface": "#2e3132",
+                        "on-secondary-fixed": "#410002",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-low": "#f3f4f5",
+                        "secondary-fixed": "#ffdad6",
+                        "on-surface": "#191c1d",
+                        "on-surface-variant": "#454652",
+                        "on-primary-container": "#9ca9ff",
+                        "on-background": "#191c1d",
+                        "secondary-fixed-dim": "#ffb4ab",
+                        "primary-fixed-dim": "#bbc3ff",
+                        "on-error-container": "#93000a",
+                        "primary": "#10207a",
+                        "secondary-container": "#e71520",
+                        "on-primary-fixed": "#000e5e",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed-variant": "#005225",
+                        "surface-dim": "#d9dadb",
+                        "surface-bright": "#f8f9fa",
+                        "on-secondary-container": "#fffbff",
+                        "inverse-primary": "#bbc3ff",
+                        "outline-variant": "#c6c5d3",
+                        "outline": "#767683",
+                        "primary-container": "#2b3990",
+                        "surface-container-high": "#e7e8e9",
+                        "tertiary-fixed": "#78fc9c",
+                        "tertiary-container": "#004d22",
+                        "tertiary-fixed-dim": "#5adf82",
+                        "tertiary": "#003415",
+                        "on-secondary-fixed-variant": "#93000d",
+                        "primary-fixed": "#dfe0ff",
+                        "on-tertiary-container": "#3ec66d",
+                        "on-error": "#ffffff",
+                        "inverse-on-surface": "#f0f1f2",
+                        "on-secondary": "#ffffff",
+                        "secondary": "#bb0013",
+                        "on-primary": "#ffffff",
+                        "background": "#f8f9fa",
+                        "surface-container-highest": "#e1e3e4",
+                        "surface": "#f8f9fa"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "gutter": "24px",
+                        "md": "24px",
+                        "lg": "48px",
+                        "margin-mobile": "16px",
+                        "base": "8px",
+                        "xl": "80px",
+                        "xs": "4px",
+                        "sm": "12px"
+                    },
+                    "fontFamily": {
+                        "headline-xl": ["Playfair Display"],
+                        "headline-lg": ["Playfair Display"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "headline-lg-mobile": ["Playfair Display"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "headline-md": ["Playfair Display"],
+                        "body-sm": ["Plus Jakarta Sans"],
+                        "label-md": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "headline-xl": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-lg": ["36px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["30px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-md": ["28px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "label-md": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .perspective-1000 { perspective: 1000px; }
+        .backface-hidden { backface-visibility: hidden; }
+        .mask-gradient {
+            mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+        }
+        .editorial-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-auto-rows: 100px;
+            gap: 24px;
+        }
+        .testimonial-italic { font-style: italic; }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md">
+<!-- Top Navigation Bar -->
+<nav class="bg-surface/90 backdrop-blur-md docked full-width top-0 sticky z-50 border-b border-outline-variant">
+<div class="flex justify-between items-center w-full px-margin-desktop py-4 max-w-7xl mx-auto">
+<a class="font-headline-md text-headline-md font-bold text-primary flex items-center gap-2" href="{{DATA:SCREEN:SCREEN_7}}">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">school</span>Muktir Shiksha College
+        </a>
+<div class="hidden md:flex items-center gap-md">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="{{DATA:SCREEN:SCREEN_6}}">Academics</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="{{DATA:SCREEN:SCREEN_5}}">Admissions</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Departments</a>
+<a class="font-label-md text-label-md text-primary font-bold border-b-2 border-primary pb-1" href="#">Student Life</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Placements</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Contact</a>
+</div>
+<div class="flex items-center gap-md">
+<button class="hidden lg:flex items-center text-on-surface-variant hover:bg-surface-container-high p-2 rounded-full transition-all">
+<span class="material-symbols-outlined">search</span>
+</button>
+<a class="bg-primary text-on-primary font-label-md text-label-md px-6 py-2 rounded hover:bg-primary-container transition-all active:scale-95 duration-150 ease-in-out flex items-center justify-center" href="{{DATA:SCREEN:SCREEN_5}}">Apply Now</a>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative h-[65vh] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center brightness-[0.65]" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBUK2HZ-oj1Jkje6G9dMfS2LXXsF0wiDJHmvZuxXtOU9UgEDU8ysfXmk_umTmlZ3RSMxuO2A-IYHEfUDB94l8QpWyqBpyo7K3eAvScazjq0wgM3dd_CMDyJ2iehONUmmJh6bgoHi8UtVhckCZo4fEBYhL03wstwYP5AOAp-2nZ8hdOtSY7XWfyMqLb_-5GeN2jchSyuGxhBouXSGsJGHGZhRPcPYDAHYHyizMHisrSMSJKX-FXec_LgRQ')"></div>
+</div>
+<div class="relative z-10 w-full px-margin-desktop max-w-7xl mx-auto text-white">
+<h1 class="font-headline-xl text-headline-xl lg:text-[64px] max-w-3xl mb-md">Empowering Journeys Beyond the Classroom</h1>
+<p class="font-body-lg text-body-lg max-w-xl opacity-90 border-l-2 border-primary-fixed pl-6">Experience a vibrant campus life that balances rigorous pharmacy and education studies with cultural richness, athletic excellence, and global career opportunities.</p>
+</div>
+</header>
+<!-- Campus Life Gallery: Structured Editorial Grid -->
+<section class="py-xl px-margin-desktop max-w-7xl mx-auto">
+<div class="mb-lg border-b border-outline-variant pb-8 flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-primary">Campus Life Gallery</h2>
+<p class="font-body-md text-body-md text-on-surface-variant italic">A curated glimpse into the diverse experiences that define our scholars.</p>
+</div>
+<a class="text-primary font-label-md hover:underline flex items-center gap-1" href="#">View Full Archive <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+<div class="editorial-grid h-auto lg:h-[900px]">
+<!-- Main Feature -->
+<div class="col-span-12 lg:col-span-7 row-span-4 lg:row-span-6 relative group overflow-hidden bg-surface-container shadow-sm border border-outline-variant">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDnvK4GJPc9TBCmhvd7luOnoEzPLUaQv7qvdSS1PmpCX_KcBv18jhKqiTWiYwWDc5hm2COjnLzpoiD2KLLJ9maGqbK2m2ywqVEaKP1iihz8nV6EblC-qmVbPCdY_2DWZbQBi3Dmsh1S6g0rRqc5SF-c1C1XFp-c8O6GNaDGDptpL-_Xa5Y3VIgRhkkw-sZyjdbxObrT8O0h0K8ylJa9rexDgVnCodK4iNiEXLx_hgu7Ujm4XIapg_p8gw')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-lg">
+<div class="translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+<span class="bg-secondary text-on-primary text-[10px] font-bold px-3 py-1 uppercase mb-3 inline-block tracking-widest">Heritage &amp; Culture</span>
+<h3 class="text-white font-headline-xl text-headline-lg">Annual Fest 'Kshitij'</h3>
+<p class="text-white/80 font-body-sm mt-2 max-w-md hidden md:block">Celebrating the spirit of diversity through performing arts and shared traditions.</p>
+</div>
+</div>
+</div>
+<!-- Side Top -->
+<div class="col-span-12 lg:col-span-5 row-span-4 lg:row-span-3 relative group overflow-hidden shadow-sm border border-outline-variant">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB2hD4xKigy2o1ZqC_RPGhQDxumJJgLRb1LEMlG-9DMfLej_Rys57JdA1HxHOU9GHqQoswy9hF6Aqy1QayOvCuzO91uCRrXnYw9Yy20eNcOx1iu4ChOUt-p30Kd7JW4ysK9ocjJozYNVoIlHwT99F-btiUkmIccbItYPPBB1rMaq0TxnDhef0P7KP-WbhenXSOLM8Q_24pyNBacWeFu4DXf9XZlstRYoFPoIWT3WZ9SbqEvy4F5jyqQFA')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-md">
+<div>
+<h3 class="text-white font-headline-md text-headline-md">Sports Excellence</h3>
+<p class="text-white/70 font-body-sm italic">Fostering teamwork and endurance.</p>
+</div>
+</div>
+</div>
+<!-- Side Bottom Left -->
+<div class="col-span-12 md:col-span-6 lg:col-span-3 row-span-4 lg:row-span-3 relative group overflow-hidden shadow-sm border border-outline-variant">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAYKx3PyZmOpqDyfmi1yHAnWj-7P9xmEMOm07Jj1WLtWS3cPKiUwd_EhawOC04rbblIU-VfjJDtSew96Y9Yxz3Ae9Fb8OjHZNOJPtpcObGB03R1Yi2GMCDNobTHSlkbCzS9hM3MRMKVkLFpodGCYg5AQ_A-c0YMbEseb8FZaZZD1pINKCrhkJep8cM1PvHN4q2lNn2PXuEckuFW-SGN0sspoH-JKGtRb23pZwzbqfYFZqa2tIky3xosCQ')"></div>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-md text-center">
+<p class="text-white font-label-md">Practical Innovation Labs</p>
+</div>
+</div>
+<!-- Side Bottom Right -->
+<div class="col-span-12 md:col-span-6 lg:col-span-2 row-span-4 lg:row-span-3 relative group overflow-hidden shadow-sm border border-outline-variant">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBQUzQ-U5XLH-iATwRhSM-ghklDvtfqz4O9suYJP0zbB9GmXhM21UFx8buZ4miFJmBi9jbhB7Pf8qBIqL6SfqcVbAKHr90DjYyB7yrbp9O7tyI0xe6AyyB1cmB2NTFZPzvGtKTY5HwArBLgsQWiydUJwIK_mh3JMuIyWe6qwOLzkHIjAtnI_2y2bKJ-6xEDd8-2DqJl2vv5NxN4qLv7PxGGrUV9M-XdkO5oWJCzY9wNBG8kdicR2CWFjQ')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+<p class="text-white font-label-md">Student Community Hub</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Amenities Section -->
+<section class="py-xl bg-surface-container-low">
+<div class="px-margin-desktop max-w-7xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-xl items-center">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-md">World-Class Infrastructure</h2>
+<div class="space-y-lg">
+<div class="flex gap-md group">
+<div class="w-14 h-14 bg-primary text-on-primary flex items-center justify-center shrink-0 shadow-md">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">library_books</span>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md text-on-surface mb-2">Central Library</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Over 50,000 volumes including specialized journals for Pharmacy and Pedagogy, with 24/7 digital access to global research databases.</p>
+</div>
+</div>
+<div class="flex gap-md group">
+<div class="w-14 h-14 bg-secondary text-on-secondary flex items-center justify-center shrink-0 shadow-md">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">bed</span>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md text-on-surface mb-2">Secure Hostels</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Separate residential wings for men and women with high-speed Wi-Fi, modern dining halls, and 24-hour security personnel.</p>
+</div>
+</div>
+<div class="flex gap-md group">
+<div class="w-14 h-14 bg-tertiary-container text-on-tertiary-container flex items-center justify-center shrink-0 shadow-md">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">restaurant</span>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md text-on-surface mb-2">Campus Cafeteria</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Nutritious multi-cuisine menu options prepared in hygienic conditions, serving as a vibrant social anchor for students and faculty.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="relative p-8">
+<div class="absolute inset-0 border border-outline-variant/50 -rotate-3 scale-105"></div>
+<div class="relative z-10 shadow-2xl">
+<img alt="Modern Library" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuACRE2aL1jltSQ8y0uCUfZb569sucbQc1rv-sqoxCwKnh617xK6gpH6YXNfxL6FjIaV9bjeHG0dYwNYRoa-API3vBW5Up8Bs93btrEa_VoWchulEGBeFcOiwomdnBLRVqATqlAzIRYlv7IuAceWy3O4o8um0Mo4Vv8-G8a4AbU9N41TVNcWEZynQlIv4v9NsujesbqvCB1zt5eqioNXzQTh6BhxSANQwg6mJNtpr2wvtn2KQeOYXdXxSQ"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Placement Record Section: High-End Typography -->
+<section class="py-xl px-margin-desktop max-w-7xl mx-auto overflow-hidden">
+<div class="text-center mb-xl">
+<span class="text-secondary font-label-md tracking-[0.3em] uppercase mb-4 block">Professional Trajectory</span>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-base">Leading the Career Frontiers</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto italic">Our dedicated training and placement cell ensures a 90%+ success rate across top-tier education and pharmaceutical industries.</p>
+</div>
+<!-- Typographic Stats Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-xl border-y border-outline-variant py-16">
+<div class="text-center md:border-r border-outline-variant px-md last:border-0">
+<div class="font-headline-xl text-[64px] text-primary leading-none mb-4 italic">94<span class="text-3xl align-top mt-2 inline-block">%</span></div>
+<div class="font-label-md text-label-md uppercase tracking-[0.2em] text-outline">Placement Success Rate</div>
+<p class="font-body-sm text-on-surface-variant mt-4 max-w-[200px] mx-auto">Secured within 6 months of graduation.</p>
+</div>
+<div class="text-center md:border-r border-outline-variant px-md last:border-0">
+<div class="font-headline-xl text-[64px] text-primary leading-none mb-4 italic">12<span class="text-2xl align-top mt-2 inline-block px-2">LPA</span></div>
+<div class="font-label-md text-label-md uppercase tracking-[0.2em] text-outline">Highest Package Offered</div>
+<p class="font-body-sm text-on-surface-variant mt-4 max-w-[200px] mx-auto">In leading R&amp;D pharmaceutical firms.</p>
+</div>
+<div class="text-center px-md">
+<div class="font-headline-xl text-[64px] text-primary leading-none mb-4 italic">150<span class="text-3xl align-top mt-2 inline-block font-sans">+</span></div>
+<div class="font-label-md text-label-md uppercase tracking-[0.2em] text-outline">Global Recruiting Partners</div>
+<p class="font-body-sm text-on-surface-variant mt-4 max-w-[200px] mx-auto">Spanning domestic and international regions.</p>
+</div>
+</div>
+<div class="relative">
+<h4 class="text-center font-label-md text-label-md text-outline uppercase tracking-[0.2em] mb-lg">Institutional Partners</h4>
+<div class="flex overflow-hidden mask-gradient">
+<div class="flex gap-xl animate-[scroll_40s_linear_infinite] shrink-0 items-center grayscale opacity-50 hover:opacity-100 transition-opacity">
+<div class="flex items-center gap-3 px-8"><span class="material-symbols-outlined text-4xl text-primary">domain</span><span class="font-bold font-headline-md text-primary">DPS Global</span></div>
+<div class="flex items-center gap-3 px-8"><span class="material-symbols-outlined text-4xl text-primary">medical_services</span><span class="font-bold font-headline-md text-primary">Apollo Pharmacy</span></div>
+<div class="flex items-center gap-3 px-8"><span class="material-symbols-outlined text-4xl text-primary">school</span><span class="font-bold font-headline-md text-primary">Cambridge Int.</span></div>
+<div class="flex items-center gap-3 px-8"><span class="material-symbols-outlined text-4xl text-primary">biotech</span><span class="font-bold font-headline-md text-primary">Sun Pharma</span></div>
+<div class="flex items-center gap-3 px-8"><span class="material-symbols-outlined text-4xl text-primary">apartment</span><span class="font-bold font-headline-md text-primary">Max Healthcare</span></div>
+<div class="flex items-center gap-3 px-8"><span class="material-symbols-outlined text-4xl text-primary">history_edu</span><span class="font-bold font-headline-md text-primary">Oakridge Academy</span></div>
+<!-- Duplicate for loop -->
+<div class="flex items-center gap-3 px-8"><span class="material-symbols-outlined text-4xl text-primary">domain</span><span class="font-bold font-headline-md text-primary">DPS Global</span></div>
+<div class="flex items-center gap-3 px-8"><span class="material-symbols-outlined text-4xl text-primary">medical_services</span><span class="font-bold font-headline-md text-primary">Apollo Pharmacy</span></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Alumni Testimonials: Editorial Pull-Quotes -->
+<section class="py-xl bg-primary text-on-primary">
+<div class="px-margin-desktop max-w-7xl mx-auto">
+<div class="max-w-3xl mx-auto text-center mb-xl">
+<h2 class="font-headline-lg text-headline-lg mb-4">Voices of Success</h2>
+<div class="w-24 h-1 bg-secondary mx-auto"></div>
+</div>
+<div class="space-y-xl">
+<!-- Testimonial 1 -->
+<div class="flex flex-col md:flex-row items-center gap-xl">
+<div class="md:w-1/3 flex justify-center">
+<div class="relative">
+<div class="absolute -inset-4 border border-white/20"></div>
+<img alt="Ananya Sharma" class="w-64 h-80 object-cover grayscale hover:grayscale-0 transition-all duration-500 shadow-2xl border-4 border-primary" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDaf8toUWnuY4Uuq8Pw0TmjAJqTV5UhlhhTEsZuj0kL69DZ3R3AvXsa_9bGd0oPUs9gCvYboYcdJlnoY2edXWnXcucBq5zvfsH1hMpKVADgmvjT3coYyvUiOGwfhExDpifO9ZpTBm8Ocf5PRCiyvzOELVHNDcoUXUNdlbj4daGEWgUKgMuNapfgd_v5wjpO_qq5vYM7hwc-SCjAkIj7c29aPo2ie7GUEgvnS18fcpzhK3xziFBINw-QIw"/>
+</div>
+</div>
+<div class="md:w-2/3">
+<span class="material-symbols-outlined text-6xl text-on-primary-container/30 mb-4 block" style="font-variation-settings: 'FILL' 1;">format_quote</span>
+<blockquote class="font-headline-md text-headline-md italic leading-relaxed mb-lg text-primary-fixed">
+                        "The B.Ed program at Muktir Shiksha was transformative. The emphasis on modern pedagogy prepared me for the challenges of 21st-century classrooms."
+                    </blockquote>
+<div class="border-l-2 border-secondary pl-6">
+<p class="font-headline-md text-lg font-bold">Ananya Sharma</p>
+<p class="font-body-sm text-sm opacity-80 uppercase tracking-widest mt-1">Batch of 2021 · Senior Educator, Delhi Public School</p>
+</div>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="flex flex-col md:flex-row-reverse items-center gap-xl">
+<div class="md:w-1/3 flex justify-center">
+<div class="relative">
+<div class="absolute -inset-4 border border-white/20"></div>
+<img alt="Rahul Verma" class="w-64 h-80 object-cover grayscale hover:grayscale-0 transition-all duration-500 shadow-2xl border-4 border-primary" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUD4WbbK0dELoK3xDv1FyhNIuhGalrM2kGH4itMn5bdUPvt3wHeRm7PUHS_CMMf7AdAv4Tvmqt4txdJcCbxU1neNYBbsnN6f6U6R5gs0V_jeGPluUTqE7OUIe98Pp2TZ24wY0imY4hBr3dg7wTe9YybIdVJH35aSv-JDYzp6rSqGX5g0vupjSNzva2A0kAGdmc16XkwcO3T_UqnrTpFhjwj04T_hxV4rECW7UcV1GK8tmcjtmMxODjmQ"/>
+</div>
+</div>
+<div class="md:w-2/3 text-left md:text-right">
+<span class="material-symbols-outlined text-6xl text-on-primary-container/30 mb-4 block md:ml-auto" style="font-variation-settings: 'FILL' 1;">format_quote</span>
+<blockquote class="font-headline-md text-headline-md italic leading-relaxed mb-lg text-primary-fixed">
+                        "Practical exposure in the pharmacy labs was exceptional. The placement cell helped me secure a role at a leading multinational firm before I even graduated."
+                    </blockquote>
+<div class="border-r-2 border-secondary pr-6">
+<p class="font-headline-md text-lg font-bold">Rahul Verma</p>
+<p class="font-body-sm text-sm opacity-80 uppercase tracking-widest mt-1">Batch of 2022 · Research Associate, Cipla Ltd.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Admission CTA -->
+<section class="py-xl px-margin-desktop max-w-7xl mx-auto text-center">
+<div class="bg-surface-container-highest p-xl shadow-lg border border-outline-variant relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 -mr-16 -mt-16 rounded-full"></div>
+<div class="absolute bottom-0 left-0 w-32 h-32 bg-secondary/5 -ml-16 -mb-16 rounded-full"></div>
+<h2 class="font-headline-xl text-headline-xl text-primary mb-md">Your Future Begins Today</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-xl max-w-xl mx-auto">Join a legacy of excellence and innovation. Admissions are now open for the upcoming academic session in Education and Pharmacy.</p>
+<div class="flex flex-col sm:flex-row justify-center gap-md">
+<button class="bg-primary text-on-primary px-10 py-4 font-bold shadow-lg hover:shadow-primary/20 hover:-translate-y-1 transition-all">Download Prospectus</button>
+<button class="border border-primary text-primary px-10 py-4 font-bold hover:bg-primary/5 transition-all">Book a Campus Tour</button>
+</div>
+</div>
+</section>
+<!-- Institutional Footer -->
+<footer class="bg-primary text-on-primary border-t border-white/5">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-xl max-w-7xl mx-auto">
+<div class="md:col-span-1">
+<a class="font-headline-md text-headline-md text-on-primary font-bold mb-md block italic" href="{{DATA:SCREEN:SCREEN_7}}">Muktir Shiksha</a>
+<p class="font-body-sm text-body-sm opacity-70 mb-lg">Pioneering academic brilliance in Pharmacy and Pedagogy for over two decades. Dedicated to nurturing global leaders.</p>
+<div class="flex gap-md">
+<a class="w-10 h-10 flex items-center justify-center border border-white/20 hover:border-white/50 transition-all" href="#"><span class="material-symbols-outlined text-sm">share</span></a>
+<a class="w-10 h-10 flex items-center justify-center border border-white/20 hover:border-white/50 transition-all" href="#"><span class="material-symbols-outlined text-sm">mail</span></a>
+<a class="w-10 h-10 flex items-center justify-center border border-white/20 hover:border-white/50 transition-all" href="#"><span class="material-symbols-outlined text-sm">call</span></a>
+</div>
+</div>
+<div>
+<h5 class="font-label-md text-label-md font-bold mb-lg uppercase tracking-widest text-primary-fixed">Quick Links</h5>
+<ul class="space-y-sm">
+<li><a class="font-body-sm text-body-sm opacity-70 hover:opacity-100 hover:translate-x-1 duration-200 inline-block transition-all" href="#">Privacy Policy</a></li>
+<li><a class="font-body-sm text-body-sm opacity-70 hover:opacity-100 hover:translate-x-1 duration-200 inline-block transition-all" href="#">Terms of Service</a></li>
+<li><a class="font-body-sm text-body-sm opacity-70 hover:opacity-100 hover:translate-x-1 duration-200 inline-block transition-all" href="#">Accreditation</a></li>
+<li><a class="font-body-sm text-body-sm opacity-70 hover:opacity-100 hover:translate-x-1 duration-200 inline-block transition-all" href="#">Career</a></li>
+<li><a class="font-body-sm text-body-sm opacity-70 hover:opacity-100 hover:translate-x-1 duration-200 inline-block transition-all" href="#">Faculty Login</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-label-md text-label-md font-bold mb-lg uppercase tracking-widest text-primary-fixed">Contact Us</h5>
+<p class="font-body-sm text-body-sm opacity-70 mb-base leading-relaxed">College Road, Sector 12<br/>Academic District, City Hub<br/>Pin: 400102</p>
+<p class="font-body-sm text-body-sm opacity-70">info@muktirshiksha.edu<br/>+91 (0) 123 456 7890</p>
+</div>
+<div>
+<h5 class="font-label-md text-label-md font-bold mb-lg uppercase tracking-widest text-primary-fixed">Accreditations</h5>
+<div class="grid grid-cols-3 gap-sm">
+<div class="h-12 border border-white/10 flex items-center justify-center"><span class="text-[10px] font-bold text-center tracking-tighter">NCTE</span></div>
+<div class="h-12 border border-white/10 flex items-center justify-center"><span class="text-[10px] font-bold text-center tracking-tighter">PCI</span></div>
+<div class="h-12 border border-white/10 flex items-center justify-center"><span class="text-[10px] font-bold text-center tracking-tighter uppercase">Naac A+</span></div>
+</div>
+</div>
+</div>
+<div class="border-t border-white/5 py-md px-margin-desktop max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-md">
+<p class="font-body-sm text-body-sm opacity-40">© 2024 Muktir Shiksha College of Education &amp; Pharmacy. All rights reserved.</p>
+<p class="font-body-sm text-body-sm opacity-40 italic">Heritage Professional Standard</p>
+</div>
+</footer>
+<style>
+    @keyframes scroll {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+    }
+</style>
+<script>
+    // Reveal Observer for scroll animations
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('opacity-100', 'translate-y-0');
+                entry.target.classList.remove('opacity-0', 'translate-y-10');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('section').forEach(section => {
+        section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+        observer.observe(section);
+    });
+</script>
+</body></html>

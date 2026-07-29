@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Muktir Shiksha College of Education &amp; Pharmacy</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-on-surface": "#f0f1f2",
+                    "secondary-fixed-dim": "#ffb4ab",
+                    "on-background": "#191c1d",
+                    "inverse-primary": "#bbc3ff",
+                    "primary-container": "#2b3990",
+                    "tertiary-fixed": "#78fc9c",
+                    "outline-variant": "#c6c5d3",
+                    "on-surface": "#191c1d",
+                    "on-secondary-container": "#fffbff",
+                    "primary": "#10207a",
+                    "on-surface-variant": "#454652",
+                    "surface-dim": "#d9dadb",
+                    "secondary-fixed": "#ffdad6",
+                    "surface-container": "#edeeef",
+                    "tertiary": "#003415",
+                    "surface-container-high": "#e7e8e9",
+                    "surface-tint": "#4957ae",
+                    "primary-fixed-dim": "#bbc3ff",
+                    "on-primary-fixed-variant": "#303e95",
+                    "on-tertiary-container": "#3ec66d",
+                    "tertiary-fixed-dim": "#5adf82",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-fixed-variant": "#93000d",
+                    "on-tertiary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "tertiary-container": "#004d22",
+                    "on-secondary-fixed": "#410002",
+                    "inverse-surface": "#2e3132",
+                    "surface": "#f8f9fa",
+                    "on-tertiary-fixed": "#00210b",
+                    "surface-bright": "#f8f9fa",
+                    "surface-container-low": "#f3f4f5",
+                    "surface-container-highest": "#e1e3e4",
+                    "on-tertiary-fixed-variant": "#005225",
+                    "primary-fixed": "#dfe0ff",
+                    "surface-variant": "#e1e3e4",
+                    "on-primary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "background": "#f8f9fa",
+                    "on-error-container": "#93000a",
+                    "on-error": "#ffffff",
+                    "on-primary-container": "#9ca9ff",
+                    "on-secondary": "#ffffff",
+                    "secondary": "#bb0013",
+                    "on-primary-fixed": "#000e5e",
+                    "outline": "#767683",
+                    "secondary-container": "#e71520",
+                    "heritage-burgundy": "#800000"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "xl": "80px",
+                    "margin-mobile": "16px",
+                    "lg": "48px",
+                    "base": "8px",
+                    "md": "24px",
+                    "margin-desktop": "64px",
+                    "sm": "12px",
+                    "gutter": "24px",
+                    "xs": "4px"
+            },
+            "fontFamily": {
+                    "body-sm": ["Plus Jakarta Sans", "sans-serif"],
+                    "body-lg": ["Plus Jakarta Sans", "sans-serif"],
+                    "headline-lg": ["Playfair Display", "serif"],
+                    "headline-lg-mobile": ["Playfair Display", "serif"],
+                    "headline-md": ["Playfair Display", "serif"],
+                    "label-md": ["Plus Jakarta Sans", "sans-serif"],
+                    "headline-xl": ["Playfair Display", "serif"],
+                    "body-md": ["Plus Jakarta Sans", "sans-serif"]
+            },
+            "fontSize": {
+                    "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-lg": ["36px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "headline-lg-mobile": ["30px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "headline-md": ["28px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "label-md": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-xl": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .premium-card {
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            border: 1px solid rgba(118, 118, 131, 0.1);
+        }
+        .premium-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.1);
+            border-color: rgba(16, 32, 122, 0.2);
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #10207a;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .hero-gradient {
+            background: linear-gradient(to right, rgba(16, 32, 122, 0.9) 0%, rgba(16, 32, 122, 0.4) 100%);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="full-width top-0 sticky z-50 bg-white/80 backdrop-blur-xl border-b border-outline-variant/30 transition-all duration-300">
+<div class="flex justify-between items-center w-full px-margin-desktop py-4 max-w-7xl mx-auto">
+<a class="flex items-center gap-4 group" href="{{DATA:SCREEN:SCREEN_7}}">
+<img alt="College Logo" class="h-14 w-auto object-contain transition-transform group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrAT67AY3TiH8h2wP7flybL7-JCineM6NuMJP5BBQKklnP5ctlCRyRKyKk7uwobq_EBYrA7D2hOmAG3YVFzanH3Cd0Ok6H7LzZHHVLvPjTGefSwxwjTmCVGrlZhDy4teI7rkLusqNAq2XewBekUiQFGOlOghnP2mTv4eUG0idQ5gVVDKMdi3KPJljUZjXuo8GF-Wkv04waZndG6XycjUg8SjliZj8ENk7KBREztmLTwLeX7980Y9xTWV5Q1MwtGSY4w5s"/>
+<div class="hidden md:flex flex-col">
+<span class="font-headline-md text-[22px] font-bold text-primary tracking-tight leading-none mb-1">Muktir Shiksha College</span>
+<span class="text-[10px] uppercase tracking-[0.2em] text-on-surface-variant font-bold">Of Education &amp; Pharmacy</span>
+</div>
+</a>
+<div class="hidden lg:flex items-center gap-8">
+<a class="nav-link text-primary font-bold font-label-md text-label-md" href="{{DATA:SCREEN:SCREEN_6}}">Academics</a>
+<a class="nav-link text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="{{DATA:SCREEN:SCREEN_5}}">Admissions</a>
+<a class="nav-link text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#">Departments</a>
+<a class="nav-link text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="{{DATA:SCREEN:SCREEN_3}}">Student Life</a>
+<a class="nav-link text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#">Placements</a>
+<a class="nav-link text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#">Contact</a>
+</div>
+<div class="flex items-center gap-4">
+<a class="bg-primary text-on-primary px-7 py-3 rounded-none font-label-md text-label-md font-bold hover:bg-heritage-burgundy transition-all duration-300 shadow-lg shadow-primary/20 hover:shadow-heritage-burgundy/20 inline-block" href="{{DATA:SCREEN:SCREEN_5}}">
+                Apply Now
+            </a>
+<button class="lg:hidden text-primary">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative h-[90vh] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover scale-105 animate-[subtle-zoom_20s_infinite_alternate]" data-alt="Grand campus view" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4at1vczKQ6vtBO954aAKMm9zRvLOQDWO_39nuaeXScLUbEuTOjexa6ou7BjpG1qPrVhGQL1MyH1TbIYcqfvOGX9hNk16shQCNSBnP9VJ59C6GKD5Xq8KIPotLN7x-vgfGrfXmvH4oqNFiZkgeSaVzE7ClHqQP-hs09brYkjG0eH530dGpbdQwXiUaR80snFXrj4LUoMLhSgUAxkiJZxvQ4ksRja55aY5jxfFNxaiSxPsa5Wtbk9UwPw"/>
+<div class="absolute inset-0 hero-gradient"></div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-margin-desktop w-full text-on-primary">
+<div class="max-w-3xl">
+<span class="font-label-md text-label-md tracking-[0.3em] uppercase mb-6 block text-secondary-fixed/90 font-semibold border-l-2 border-secondary-fixed pl-4">Empowering Next-Gen Professionals</span>
+<h1 class="font-headline-xl text-headline-xl mb-8 leading-[1.1] text-white">Shaping the Future of <br/><span class="italic text-secondary-fixed">Education &amp; Pharmacy</span></h1>
+<p class="font-body-lg text-body-lg mb-12 opacity-90 leading-relaxed max-w-xl">Dedicated to excellence in pharmaceutical sciences and pedagogical studies. Join an institution where heritage meets innovation.</p>
+<div class="flex flex-wrap gap-6">
+<button class="bg-secondary-container text-on-secondary-container px-10 py-5 rounded-none font-label-md text-label-md font-bold hover:shadow-2xl hover:-translate-y-1 transition-all flex items-center gap-3">
+                    Explore Programs <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button class="bg-white/5 backdrop-blur-md border border-white/20 text-white px-10 py-5 rounded-none font-label-md text-label-md font-bold hover:bg-white/20 transition-all">
+                    Take Campus Tour
+                </button>
+</div>
+</div>
+</div>
+<!-- Quick Admission Notification -->
+<div class="absolute bottom-20 right-margin-desktop hidden lg:block">
+<div class="bg-white/95 backdrop-blur-xl p-8 rounded-none shadow-2xl border-l-4 border-heritage-burgundy max-w-sm">
+<div class="flex items-center gap-4 mb-4">
+<span class="material-symbols-outlined text-heritage-burgundy text-3xl font-variation-settings: 'FILL' 1">event_upcoming</span>
+<span class="font-headline-md text-[20px] font-bold text-primary">Admission Alert</span>
+</div>
+<p class="text-body-md text-on-surface-variant mb-6 leading-relaxed">Fall Intake 2024: Applications for B.Pharm and B.Ed are closing in 14 days. Secure your future today.</p>
+<a class="text-heritage-burgundy font-bold text-body-md hover:underline flex items-center gap-2" href="#">Register Today <span class="material-symbols-outlined text-sm">arrow_outward</span></a>
+</div>
+</div>
+</section>
+<!-- Why Choose Us - Enhanced Grid -->
+<section class="py-xl bg-surface-container-low">
+<div class="px-margin-desktop max-w-7xl mx-auto">
+<div class="text-center mb-20">
+<span class="text-heritage-burgundy font-label-md tracking-widest uppercase mb-4 block">Our Legacy</span>
+<h2 class="font-headline-lg text-[42px] text-primary mb-6">A Legacy of Academic Brilliance</h2>
+<div class="w-24 h-1 bg-heritage-burgundy mx-auto mb-8"></div>
+<p class="text-on-surface-variant max-w-2xl mx-auto font-body-lg">We provide an ecosystem that fosters critical thinking, research excellence, and practical skills required in the modern global landscape.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<div class="md:col-span-8 bg-white p-12 premium-card flex flex-col md:flex-row gap-10 items-center overflow-hidden">
+<div class="flex-1">
+<div class="h-16 w-16 bg-primary/5 text-primary flex items-center justify-center mb-8">
+<span class="material-symbols-outlined text-4xl">biotech</span>
+</div>
+<h3 class="font-headline-md text-[28px] text-primary mb-5 font-bold">State-of-the-Art Pharmacy Labs</h3>
+<p class="text-on-surface-variant font-body-md mb-8 leading-relaxed">Our research facilities are equipped with the latest instrumentation for pharmacology, pharmaceutical chemistry, and pharmacognosy studies.</p>
+<ul class="space-y-4 font-label-md text-primary font-semibold">
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary text-xl">verified</span> Advanced Analytical Instrumentation</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary text-xl">verified</span> Simulated Hospital Pharmacy Lab</li>
+</ul>
+</div>
+<div class="w-full md:w-1/2 h-full">
+<img class="w-full h-64 md:h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="High-tech lab equipment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhTUqKhqFYtL-NZdg-FUbcrdWd8ykKHABo0Ez8gQAEfQjaHQC6il41SZwJr5K8K6rwgz9K6l_0dHJnLZ1xLpmE4WTECoGBOKNTlPjZ7GWh_PlRjQz03cAezekC9opzDIklm9r-XKe1SMw_KE3l624xNmMxSa8nrIV2rjHSstRtlCoVq42P3rE1VEjN6DV8Y5N1RbiN-rPzReb2mETjUKYm1QjfRN1Ys0Il7kjgIFGDOWHd3ip7bi5BrQ"/>
+</div>
+</div>
+<div class="md:col-span-4 bg-primary text-on-primary p-12 premium-card border-none relative overflow-hidden group">
+<div class="absolute inset-0 bg-heritage-burgundy opacity-0 group-hover:opacity-10 transition-opacity duration-500"></div>
+<div class="relative z-10 flex flex-col h-full justify-between">
+<div>
+<div class="h-16 w-16 bg-white/10 text-white flex items-center justify-center mb-8">
+<span class="material-symbols-outlined text-4xl">school</span>
+</div>
+<h3 class="font-headline-md text-[28px] mb-5 font-bold">Educational Excellence</h3>
+<p class="text-white/80 font-body-md leading-relaxed">Pioneering pedagogy for the next generation of educators with immersive classroom training and mentor support.</p>
+</div>
+<div class="mt-12 pt-12 border-t border-white/20">
+<div class="text-5xl font-extrabold text-secondary-fixed mb-2">98%</div>
+<p class="text-label-md font-bold tracking-widest uppercase opacity-70">Placement Success Rate</p>
+</div>
+</div>
+</div>
+<div class="md:col-span-4 bg-white p-12 premium-card">
+<div class="h-16 w-16 bg-tertiary-container/20 text-tertiary flex items-center justify-center mb-8">
+<span class="material-symbols-outlined text-4xl">groups</span>
+</div>
+<h3 class="font-headline-md text-[24px] text-primary mb-5 font-bold">Expert Faculty</h3>
+<p class="text-on-surface-variant font-body-md leading-relaxed">Learn from industry veterans and PhD scholars dedicated to mentorship and research innovation. Our 1:15 faculty ratio ensures personalized growth.</p>
+</div>
+<div class="md:col-span-8 bg-white p-12 premium-card flex items-center gap-12">
+<div class="flex-1">
+<h3 class="font-headline-md text-[28px] text-primary mb-5 font-bold">Global Partnerships</h3>
+<p class="text-on-surface-variant font-body-md mb-8 leading-relaxed">Our strong industry ties ensure our students secure positions in top pharmaceutical firms and prestigious educational institutions worldwide.</p>
+<div class="flex flex-wrap gap-8 items-center opacity-60">
+<div class="text-primary font-extrabold text-xl tracking-tighter">PHARMA WORLD</div>
+<div class="text-secondary font-extrabold text-xl tracking-tighter">EDU GLOBAL</div>
+<div class="text-on-surface font-extrabold text-xl tracking-tighter">MED INNOVATE</div>
+</div>
+</div>
+<div class="hidden lg:block w-1/3">
+<span class="material-symbols-outlined text-[120px] text-primary/5">public</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Departments Section - Refined Structured Layout -->
+<section class="py-xl bg-white px-margin-desktop">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+<div>
+<span class="font-label-md text-label-md text-heritage-burgundy tracking-[0.2em] font-bold uppercase mb-4 block">Academic Departments</span>
+<h2 class="font-headline-lg text-[42px] text-primary mb-8 leading-tight">Empowering Professionals Across Disciplines</h2>
+<p class="text-on-surface-variant mb-12 font-body-lg leading-relaxed">Whether you are passionate about medicinal sciences or dedicated to teaching, our curriculum is designed to transform you into a professional leader with global perspective.</p>
+<div class="grid gap-6">
+<div class="p-8 border border-outline-variant hover:border-primary group transition-all duration-300 bg-surface-container-lowest">
+<div class="flex items-start gap-6">
+<span class="material-symbols-outlined text-4xl text-primary group-hover:scale-110 transition-transform">medical_services</span>
+<div>
+<h4 class="font-headline-md text-[24px] text-primary mb-3 font-bold">School of Pharmacy</h4>
+<p class="text-body-md text-on-surface-variant mb-6">World-class B.Pharm &amp; D.Pharm programs focusing on drug formulation, delivery, and clinical research.</p>
+<a class="text-heritage-burgundy font-bold text-sm uppercase tracking-widest flex items-center gap-2 group-hover:gap-4 transition-all" href="#">Explore Department <span class="material-symbols-outlined text-sm">east</span></a>
+</div>
+</div>
+</div>
+<div class="p-8 border border-outline-variant hover:border-secondary group transition-all duration-300 bg-surface-container-lowest">
+<div class="flex items-start gap-6">
+<span class="material-symbols-outlined text-4xl text-secondary group-hover:scale-110 transition-transform">school</span>
+<div>
+<h4 class="font-headline-md text-[24px] text-primary mb-3 font-bold">School of Education</h4>
+<p class="text-body-md text-on-surface-variant mb-6">Premier B.Ed &amp; D.El.Ed programs designed to create innovative, values-driven educators for the modern classroom.</p>
+<a class="text-heritage-burgundy font-bold text-sm uppercase tracking-widest flex items-center gap-2 group-hover:gap-4 transition-all" href="#">Explore Department <span class="material-symbols-outlined text-sm">east</span></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="relative">
+<div class="grid grid-cols-2 gap-6">
+<div class="space-y-6 pt-12">
+<div class="relative overflow-hidden group">
+<img class="w-full h-[400px] object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Pharmacy student in lab" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAp2Xy3kel4IKgeYGQ_XCXWKtGMpiIBVB2pgqhsEdirXVp_qi_s8TIoTWkHciELcmP6PN_XXL40njo_OjDKKyxRpIwnlJZk3hLcc--2e95bPUnq5sq1a7TCxHLYr6UU5PkzdpVr0GP5BodvQVqAfSUsVaSlSN-WqnYNbQxr5nCKifioSv_Ow3bj21e-0lUz0PPSyUpESyNPYvKwY_k8wfN-9RCx94NRa0hczetTmEL7VyDjuHHYUFBv_w"/>
+<div class="absolute inset-0 bg-primary/20 mix-blend-overlay"></div>
+</div>
+<div class="bg-primary p-10 text-on-primary">
+<span class="material-symbols-outlined text-5xl mb-6 text-secondary-fixed">experiment</span>
+<div class="text-3xl font-bold mb-1">25+</div>
+<p class="font-label-md uppercase tracking-widest opacity-80">Patents Filed</p>
+</div>
+</div>
+<div class="space-y-6">
+<div class="bg-heritage-burgundy p-10 text-on-primary">
+<span class="material-symbols-outlined text-5xl mb-6 text-secondary-fixed">diversity_3</span>
+<div class="text-3xl font-bold mb-1">5000+</div>
+<p class="font-label-md uppercase tracking-widest opacity-80">Alumni Globally</p>
+</div>
+<div class="relative overflow-hidden group">
+<img class="w-full h-[400px] object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Collaborative students" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsAPS4LScXTDH2JDeoXlLmCumTuOnnv0YU60U8MDwZnZZLMKx0ENo4sEJO_8NqmqnFCKJRKwmKXMYXoizE8hNHSH9Ik_cX8wFpfhr9AhoXIZxhNdm_D5nSdZWZd4L2JysK3vFAYGIA2kxxcvn_Kk-dT8IjE5QXGgCEJgUOTfPpyCriBND4Os2jEyIUduiY4JRECOvX081Yc0iN9Hj5Ss8l-rPF3G4a2WbN-aGi2g02XuRiT6SGl3taMA"/>
+<div class="absolute inset-0 bg-heritage-burgundy/10 mix-blend-overlay"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- News & Achievements - Enhanced Sophisticated Layout -->
+<section class="py-xl bg-surface-container-lowest px-margin-desktop">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+<div class="max-w-2xl">
+<span class="text-heritage-burgundy font-label-md tracking-widest uppercase mb-4 block">Headlines &amp; Updates</span>
+<h2 class="font-headline-lg text-[42px] text-primary mb-4 leading-tight">Campus Life &amp; Global Achievements</h2>
+<p class="text-on-surface-variant font-body-lg">Celebrating our students' milestones and staying connected with institutional progress.</p>
+</div>
+<button class="flex items-center gap-3 text-primary font-bold hover:text-heritage-burgundy transition-all border-b-2 border-primary/20 pb-2">
+                View All News <span class="material-symbols-outlined">arrow_right_alt</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+<!-- News Card 1 -->
+<article class="group premium-card bg-white h-full flex flex-col">
+<div class="overflow-hidden aspect-[16/10] relative">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Award ceremony" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyToBSZ1fDU-87zk0LfXuw3AqVA_5a2v_hKt6LNE_BMq5ewY9CKI8g2t4Nw3MoxaZYsAH14O4TfeO3yeyXbkylFSdmapXFnskRMnbb-ljQwX-8D71ioeO0fTfNsp4v4aNtjOb_YmCfn7Yn1_vchIfOXC8XwNfzAQrScDYH7rvQTPAjb6f-UkGABdHT-fxocmQiSMa2S53YxMZzMhhGnzNOsKxPRxRGwnCXLm5dWePOIgUl7FaVg8SP9w"/>
+<div class="absolute top-6 left-6 bg-primary text-on-primary px-4 py-1.5 text-[10px] font-bold tracking-widest uppercase">Achievement</div>
+</div>
+<div class="p-8 flex-1 flex flex-col">
+<div class="flex items-center gap-2 mb-4 text-on-surface-variant/60 font-label-md text-xs">
+<span class="material-symbols-outlined text-sm">calendar_month</span> OCTOBER 12, 2024
+                    </div>
+<h3 class="font-headline-md text-[22px] text-primary mb-4 group-hover:text-heritage-burgundy transition-colors leading-snug font-bold">National Level Innovation Award won by B.Pharm batch</h3>
+<p class="text-body-md text-on-surface-variant mb-8 line-clamp-3 leading-relaxed">Our final year students secured the first position at the National Pharma-Innova hackathon held in New Delhi last week, showcasing ground-breaking research.</p>
+<div class="mt-auto">
+<a class="text-primary font-bold text-sm uppercase tracking-widest flex items-center gap-2 group-hover:gap-4 transition-all" href="#">Read Story <span class="material-symbols-outlined text-sm">trending_flat</span></a>
+</div>
+</div>
+</article>
+<!-- News Card 2 -->
+<article class="group premium-card bg-white h-full flex flex-col">
+<div class="overflow-hidden aspect-[16/10] relative">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Seminar hall" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAU9N0fcGlM1flGG9tJzt95_nNNnhtskxsh6Qu3tYSPerJB80HPh0YdaHASnaqrb_uZOnmzGX2BgC8xy1NNz4nmMTSW_SViFcvD1emO3i_5ZLJqar4i4ID7SU-C-NnTHJl1XtOsU2e6PQrG_657NqVsH5MaFHg7VdJavs6NN5lgyAdhGM3M_GfbMr4LDpWAfr0e7iMuV-KmBnhgxfBxYsIWeHXHi74vMPox5ASmQvVF9Jve8B5PFtfEkw"/>
+<div class="absolute top-6 left-6 bg-heritage-burgundy text-on-primary px-4 py-1.5 text-[10px] font-bold tracking-widest uppercase">Seminar</div>
+</div>
+<div class="p-8 flex-1 flex flex-col">
+<div class="flex items-center gap-2 mb-4 text-on-surface-variant/60 font-label-md text-xs">
+<span class="material-symbols-outlined text-sm">calendar_month</span> SEPTEMBER 28, 2024
+                    </div>
+<h3 class="font-headline-md text-[22px] text-primary mb-4 group-hover:text-heritage-burgundy transition-colors leading-snug font-bold">International Conference on Pedagogy &amp; Ethics</h3>
+<p class="text-body-md text-on-surface-variant mb-8 line-clamp-3 leading-relaxed">Join global experts this December for a three-day summit exploring the intersection of modern technology and ethics in teacher education.</p>
+<div class="mt-auto">
+<a class="text-primary font-bold text-sm uppercase tracking-widest flex items-center gap-2 group-hover:gap-4 transition-all" href="#">Read Story <span class="material-symbols-outlined text-sm">trending_flat</span></a>
+</div>
+</div>
+</article>
+<!-- News Card 3 -->
+<article class="group premium-card bg-white h-full flex flex-col">
+<div class="overflow-hidden aspect-[16/10] relative">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Pharma placement" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCNl1VRA3IIH_ZcGUeN3BjzgMVcQ-3YoVY4LdjaaTIqVyZkyDmWaWkW-9tW7YWRDYKXmth-nq1LHspOw4bRdheMo-3PJL517HTVwNIhjOmeOad5KIfVaWnQzRJzgv-DefTUGpoPecu0yGxrPwZwJZjdkqcUcweBt87_unfpG7IzPv1_YvKfCuC-BmfKgxC1tABh18mMSS0dod3OplydAf0qtthq148IDuoEqm3vwhaBR8B6s9Ftr3PvQ"/>
+<div class="absolute top-6 left-6 bg-tertiary text-on-primary px-4 py-1.5 text-[10px] font-bold tracking-widest uppercase">Placement</div>
+</div>
+<div class="p-8 flex-1 flex flex-col">
+<div class="flex items-center gap-2 mb-4 text-on-surface-variant/60 font-label-md text-xs">
+<span class="material-symbols-outlined text-sm">calendar_month</span> SEPTEMBER 15, 2024
+                    </div>
+<h3 class="font-headline-md text-[22px] text-primary mb-4 group-hover:text-heritage-burgundy transition-colors leading-snug font-bold">Record-Breaking Placement Drive This Season</h3>
+<p class="text-body-md text-on-surface-variant mb-8 line-clamp-3 leading-relaxed">Over 15 fortune-500 pharmaceutical companies visited the campus this month, offering highly competitive packages to our bright scholars.</p>
+<div class="mt-auto">
+<a class="text-primary font-bold text-sm uppercase tracking-widest flex items-center gap-2 group-hover:gap-4 transition-all" href="#">Read Story <span class="material-symbols-outlined text-sm">trending_flat</span></a>
+</div>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-xl px-margin-desktop relative overflow-hidden">
+<div class="max-w-6xl mx-auto bg-primary py-20 px-12 md:px-24 text-center relative">
+<div class="absolute inset-0 opacity-5 pointer-events-none" style="background-image: radial-gradient(#ffffff 1px, transparent 1px); background-size: 40px 40px;"></div>
+<div class="relative z-10">
+<h2 class="font-headline-xl text-headline-xl text-on-primary mb-8 leading-tight">Ready to Embark on Your <br/><span class="italic text-secondary-fixed">Academic Journey?</span></h2>
+<p class="text-on-primary/80 font-body-lg max-w-2xl mx-auto mb-12 leading-relaxed text-lg">Admissions for the 2024-25 academic session are now officially open. Take the first step towards a prestigious career in Pharmacy or Education.</p>
+<div class="flex flex-col sm:flex-row justify-center gap-6">
+<button class="bg-heritage-burgundy text-on-primary px-12 py-5 rounded-none font-label-md text-label-md font-bold hover:bg-heritage-burgundy/90 hover:scale-105 transition-all shadow-2xl">
+                    Start Application 2024
+                </button>
+<button class="border-2 border-white/40 text-on-primary px-12 py-5 rounded-none font-label-md text-label-md font-bold hover:bg-white/10 transition-all">
+                    Download Prospectus
+                </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary full-width text-on-primary">
+<div class="px-margin-desktop pt-24 pb-12 max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-16 mb-20">
+<div class="md:col-span-4">
+<div class="flex items-center gap-4 mb-8">
+<img alt="College Logo Inverse" class="h-16 w-auto brightness-0 invert" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRAj6fSmCjM73dPbuynk_I_WC9EzV2a9BS81ggyTmB7JJS7WiK1fAU-cIV7Y4VK22kDzyvCX9vIz6p84xXIsPEfI0RC5_ljuo9TRY6NN3Iv-3z5U8XyYm6eZo94GromJL4PT8DnBxEGtBKAy_quqQgis8t1NKIjk2sefXFs5ZAw6_OO2_on_R30bu-T25ihTBwG268y8SY0gxT7iGKD2LKNIs4orhyS3mMDYXR3eQ3IX7oHl6InXQesDgs2sFFhDUOQ68"/>
+<h2 class="font-headline-md text-[24px] text-white font-bold leading-tight">Muktir Shiksha <br/>College</h2>
+</div>
+<p class="font-body-sm text-on-primary/70 leading-relaxed mb-8 max-w-xs">A premier institution dedicated to developing skilled professionals in the fields of Pharmaceutical Sciences and Teacher Education through innovation and excellence.</p>
+<div class="flex gap-4">
+<a class="h-12 w-12 border border-white/20 flex items-center justify-center hover:bg-heritage-burgundy transition-all" href="#"><span class="material-symbols-outlined text-xl">facebook</span></a>
+<a class="h-12 w-12 border border-white/20 flex items-center justify-center hover:bg-heritage-burgundy transition-all" href="#"><span class="material-symbols-outlined text-xl">link</span></a>
+<a class="h-12 w-12 border border-white/20 flex items-center justify-center hover:bg-heritage-burgundy transition-all" href="#"><span class="material-symbols-outlined text-xl">mail</span></a>
+</div>
+</div>
+<div class="md:col-span-2">
+<h4 class="font-label-md text-xs font-bold mb-8 tracking-[0.2em] text-secondary-fixed uppercase">Quick Links</h4>
+<ul class="space-y-4 font-body-sm text-on-primary/70">
+<li><a class="hover:text-white transition-colors" href="{{DATA:SCREEN:SCREEN_7}}">About Campus</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Pharmacy Council</a></li>
+<li><a class="hover:text-white transition-colors" href="#">NCTE Recognition</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Research Portal</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Student Portal</a></li>
+</ul>
+</div>
+<div class="md:col-span-2">
+<h4 class="font-label-md text-xs font-bold mb-8 tracking-[0.2em] text-secondary-fixed uppercase">Institutional</h4>
+<ul class="space-y-4 font-body-sm text-on-primary/70">
+<li><a class="hover:text-white transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Terms of Service</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Accreditation</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Career</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Faculty Login</a></li>
+</ul>
+</div>
+<div class="md:col-span-4">
+<h4 class="font-label-md text-xs font-bold mb-8 tracking-[0.2em] text-secondary-fixed uppercase">Contact Information</h4>
+<ul class="space-y-6 font-body-sm text-on-primary/70">
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-secondary-fixed">location_on</span>
+<span>College Campus, Institutional Area, <br/>West Bengal, India - 700001</span>
+</li>
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-secondary-fixed">call</span>
+<span>+91 123-456-7890 / 080-2234-5678</span>
+</li>
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-secondary-fixed">mail</span>
+<span>info@muktirshikshacollege.org</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="border-t border-white/10 pt-8 text-center">
+<p class="font-body-sm text-on-primary/50 text-[13px]">© 2024 Muktir Shiksha College of Education &amp; Pharmacy. All rights reserved. Designed for Excellence.</p>
+</div>
+</div>
+</footer>
+<script>
+    // Premium sticky header effect
+    window.addEventListener('scroll', () => {
+        const nav = document.querySelector('nav');
+        if (window.scrollY > 80) {
+            nav.classList.add('shadow-xl', 'py-2');
+            nav.classList.remove('py-4');
+        } else {
+            nav.classList.remove('shadow-xl', 'py-2');
+            nav.classList.add('py-4');
+        }
+    });
+</script>
+</body></html>
