@@ -241,8 +241,8 @@ img { max-width: 100%; }
 
   /* pills keep their labels, just smaller, and sit lower so they clear the copy */
   .floatbtns { right: 10px !important; bottom: 10px !important; gap: 7px !important; }
-  .floatbtns a { font-size: 12.5px !important; padding: 9px 14px !important; }
-  .floatbtns a .ico { width: 15px; height: 15px; }
+  .floatbtns a { width: 50px; height: 50px; }
+  .floatbtns svg { width: 24px; height: 24px; }
 }
 
 /* Very small phones (≤400px): the design's inline grids use
@@ -1158,6 +1158,25 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   .emplogos__set:last-child { display: none; }
 }
 
+/* ---------- floating contact buttons ----------
+   Mark only: the WhatsApp glyph and a handset, each in its own circle. The
+   labels are carried by aria-label so screen readers still announce them. */
+.fab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  box-shadow: 0 6px 18px rgba(11, 37, 69, 0.28);
+  transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease), background var(--dur) var(--ease);
+}
+.fab:hover, .fab:focus-visible { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(11, 37, 69, 0.34); }
+.fab--wa { background: #25D366; color: #FFFFFF; }      /* the brand green */
+.fab--wa:hover { background: #1EBD5A; color: #FFFFFF; }
+.fab--call { background: var(--color-primary); color: #FFFFFF; }
+.fab--call:hover { background: var(--color-primary-soft); color: #FFFFFF; }
+
 /* generated from style-hover / style-focus */
 .h0:hover{background: #1877F2 !important; color: #FFFFFF !important;}
 .h1:hover{background: #E1306C !important; color: #FFFFFF !important;}
@@ -1172,9 +1191,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .h10:hover{background: #E6EDF4 !important; color: #0B2545 !important;}
 .h11:hover{color: #E8CE9A !important;}
 .h12:hover{color: #FFD48A !important;}
-.h13:hover{background: #1EBD5A !important; color: #073B14 !important;}
-.f14:focus{border: 1.5px solid #0B2545 !important; background: #FFFFFF !important; outline: none !important;}
-.h15:hover{background: #DBB05B !important;}
-.h16:hover{background: rgba(255,255,255,0.14) !important; color: #FFFFFF !important;}
-.h17:hover{background: rgba(6,23,38,0.8) !important; color: #FFFFFF !important;}
-.h18:hover{background: rgba(255,255,255,0.12) !important; color: #FFFFFF !important;}
+.f13:focus{border: 1.5px solid #0B2545 !important; background: #FFFFFF !important; outline: none !important;}
+.h14:hover{background: #DBB05B !important;}
+.h15:hover{background: rgba(255,255,255,0.14) !important; color: #FFFFFF !important;}
+.h16:hover{background: rgba(6,23,38,0.8) !important; color: #FFFFFF !important;}
+.h17:hover{background: rgba(255,255,255,0.12) !important; color: #FFFFFF !important;}
