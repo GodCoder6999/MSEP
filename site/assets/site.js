@@ -14,14 +14,28 @@
     });
   });
 
-  /* ---------------- sticky header condenses after 40px ---------------- */
+  /* ---------------- sticky header condenses on scroll ----------------
+     The header is in flow, so condensing it shortens the document and pulls
+     the page up — with a single threshold that lands you back under it and
+     the header flickers open/closed. Two thresholds (condense high, expand
+     low) leave a dead band wider than the height the header gives up. */
   var header = document.querySelector('header');
   if (header) {
-    var onScroll = function () {
-      header.classList.toggle('is-stuck', window.scrollY > 40);
-    };
-    onScroll();
-    window.addEventListener('scroll', onScroll, { passive: true });
+    var CONDENSE_AT = 220;   // must exceed the ~85px the header collapses by
+    var EXPAND_AT = 60;
+    var stuck = false;
+    var ticking = false;
+
+    function syncHeader() {
+      var y = window.scrollY;
+      if (!stuck && y > CONDENSE_AT) { stuck = true; header.classList.add('is-stuck'); }
+      else if (stuck && y < EXPAND_AT) { stuck = false; header.classList.remove('is-stuck'); }
+      ticking = false;
+    }
+    window.addEventListener('scroll', function () {
+      if (!ticking) { ticking = true; window.requestAnimationFrame(syncHeader); }
+    }, { passive: true });
+    syncHeader();
   }
 
   /* ---------------- mark the current page in the nav ---------------- */

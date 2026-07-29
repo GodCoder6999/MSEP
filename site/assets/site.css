@@ -91,6 +91,10 @@ img { max-width: 100%; }
   /* once the 1180px container stops having side margin, the lock-up would
      sit flush against the viewport edge — keep a gutter below that point */
   @media (max-width: 1240px) { .logobar { padding-left: 16px !important; } }
+  /* crest + name pull out to the far left; the accreditation line is pushed
+     back by the same amount so it keeps the position it already had */
+  .logobar > a { margin-left: calc(-1 * var(--gutter-pull)); }
+  .hdr-sub { margin-left: var(--gutter-pull); }
   header img[src$="logo.jpg"] { width: 104px !important; height: 104px !important; }
   .hdr-name { font-size: clamp(19px, 1.95vw, 26px) !important; line-height: 1.1 !important; }
   .hdr-sub { font-size: 13.5px !important; margin-top: 2px !important; gap: 3px 8px !important; }

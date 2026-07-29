@@ -62,6 +62,9 @@
   --container: 1140px;
   --measure: 68ch;                   /* paragraph line length               */
   --floatbar: 76px;                  /* clearance for the floating buttons  */
+  /* how far the container sits from the viewport edge — the lock-up borrows
+     this to pull out to the far left while the rest of the bar stays put */
+  --gutter-pull: max(0px, (100vw - var(--container)) / 2 - 20px);
 }
 
 /* =========================================================================
