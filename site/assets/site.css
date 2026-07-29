@@ -427,6 +427,49 @@ img { max-width: 100%; }
 .approval > div > strong { display: block; font-size: 15px; color: var(--color-primary); }
 .approval > div > span { display: block; font-size: 13px; line-height: 1.55; color: var(--color-muted); margin-top: 3px; }
 
+/* ---------- admission steps: a connected stepper, not cards ----------
+   The connector line is what tells the reader this is a sequence. Horizontal
+   on desktop, vertical timeline on a phone. */
+.steps { position: relative; }
+.steps::before {
+  content: ''; position: absolute; z-index: 0;
+  left: 20px; right: 20px; top: 20px; height: 2px;
+  background: linear-gradient(to right, var(--color-accent) 0%, rgba(200, 155, 60, 0.35) 100%);
+}
+.step { position: relative; z-index: 1; }
+.step__num {
+  box-shadow: 0 0 0 6px var(--color-primary-dark);   /* punches the line behind it */
+}
+@media (max-width: 700px) {
+  .steps::before { left: 20px; right: auto; top: 0; bottom: 0; width: 2px; height: auto;
+    background: linear-gradient(to bottom, var(--color-accent) 0%, rgba(200, 155, 60, 0.35) 100%); }
+  .step { padding-left: 56px !important; }
+  .step + .step { border-top: 0; margin-top: var(--space-3); }
+  .step__num { position: absolute; left: 0; top: 0; }
+}
+
+/* ---------- eight reasons: oversized numerals, magazine-style ---------- */
+.why-item { align-items: baseline; gap: var(--space-3); }
+.why-ico { display: none; }                 /* the numeral carries the rhythm now */
+.why-num {
+  font-family: var(--font-head);
+  font-size: 2.2rem; font-weight: 800; line-height: 1;
+  color: var(--color-border);               /* muted, sits behind the words */
+  letter-spacing: -0.03em;
+  min-width: 2.4ch;
+}
+.why-item h3 { font-size: 1.05rem; margin-top: 0; }
+.why-item p { max-width: 46ch; }
+
+/* ---------- facilities keep a grid, chrome dialled down ----------
+   Eight tiles with two double-width cells makes ten, which cannot fill a
+   four-column grid — it stranded two tiles on the last row. A clean 4x2 with
+   lighter chrome breaks the "card matrix" look without the orphan gap; the
+   varied-tile job is done by the gallery mosaic just above it. */
+/* card chrome comes down — the section ground already separates them */
+.deptgrid .dept { box-shadow: none; text-align: left; }
+.deptgrid .dept:hover { box-shadow: var(--shadow-sm); }
+
 /* ---------- admission steps ---------- */
 .steps {
   list-style: none; margin: 0; padding: 0;
@@ -708,6 +751,89 @@ img { max-width: 100%; }
   color: var(--color-on-primary);
 }
 
+/* =========================================================================
+   De-templated section layouts. Each block below exists because a uniform
+   card grid was the wrong shape for its content — steps are sequential, the
+   reasons are narrative, quick links are a list, and so on.
+   ========================================================================= */
+
+/* ---------- trust bar (was a 4-up icon-card grid) ---------- */
+.trustbar { background: var(--color-primary-tint); border-block: 1px solid var(--color-border); }
+.trustbar__inner {
+  max-width: var(--container); margin-inline: auto;
+  padding: var(--space-2) var(--space-3);
+  display: flex; align-items: center; justify-content: space-between; gap: 0;
+}
+.trustbar__item {
+  display: flex; align-items: center; gap: 0.6em;
+  flex: 1; justify-content: center;
+  padding: 0 var(--space-2);
+  font-size: var(--fs-small); font-weight: 600; color: var(--color-primary);
+  text-align: left;
+}
+.trustbar__item + .trustbar__item { border-left: 1px solid var(--color-border); }
+.trustbar__item svg { color: var(--color-accent); flex-shrink: 0; }
+@media (max-width: 860px) {
+  .trustbar__inner { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-1) 0; }
+  .trustbar__item { justify-content: flex-start; }
+  .trustbar__item + .trustbar__item { border-left: 0; }
+  .trustbar__item:nth-child(even) { border-left: 1px solid var(--color-border); }
+}
+@media (max-width: 460px) { .trustbar__inner { grid-template-columns: 1fr; } .trustbar__item:nth-child(even) { border-left: 0; } }
+
+/* ---------- departments as ruled rows (was six floating boxes) ---------- */
+.deptlist { display: grid; grid-template-columns: 1fr 1fr; gap: 0 var(--space-6); border-top: 1px solid var(--color-border); }
+@media (max-width: 760px) { .deptlist { grid-template-columns: 1fr; } }
+.deptlist .dept {
+  display: grid; grid-template-columns: auto 1fr; align-items: start; gap: var(--space-2);
+  background: none; border: 0; border-bottom: 1px solid var(--color-border); border-radius: 0;
+  box-shadow: none; padding: var(--space-3) 0;
+}
+.deptlist .dept:hover { transform: none; box-shadow: none; border-color: var(--color-border); background: none; }
+.deptlist .dept__ico { grid-row: span 2; margin-bottom: 0; width: 40px; height: 40px; }
+.deptlist .dept:hover .dept__ico { background: var(--color-primary); color: var(--color-on-primary); }
+.deptlist .dept__name { align-self: end; margin-bottom: 2px; }
+.deptlist .dept__desc { align-self: start; }
+
+/* ---------- quick links as a list (was eight tiles) ---------- */
+.linklist { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0 var(--space-6); }
+.linklist li { border-bottom: 1px solid var(--color-border); }
+.linklist a { display: flex; align-items: center; gap: var(--space-2); padding: var(--space-2) 0; color: var(--color-primary); font-weight: 600; font-size: 0.95rem; }
+.linklist a:hover { color: var(--color-accent-dark); }
+.linklist svg { color: var(--color-primary-soft); flex-shrink: 0; }
+
+/* ---------- dated rows for events (was cards) ---------- */
+.datedlist { display: flex; flex-direction: column; }
+.datedrow { display: flex; gap: var(--space-3); align-items: baseline; padding: var(--space-2) 0; border-bottom: 1px solid var(--color-border); color: var(--color-ink); }
+.datedrow:hover { color: var(--color-ink); background: var(--color-surface-alt); }
+.datedrow__date { display: flex; flex-direction: column; align-items: center; width: 54px; flex-shrink: 0; }
+.datedrow__date strong { font-family: var(--font-head); font-size: 1.4rem; color: var(--color-primary); line-height: 1; }
+.datedrow__date em { font-style: normal; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-accent); }
+.datedrow__body strong { display: block; font-size: 0.95rem; color: var(--color-primary); }
+.datedrow__body em { display: block; font-style: normal; font-size: var(--fs-small); color: var(--color-muted); margin-top: 2px; }
+
+/* ---------- graduate outcomes as alternating rows (was four boxes) ---------- */
+.outcomes { display: flex; flex-direction: column; border-top: 1px solid var(--color-border); }
+.outcome {
+  display: grid; grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.4fr);
+  gap: var(--space-3) var(--space-6); align-items: center;
+  padding: var(--space-3) 0; border-bottom: 1px solid var(--color-border); color: var(--color-ink);
+}
+.outcome:nth-child(even) { direction: rtl; }
+.outcome:nth-child(even) > * { direction: ltr; }
+@media (max-width: 760px) { .outcome, .outcome:nth-child(even) { grid-template-columns: 1fr; direction: ltr; gap: var(--space-1); } }
+.outcome__lead { display: grid; grid-template-columns: auto 1fr; align-items: center; gap: var(--space-1) var(--space-2); }
+.outcome__lead svg { grid-row: span 2; color: var(--color-primary-soft); }
+.outcome__lead strong { font-family: var(--font-head); font-size: var(--fs-h4); color: var(--color-primary); align-self: end; }
+.outcome__lead em {
+  font-style: normal; align-self: start; justify-self: start;
+  font-size: 0.68rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--color-accent-dark); background: var(--color-accent-tint); padding: 3px 8px; border-radius: 3px;
+}
+.outcome__body { font-size: 0.95rem; line-height: 1.7; color: var(--color-muted); }
+.outcome:hover { color: var(--color-ink); }
+.outcome:hover .outcome__lead strong { color: var(--color-accent-dark); }
+
 /* ---------- department / facility tiles ---------- */
 .deptgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; }
 .dept {
@@ -894,5 +1020,4 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .h15:hover{background: #DBB05B !important;}
 .h16:hover{background: rgba(255,255,255,0.14) !important; color: #FFFFFF !important;}
 .h17:hover{background: rgba(6,23,38,0.8) !important; color: #FFFFFF !important;}
-.h18:hover{border: 1px solid #C89B3C !important; color: #16232E !important; box-shadow: 0 6px 18px rgba(11,37,69,0.08) !important;}
-.h19:hover{background: rgba(255,255,255,0.12) !important; color: #FFFFFF !important;}
+.h18:hover{background: rgba(255,255,255,0.12) !important; color: #FFFFFF !important;}
