@@ -1008,3 +1008,65 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   outline: 3px solid var(--color-accent); outline-offset: 2px;
 }
 @media print { [data-on-click], #mobile-menu { display: none !important; } }
+
+/* =========================================================================
+   Employer logo wall — the sector D.Pharm graduates enter.
+   Deliberately not a card grid: hairline cells, one flat plane, so it reads
+   as a list of marks rather than another row of clickable tiles.
+   ========================================================================= */
+.emplogos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(148px, 1fr));
+  /* hairlines are drawn by the cells, not by a gap over a grey ground: with
+     seven logos the last row is rarely full, and a gap-based rule leaves the
+     empty track showing as a grey block */
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.emplogos__cell {
+  background: var(--color-surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 16px;
+  min-height: 104px;
+  /* right + bottom hairline; the container clips the trailing edges */
+  box-shadow: 1px 0 0 var(--color-border), 0 1px 0 var(--color-border);
+}
+.emplogos__cell img {
+  /* optical sizing: a tall mark and a mark with baked-in padding both need
+     more room than a wide wordmark to read at the same visual weight */
+  max-width: var(--logo-w, 122px);
+  max-height: var(--logo-h, 50px);
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  /* seven brand palettes at once would fight the navy/gold scheme —
+     desaturate at rest, restore the real colours on hover */
+  filter: grayscale(1);
+  opacity: 0.68;
+  transition: filter var(--dur) var(--ease), opacity var(--dur) var(--ease);
+}
+.emplogos__cell:hover img { filter: none; opacity: 1; }
+.emplogos__cell--tall  { --logo-h: 62px; }          /* stacked mark over wordmark */
+.emplogos__cell--boxed { --logo-h: 88px; --logo-w: 152px; }  /* logo sits inside its own white margin */
+.emplogos__note {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--color-muted);
+  margin: 14px 0 0;
+}
+@media (max-width: 520px) {
+  .emplogos { grid-template-columns: repeat(2, 1fr); }
+  /* seven cells over two columns leaves one alone — let it take the row */
+  .emplogos__cell:last-child { grid-column: 1 / -1; }
+  .emplogos__cell { min-height: 88px; padding: 16px 12px; }
+  .emplogos__cell img { max-width: 98px; max-height: 40px; }
+  .emplogos__cell--tall img  { max-height: 50px; }
+  .emplogos__cell--boxed img { max-width: 122px; max-height: 70px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .emplogos__cell img { filter: none; opacity: 1; }
+}

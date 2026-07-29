@@ -380,6 +380,14 @@ const COLLEGE_ASSETS = {
   'PP-e1770564409555.jpg': ['campus-front.jpg', 'gal-c0.jpg'],
   'Pharmacy_Council_of_India_Logo.png': ['accred-pci.png'],
   'logo.png': ['accred-wbsctvesd.png'],
+  /* employer marks — used only to show the sector graduates enter */
+  'APOLLOHOSP.NS_BIG-7f75df62.png': ['emp-apollo.png'],
+  'Mankind_Pharma_Corporate_Logo.png': ['emp-mankind.png'],
+  'zydus_life_logo.png': ['emp-zydus.png'],
+  '8963ffa104b17240e4f4e08a27422bba.png': ['emp-lupin.png'],
+  'medplus-65800ccda6dc4.webp': ['emp-medplus.webp'],
+  'b3d64f99e1c9f3e9e8c4066d92a6e73f.png': ['emp-cipla.png'],
+  '1eb0e0256b4b203981953db432f7ae03.png': ['emp-sun.png'],
 };
 for (const [src, targets] of Object.entries(COLLEGE_ASSETS)) {
   const from = join(ROOT, src);
