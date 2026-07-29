@@ -282,3 +282,30 @@
     });
   }
 })();
+
+/* ---------------------------------------------------------------- employer marquee
+   The :hover rule sets animation-play-state, but Chrome does not always apply
+   it to an already-running composited transform animation. Pause through the
+   Web Animations API instead, which holds reliably. */
+(function () {
+  var wall = document.querySelector('.emplogos');
+  if (!wall || !wall.animate) return;
+  var track = wall.querySelector('.emplogos__track');
+  if (!track || !track.getAnimations) return;
+
+  function each(fn) {
+    track.getAnimations().forEach(function (a) {
+      if (a.animationName === 'emplogos-scroll') { try { fn(a); } catch (e) {} }
+    });
+  }
+  var pause = function () { each(function (a) { a.pause(); }); };
+  var play = function () { each(function (a) { a.play(); }); };
+
+  wall.addEventListener('mouseenter', pause);
+  wall.addEventListener('mouseleave', play);
+  wall.addEventListener('focusin', pause);
+  wall.addEventListener('focusout', play);
+  /* on touch there is no hover: a tap holds it, a second tap releases */
+  wall.addEventListener('touchstart', pause, { passive: true });
+  wall.addEventListener('touchend', play, { passive: true });
+})();

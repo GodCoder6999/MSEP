@@ -1011,29 +1011,43 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 
 /* =========================================================================
    Employer logo wall — the sector D.Pharm graduates enter.
-   Deliberately not a card grid: hairline cells, one flat plane, so it reads
-   as a list of marks rather than another row of clickable tiles.
+   A slow marquee rather than a static grid: seven marks read as a moving
+   band, and the row cannot leave an orphan cell at any width.
    ========================================================================= */
 .emplogos {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(148px, 1fr));
-  /* hairlines are drawn by the cells, not by a gap over a grey ground: with
-     seven logos the last row is rarely full, and a gap-based rule leaves the
-     empty track showing as a grey block */
+  position: relative;
+  overflow: hidden;
   background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius);
-  overflow: hidden;
+  /* fade the marks into the edges so items do not pop in mid-stride */
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+          mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
 }
+.emplogos__track {
+  display: flex;
+  width: max-content;
+  animation: emplogos-scroll 38s linear infinite;
+}
+/* pause for anyone reading a mark — pointer or keyboard */
+.emplogos:hover .emplogos__track,
+.emplogos:focus-within .emplogos__track { animation-play-state: paused; }
+
+.emplogos__set { display: flex; flex-shrink: 0; }
+@keyframes emplogos-scroll {
+  from { transform: translate3d(0, 0, 0); }
+  to   { transform: translate3d(-50%, 0, 0); }   /* one full set, then it repeats */
+}
+
 .emplogos__cell {
-  background: var(--color-surface);
+  flex: 0 0 auto;
+  width: 172px;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 20px 16px;
   min-height: 104px;
-  /* right + bottom hairline; the container clips the trailing edges */
-  box-shadow: 1px 0 0 var(--color-border), 0 1px 0 var(--color-border);
+  border-right: 1px solid var(--color-border);
 }
 .emplogos__cell img {
   /* optical sizing: a tall mark and a mark with baked-in padding both need
@@ -1043,30 +1057,27 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   width: auto;
   height: auto;
   object-fit: contain;
-  /* seven brand palettes at once would fight the navy/gold scheme —
-     desaturate at rest, restore the real colours on hover */
-  filter: grayscale(1);
-  opacity: 0.68;
-  transition: filter var(--dur) var(--ease), opacity var(--dur) var(--ease);
 }
-.emplogos__cell:hover img { filter: none; opacity: 1; }
-.emplogos__cell--tall  { --logo-h: 62px; }          /* stacked mark over wordmark */
+.emplogos__cell--tall  { --logo-h: 62px; }                   /* stacked mark over wordmark */
 .emplogos__cell--boxed { --logo-h: 88px; --logo-w: 152px; }  /* logo sits inside its own white margin */
+
 .emplogos__note {
   font-size: 13px;
   line-height: 1.6;
   color: var(--color-muted);
   margin: 14px 0 0;
 }
+
 @media (max-width: 520px) {
-  .emplogos { grid-template-columns: repeat(2, 1fr); }
-  /* seven cells over two columns leaves one alone — let it take the row */
-  .emplogos__cell:last-child { grid-column: 1 / -1; }
-  .emplogos__cell { min-height: 88px; padding: 16px 12px; }
-  .emplogos__cell img { max-width: 98px; max-height: 40px; }
-  .emplogos__cell--tall img  { max-height: 50px; }
-  .emplogos__cell--boxed img { max-width: 122px; max-height: 70px; }
+  .emplogos__cell { width: 140px; min-height: 88px; padding: 16px 12px; }
+  .emplogos__cell img { max-width: 98px; max-height: 42px; }
+  .emplogos__cell--tall img  { max-height: 52px; }
+  .emplogos__cell--boxed img { max-width: 122px; max-height: 72px; }
 }
+
+/* no motion: hold still and let the reader swipe through instead */
 @media (prefers-reduced-motion: reduce) {
-  .emplogos__cell img { filter: none; opacity: 1; }
+  .emplogos { overflow-x: auto; }
+  .emplogos__track { animation: none; }
+  .emplogos__set:last-child { display: none; }
 }

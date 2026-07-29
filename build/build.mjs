@@ -386,7 +386,9 @@ const COLLEGE_ASSETS = {
   'zydus_life_logo.png': ['emp-zydus.png'],
   '8963ffa104b17240e4f4e08a27422bba.png': ['emp-lupin.png'],
   'medplus-65800ccda6dc4.webp': ['emp-medplus.webp'],
-  'b3d64f99e1c9f3e9e8c4066d92a6e73f.png': ['emp-cipla.png'],
+  /* the supplied Cipla PNG was a social-card crop with the C and the a cut
+     off at the file edges; this is the vector wordmark from Wikimedia */
+  'cipla-logo.svg': ['emp-cipla.svg'],
   '1eb0e0256b4b203981953db432f7ae03.png': ['emp-sun.png'],
 };
 for (const [src, targets] of Object.entries(COLLEGE_ASSETS)) {
