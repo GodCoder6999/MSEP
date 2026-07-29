@@ -142,6 +142,14 @@ img { max-width: 100%; }
   letter-spacing: 0.01em;
   line-height: 1.2;
   color: var(--color-navy);
+  /* raised lettering: three short steps down in cooling greys give the
+     extrusion, the last blurred shadow lifts the whole block off the band,
+     and the hairline highlight above the glyphs reads as the lit edge */
+  text-shadow:
+    0 -1px 0 rgba(255, 255, 255, 0.9),
+    0 1px 0 #C6D0DB,
+    0 2px 0 #AEBBC9,
+    0 3px 5px rgba(11, 37, 69, 0.26);
 }
 .hdr-sub {
   display: flex;
@@ -174,7 +182,10 @@ img { max-width: 100%; }
 @media (max-width: 600px) {
   .lockup { gap: var(--space-2); }
   .lockup__logo { height: 56px; border-radius: 11px; }
-  .hdr-name { font-size: 1.12rem; }
+  .hdr-name {
+    font-size: 1.12rem;
+    text-shadow: 0 -1px 0 rgba(255, 255, 255, 0.9), 0 1px 0 #C6D0DB, 0 2px 0 #B4C0CE, 0 3px 4px rgba(11, 37, 69, 0.26);
+  }
   .accred img { width: 20px; height: 20px; }
   /* a wrapped pill looks broken, and two-line chips cost the bar 70px on a
      320px screen — hold each credential on one line and shrink it instead */
@@ -1045,7 +1056,10 @@ header.is-stuck { box-shadow: var(--shadow-sm); }
   header.is-stuck .logobar { min-height: 84px !important; transition: min-height var(--dur) var(--ease); }
   header.is-stuck .lockup__logo { height: 56px; }
   header.is-stuck .hdr-sub { display: none !important; }
-  header.is-stuck .hdr-name { font-size: 17px !important; }
+  header.is-stuck .hdr-name {
+    font-size: 17px !important;
+    text-shadow: 0 -1px 0 rgba(255, 255, 255, 0.9), 0 1px 0 #C6D0DB, 0 2px 3px rgba(11, 37, 69, 0.24);
+  }
 }
 /* the notice ticker is part of the header block, so it must not double-stick */
 header nav { position: static !important; }
