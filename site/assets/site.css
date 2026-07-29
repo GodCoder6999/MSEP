@@ -99,14 +99,14 @@ img { max-width: 100%; }
 }
 .accred { display: inline-flex; align-items: center; gap: 0.5em; }
 /* both marks are cropped to the same circle so the row reads as one style */
-.accred img { width: 20px; height: 20px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
-.accred__sep { width: 1px; height: 14px; background: var(--color-border); }
+.accred img { width: 28px; height: 28px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
+.accred__sep { width: 1px; height: 18px; background: var(--color-border); }
 
 @media (max-width: 600px) {
   .lockup { gap: var(--space-2); }
   .lockup__logo { height: 48px; }
   .hdr-name { font-size: 1.4rem; }
-  .accred img { width: 18px; height: 18px; }
+  .accred img { width: 24px; height: 24px; }
   .accred__sep { display: none; }      /* badges stack, so the rule would dangle */
   .hdr-sub { gap: 4px var(--space-1); }
 }
