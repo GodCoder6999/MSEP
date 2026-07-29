@@ -210,7 +210,8 @@ const credits = existsSync(join(SITE, 'assets/img/credits.json'))
 
 function initialsAfter(html, pos) {
   const tail = html.slice(pos, pos + 700);
-  const m = /Source Serif 4[^>]*>([^<]{3,60})</.exec(tail);
+  // the name sits in the heading font — match either the old family or the token
+  const m = /(?:Source Serif 4|--font-head)[^>]*>([^<]{3,60})</.exec(tail);
   if (!m) return null;
   const words = m[1].replace(/^(Dr\.|Mr\.|Ms\.|Mrs\.|Prof\.)\s*/i, '').trim().split(/\s+/);
   return ((words[0]?.[0] || '') + (words[words.length - 1]?.[0] || '')).toUpperCase();
@@ -232,7 +233,7 @@ function renderImageSlots(html) {
     }
     const ini = initialsAfter(html, offset + m.length);
     if (ini) {
-      return `<div role="img" aria-label="${escAttr(alt)}" style="${style} border-radius: ${radius}; background: linear-gradient(140deg, #2743A6, #3557C7); color: #FFF1DC; display: flex; align-items: center; justify-content: center; font-family: 'Source Serif 4', serif; font-weight: 700; font-size: ${shape === 'circle' ? '30px' : '64px'}; letter-spacing: 0.02em;">${ini}</div>`;
+      return `<div role="img" aria-label="${escAttr(alt)}" style="${style} border-radius: ${radius}; background: var(--color-primary-tint); color: var(--color-primary); display: flex; align-items: center; justify-content: center; font-family: var(--font-head); font-weight: 700; font-size: ${shape === 'circle' ? '30px' : '64px'}; letter-spacing: 0.02em;">${ini}</div>`;
     }
     return `<div role="img" aria-label="${escAttr(alt)}" style="${style} border-radius: ${radius}; background: #E9EEFB;"></div>`;
   });
@@ -356,8 +357,9 @@ function shell(pageTitle, helmet, html) {
 <link rel="apple-touch-icon" href="assets/img/logo.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;500;600;700&family=Inter:wght@600;700;800&display=swap" rel="stylesheet">
 ${helmet}
+<link rel="stylesheet" href="assets/tokens.css">
 <link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
@@ -404,7 +406,7 @@ for (const p of pages) {
 <div style="background: #1B2559; color: #FFFFFF;">
   <div style="max-width: 1180px; margin: 0 auto; padding: 38px 20px 42px;">
     <div style="font-size: 13px; color: #8E9BD1; margin-bottom: 10px;"><a href="index.html" style="color: #B9C3E8;">Home</a> &nbsp;/&nbsp; <span style="color: #FFD48A;">Image Credits</span></div>
-    <h1 style="font-family: 'Source Serif 4', serif; font-weight: 700; font-size: clamp(28px, 4vw, 42px); margin: 0 0 10px;">Image Credits</h1>
+    <h1 style="font-family: var(--font-head); font-weight: 700; font-size: clamp(28px, 4vw, 42px); margin: 0 0 10px;">Image Credits</h1>
     <p style="font-size: 15.5px; color: #D6DEF6; max-width: 62ch; line-height: 1.65; margin: 0;">Photographs on this website are openly-licensed images sourced through <a href="https://openverse.org" style="color: #FFD48A;" rel="noopener">Openverse</a>, used as stand-ins where the college's own photography is not yet available. Photographs supplied by the college — including the campus building — are not listed here. Each is credited to its creator below under its Creative Commons licence.</p>
   </div>
 </div>
@@ -432,5 +434,6 @@ const baseCss = readFileSync(join(ROOT, 'build', 'site.css'), 'utf8');
 mkdirSync(join(SITE, 'assets'), { recursive: true });
 writeFileSync(join(SITE, 'assets', 'site.css'), `${baseCss}\n/* generated from style-hover / style-focus */\n${cssText()}`);
 copyFileSync(join(ROOT, 'build', 'site.js'), join(SITE, 'assets', 'site.js'));
+copyFileSync(join(ROOT, 'build', 'tokens.css'), join(SITE, 'assets', 'tokens.css'));
 
 console.log(`built ${pages.length} pages, ${cssRules.size} state-style rules`);

@@ -9,26 +9,27 @@
 <link rel="apple-touch-icon" href="assets/img/logo.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;500;600;700&family=Inter:wght@600;700;800&display=swap" rel="stylesheet">
 <style>
-  body { margin: 0; background: #EEF2F5; color: #16232E; font-family: 'Public Sans', system-ui, sans-serif; }
+  body { margin: 0; background: #EEF2F5; color: #16232E; font-family: var(--font-body); }
   a { color: #0B2545; text-decoration: none; }
   a:hover { color: #16456F; }
   @keyframes fadeUp { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
 </style>
 <style>
   html { scroll-behavior: smooth; }
-  body { margin: 0; background: #EEF2F5; color: #16232E; font-family: 'Public Sans', system-ui, sans-serif; }
+  body { margin: 0; background: #EEF2F5; color: #16232E; font-family: var(--font-body); }
   a { color: #0B2545; text-decoration: none; }
   a:hover { color: #16456F; }
   @keyframes ddIn { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: translateY(0); } }
 </style>
+<link rel="stylesheet" href="assets/tokens.css">
 <link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
 <header>
 <div class="topbar" style="background: #0B2545; color: #C2D2DC; font-size: 13px;">
-  <div style="max-width: 1180px; margin: 0 auto; padding: 7px 20px; display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap;">
+  <div style="max-width: var(--container); margin: 0 auto; padding: 7px 20px; display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap;">
     <div style="display: flex; gap: 18px; flex-wrap: wrap; align-items: center;">
       <a href="tel:+919830236143" style="color: #C2D2DC;"><svg class="ico" viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.6 15.6 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.7.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C11.3 21 3 12.7 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.7.1.3 0 .7-.2 1z"/></svg> (+91) 9830 236143</a>
       <a class="topbar__email" href="mailto:muktirshikshacollegeofpharnacy@gmail.com" style="color: #C2D2DC;"><svg class="ico" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"></rect><polyline points="3.6,7.2 12,12.8 20.4,7.2"></polyline></svg> muktirshikshacollegeofpharnacy@gmail.com</a>
@@ -46,11 +47,11 @@
   </div>
 </div>
 <div style="background: #FFFFFF; border-bottom: 1px solid #D7DFE5;">
-  <div class="logobar" style="max-width: 1180px; margin: 0 auto; padding: 9px 20px; display: flex; align-items: center; gap: 14px;">
+  <div class="logobar" style="max-width: var(--container); margin: 0 auto; padding: 9px 20px; display: flex; align-items: center; gap: 14px;">
     <a href="index.html" style="display: flex; align-items: center; gap: 14px; min-width: 0; flex: 1;">
       <img src="assets/img/logo.jpg" alt="Muktir Shiksha College of Education &amp; Pharmacy" style="width: 58px; height: 58px; object-fit: contain; flex-shrink: 0;">
       <div style="min-width: 0;">
-        <div class="hdr-name" style="font-family: 'Source Serif 4', serif; font-weight: 700; font-size: clamp(14px, 2.3vw, 19px); color: #0B2545; line-height: 1.2;">Muktir Shiksha College of Education &amp; Pharmacy</div>
+        <div class="hdr-name" style="font-family: var(--font-head); font-weight: 700; font-size: clamp(14px, 2.3vw, 19px); color: #0B2545; line-height: 1.2;">Muktir Shiksha College of Education &amp; Pharmacy</div>
         <div class="hdr-sub" style="font-size: 11.5px; color: #5A6B78; margin-top: 2px; letter-spacing: 0.01em;"><span class="accred"><img src="assets/img/accred-pci.png" alt="" width="34" height="34" loading="lazy">Approved by PCI, New Delhi</span><span class="accred__sep">·</span><span class="accred"><img src="assets/img/accred-wbsctvesd.png" alt="" width="34" height="34" loading="lazy">Affiliated to WBSCT&amp;VE&amp;SD</span><span class="accred__sep">·</span><span class="accred accred--addr"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"></path><circle cx="12" cy="10" r="2.6"></circle></svg>Jogen Mondal Colony, Vill. Kuchlia, P.O. &amp; P.S. Gobardanga, North 24 Parganas, West Bengal &mdash; 743252</span></div>
       </div>
     </a>
@@ -65,14 +66,14 @@
           <span class="hdr-action__txt"><strong>Query</strong><span>We call back in a day</span></span>
         </a>
         <a class="hdr-apply h5" href="apply.html"><span class="hdr-apply__dot"></span>Apply Now</a>
-      </div></span><span class="only-mobile"><button data-on-click="toggleMenu" aria-label="Menu" style="background: #0B2545; color: #FFFFFF; border: none; border-radius: 6px; padding: 10px 14px; font-size: 15px; font-weight: 600; font-family: 'Public Sans', sans-serif; cursor: pointer; flex-shrink: 0;">☰ Menu</button></span>
+      </div></span><span class="only-mobile"><button data-on-click="toggleMenu" aria-label="Menu" style="background: #0B2545; color: #FFFFFF; border: none; border-radius: 6px; padding: 10px 14px; font-size: 15px; font-weight: 600; font-family: var(--font-body); cursor: pointer; flex-shrink: 0;">☰ Menu</button></span>
     
     
   </div>
 </div>
 
   <nav class="only-desktop" style="background: #0B2545; position: sticky; top: 0; z-index: 90; box-shadow: 0 2px 10px rgba(11,37,69,0.3);">
-    <div style="max-width: 1180px; margin: 0 auto; padding: 0 12px; display: flex; align-items: stretch;">
+    <div style="max-width: var(--container); margin: 0 auto; padding: 0 12px; display: flex; align-items: stretch;">
       <a class="h6" href="index.html" style="color: #FFFFFF; font-weight: 600; font-size: 14.5px; padding: 13px 15px; display: block;">Home</a>
       
         <div style="position: relative;" data-on-mouseenter="g.enter" data-i="0" data-on-mouseleave="g.leave" data-i="0">
@@ -363,10 +364,10 @@
 </div>
 <div id="mobile-menu" hidden><div style="position: fixed; inset: 0; z-index: 200; background: #0B2545; overflow-y: auto; padding: 16px 18px 40px;">
     <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px;">
-      <div style="font-family: 'Source Serif 4', serif; font-weight: 700; font-size: 18px; color: #FFFFFF;">Menu</div>
-      <button data-on-click="toggleMenu" style="background: #16456F; color: #FFFFFF; border: none; border-radius: 6px; padding: 9px 16px; font-size: 15px; font-weight: 600; font-family: 'Public Sans', sans-serif; cursor: pointer;">✕ Close</button>
+      <div style="font-family: var(--font-head); font-weight: 700; font-size: 18px; color: #FFFFFF;">Menu</div>
+      <button data-on-click="toggleMenu" style="background: #16456F; color: #FFFFFF; border: none; border-radius: 6px; padding: 9px 16px; font-size: 15px; font-weight: 600; font-family: var(--font-body); cursor: pointer;">✕ Close</button>
     </div>
-    <a href="apply.html" style="display: block; text-align: center; background: #C89B3C; color: #2A2109; font-weight: 700; padding: 13px; border-radius: 8px; font-size: 16px; margin-bottom: 14px;">Apply Now — Admissions Open 2026–27</a>
+    <a class="btn-primary" href="apply.html"  style="margin-bottom: 14px">Apply Now — Admissions Open 2026–27</a>
     <div class="menu-chips">
       <a href="dpharm.html">
         <span class="menu-chips__ico"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12,4 21,8.5 12,13 3,8.5"></polygon><path d="M7,11v4c0,1.5 2.2,2.8 5,2.8s5-1.3 5-2.8v-4"></path><line x1="21" y1="8.5" x2="21" y2="14"></line></svg></span>
@@ -620,7 +621,7 @@
     
     <div style="margin-top: 20px; display: flex; gap: 10px;">
       <a href="tel:+919830236143" style="flex: 1; text-align: center; background: #16456F; color: #FFFFFF; font-weight: 600; padding: 12px; border-radius: 8px;"><svg class="ico" viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.6 15.6 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.7.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C11.3 21 3 12.7 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.7.1.3 0 .7-.2 1z"/></svg> Call Us</a>
-      <a href="https://wa.me/919830236143" style="flex: 1; text-align: center; background: #25D366; color: #073B14; font-weight: 700; padding: 12px; border-radius: 8px;"><svg class="ico" viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M12 2.2A9.7 9.7 0 0 0 3.6 16.8L2.2 21.8l5.1-1.3A9.7 9.7 0 1 0 12 2.2zm0 1.8a7.9 7.9 0 1 1-4 14.7l-.3-.2-3 .8.8-2.9-.2-.3A7.9 7.9 0 0 1 12 4zm-3.6 4c-.2 0-.5.1-.7.4-.2.3-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.7 2.7 4.2 3.7 2 .8 2.5.7 2.9.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2l-.5-.3-1.6-.8c-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1-.2-.1-1.1-.4-2-1.2-.7-.6-1.2-1.4-1.4-1.7-.1-.2 0-.4.1-.5l.4-.5c.1-.2.2-.3.2-.5s0-.3-.1-.5l-.8-1.8c-.2-.4-.4-.4-.6-.4z"/></svg> WhatsApp</a>
+      <a class="btn-whatsapp" href="https://wa.me/919830236143"  style="flex: 1"><svg class="ico" viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M12 2.2A9.7 9.7 0 0 0 3.6 16.8L2.2 21.8l5.1-1.3A9.7 9.7 0 1 0 12 2.2zm0 1.8a7.9 7.9 0 1 1-4 14.7l-.3-.2-3 .8.8-2.9-.2-.3A7.9 7.9 0 0 1 12 4zm-3.6 4c-.2 0-.5.1-.7.4-.2.3-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.7 2.7 4.2 3.7 2 .8 2.5.7 2.9.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2l-.5-.3-1.6-.8c-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1-.2-.1-1.1-.4-2-1.2-.7-.6-1.2-1.4-1.4-1.7-.1-.2 0-.4.1-.5l.4-.5c.1-.2.2-.3.2-.5s0-.3-.1-.5l-.8-1.8c-.2-.4-.4-.4-.6-.4z"/></svg> WhatsApp</a>
     </div>
   </div></div>
 </header>
@@ -629,15 +630,15 @@
   <div class="hero-wrap" style="position: relative; height: clamp(380px, 29.72vw, 456px); overflow: hidden;">
       <div class="hero-slide" style="position: absolute; inset: 0; opacity: 1; transition: opacity 0.9s ease; pointer-events: auto;">
         <div style="position: absolute; inset: 0;"><img src="assets/img/campus-front.jpg" alt="The college campus at Kuchlia, Gobardanga" title="The college campus at Kuchlia, Gobardanga" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; display: block; border-radius: 0; background: #E9EEFB;"></div>
-        <div style="position: absolute; inset: 0; background: linear-gradient(100deg, rgba(6,23,38,0.92) 0%, rgba(6,23,38,0.78) 45%, rgba(6,23,38,0.35) 100%);"></div>
+        <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,.65) 0%, rgba(0,0,0,.2) 50%, rgba(0,0,0,.35) 100%), linear-gradient(100deg, rgba(6,23,38,0.86) 0%, rgba(6,23,38,0.55) 48%, rgba(6,23,38,0.15) 100%);"></div>
         <div style="position: relative; height: 100%; display: flex; align-items: center;">
-          <div style="max-width: 1180px; margin: 0 auto; padding: clamp(44px, 6vw, 76px) clamp(48px, 7vw, 92px); width: 100%; box-sizing: border-box;">
+          <div style="max-width: var(--container); margin: 0 auto; padding: clamp(44px, 6vw, 76px) clamp(48px, 7vw, 92px); width: 100%; box-sizing: border-box;">
             <div style="max-width: 640px;">
               <div style="display: inline-block; border-left: 3px solid #C89B3C; padding: 2px 0 2px 12px; font-size: 12.5px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #E8CE9A; margin-bottom: 20px;">Admissions open · Session 2026–27</div>
-              <h1 style="font-family: 'Source Serif 4', serif; font-weight: 700; font-size: clamp(29px, 4.2vw, 48px); line-height: 1.15; margin: 0 0 18px; color: #FFFFFF; text-wrap: pretty;">Empowering the Next Generation of <span style="color: #C89B3C;">Pharmacists</span></h1>
+              <h1 style="font-family: var(--font-head); font-weight: 700; font-size: clamp(29px, 4.2vw, 48px); line-height: 1.15; margin: 0 0 18px; color: #FFFFFF; text-wrap: pretty;">Empowering the Next Generation of <span style="color: #C89B3C;">Pharmacists</span></h1>
               <p style="font-size: clamp(15px, 1.5vw, 17.5px); line-height: 1.7; color: #C2D2DC; margin: 0 0 30px; max-width: 54ch;">Our students gain the knowledge, skills and confidence to excel in pharmacy and healthcare. We combine quality education, hands-on training and expert guidance for a rewarding career.</p>
               <div style="display: flex; gap: 12px; flex-wrap: wrap;">
-                <a class="h5" href="apply.html" style="background: #C89B3C; color: #2A2109; font-weight: 700; font-size: 16px; padding: 14px 28px; border-radius: 4px;">Apply Now</a>
+                <a class="btn-primary h5" href="apply.html" >Apply Now</a>
                 <a class="h16" href="dpharm.html" style="background: transparent; color: #FFFFFF; font-weight: 600; font-size: 16px; padding: 14px 28px; border-radius: 4px; border: 1.5px solid rgba(255,255,255,0.5);">Know More</a>
               </div>
             </div>
@@ -646,15 +647,15 @@
       </div>
       <div class="hero-slide" style="position: absolute; inset: 0; opacity: 0; transition: opacity 0.9s ease; pointer-events: none;">
         <div style="position: absolute; inset: 0;"><img src="assets/img/hero-slide-2.jpg" alt="Hero photograph — laboratory practical session" title="Tropical Medicine Course 2010 — US Army Africa (CC BY)" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; display: block; border-radius: 0; background: #E9EEFB;"></div>
-        <div style="position: absolute; inset: 0; background: linear-gradient(100deg, rgba(6,23,38,0.92) 0%, rgba(6,23,38,0.78) 45%, rgba(6,23,38,0.35) 100%);"></div>
+        <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,.65) 0%, rgba(0,0,0,.2) 50%, rgba(0,0,0,.35) 100%), linear-gradient(100deg, rgba(6,23,38,0.86) 0%, rgba(6,23,38,0.55) 48%, rgba(6,23,38,0.15) 100%);"></div>
         <div style="position: relative; height: 100%; display: flex; align-items: center;">
-          <div style="max-width: 1180px; margin: 0 auto; padding: clamp(44px, 6vw, 76px) clamp(48px, 7vw, 92px); width: 100%; box-sizing: border-box;">
+          <div style="max-width: var(--container); margin: 0 auto; padding: clamp(44px, 6vw, 76px) clamp(48px, 7vw, 92px); width: 100%; box-sizing: border-box;">
             <div style="max-width: 640px;">
               <div style="display: inline-block; border-left: 3px solid #C89B3C; padding: 2px 0 2px 12px; font-size: 12.5px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #E8CE9A; margin-bottom: 20px;">Practical, hands-on learning</div>
-              <h2 style="font-family: 'Source Serif 4', serif; font-weight: 700; font-size: clamp(29px, 4.2vw, 48px); line-height: 1.15; margin: 0 0 18px; color: #FFFFFF; text-wrap: pretty;">Laboratory Training That Employers Trust</h2>
+              <h2 style="font-family: var(--font-head); font-weight: 700; font-size: clamp(29px, 4.2vw, 48px); line-height: 1.15; margin: 0 0 18px; color: #FFFFFF; text-wrap: pretty;">Laboratory Training That Employers Trust</h2>
               <p style="font-size: clamp(15px, 1.5vw, 17.5px); line-height: 1.7; color: #C2D2DC; margin: 0 0 30px; max-width: 54ch;">Four dedicated laboratories, weekly practical sessions and 500 hours of supervised training in real hospital and community pharmacy settings — the experience a pharmacist’s career is built on.</p>
               <div style="display: flex; gap: 12px; flex-wrap: wrap;">
-                <a class="h5" href="apply.html" style="background: #C89B3C; color: #2A2109; font-weight: 700; font-size: 16px; padding: 14px 28px; border-radius: 4px;">Apply Now</a>
+                <a class="btn-primary h5" href="apply.html" >Apply Now</a>
                 <a class="h16" href="dpharm.html" style="background: transparent; color: #FFFFFF; font-weight: 600; font-size: 16px; padding: 14px 28px; border-radius: 4px; border: 1.5px solid rgba(255,255,255,0.5);">Know More</a>
               </div>
             </div>
@@ -663,15 +664,15 @@
       </div>
       <div class="hero-slide" style="position: absolute; inset: 0; opacity: 0; transition: opacity 0.9s ease; pointer-events: none;">
         <div style="position: absolute; inset: 0;"><img src="assets/img/hero-slide-3.jpg" alt="Hero photograph — faculty teaching a class" title="Political Science Professor at University of Ghana, Dr. Evans Aggrey-Darkoh gives a class lecture in Accra, Ghana — World Bank Photo Collection (CC BY-NC-ND)" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; display: block; border-radius: 0; background: #E9EEFB;"></div>
-        <div style="position: absolute; inset: 0; background: linear-gradient(100deg, rgba(6,23,38,0.92) 0%, rgba(6,23,38,0.78) 45%, rgba(6,23,38,0.35) 100%);"></div>
+        <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,.65) 0%, rgba(0,0,0,.2) 50%, rgba(0,0,0,.35) 100%), linear-gradient(100deg, rgba(6,23,38,0.86) 0%, rgba(6,23,38,0.55) 48%, rgba(6,23,38,0.15) 100%);"></div>
         <div style="position: relative; height: 100%; display: flex; align-items: center;">
-          <div style="max-width: 1180px; margin: 0 auto; padding: clamp(44px, 6vw, 76px) clamp(48px, 7vw, 92px); width: 100%; box-sizing: border-box;">
+          <div style="max-width: var(--container); margin: 0 auto; padding: clamp(44px, 6vw, 76px) clamp(48px, 7vw, 92px); width: 100%; box-sizing: border-box;">
             <div style="max-width: 640px;">
               <div style="display: inline-block; border-left: 3px solid #C89B3C; padding: 2px 0 2px 12px; font-size: 12.5px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #E8CE9A; margin-bottom: 20px;">Experienced, dedicated faculty</div>
-              <h2 style="font-family: 'Source Serif 4', serif; font-weight: 700; font-size: clamp(29px, 4.2vw, 48px); line-height: 1.15; margin: 0 0 18px; color: #FFFFFF; text-wrap: pretty;">Taught by Faculty Who Know You by Name</h2>
+              <h2 style="font-family: var(--font-head); font-weight: 700; font-size: clamp(29px, 4.2vw, 48px); line-height: 1.15; margin: 0 0 18px; color: #FFFFFF; text-wrap: pretty;">Taught by Faculty Who Know You by Name</h2>
               <p style="font-size: clamp(15px, 1.5vw, 17.5px); line-height: 1.7; color: #C2D2DC; margin: 0 0 30px; max-width: 54ch;">M.Pharm-qualified teachers across six departments, a 60-seat intake and small batches — so every student is guided personally through both years of the diploma.</p>
               <div style="display: flex; gap: 12px; flex-wrap: wrap;">
-                <a class="h5" href="apply.html" style="background: #C89B3C; color: #2A2109; font-weight: 700; font-size: 16px; padding: 14px 28px; border-radius: 4px;">Apply Now</a>
+                <a class="btn-primary h5" href="apply.html" >Apply Now</a>
                 <a class="h16" href="dpharm.html" style="background: transparent; color: #FFFFFF; font-weight: 600; font-size: 16px; padding: 14px 28px; border-radius: 4px; border: 1.5px solid rgba(255,255,255,0.5);">Know More</a>
               </div>
             </div>
@@ -680,23 +681,23 @@
       </div>
       <div class="hero-slide" style="position: absolute; inset: 0; opacity: 0; transition: opacity 0.9s ease; pointer-events: none;">
         <div style="position: absolute; inset: 0;"><img src="assets/img/hero-slide-4.jpg" alt="Hero photograph — graduates or hospital pharmacy" title="Hospital pharmacy in Pemba, Tanzania — Wayan Vota (CC BY-NC-SA)" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; display: block; border-radius: 0; background: #E9EEFB;"></div>
-        <div style="position: absolute; inset: 0; background: linear-gradient(100deg, rgba(6,23,38,0.92) 0%, rgba(6,23,38,0.78) 45%, rgba(6,23,38,0.35) 100%);"></div>
+        <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,.65) 0%, rgba(0,0,0,.2) 50%, rgba(0,0,0,.35) 100%), linear-gradient(100deg, rgba(6,23,38,0.86) 0%, rgba(6,23,38,0.55) 48%, rgba(6,23,38,0.15) 100%);"></div>
         <div style="position: relative; height: 100%; display: flex; align-items: center;">
-          <div style="max-width: 1180px; margin: 0 auto; padding: clamp(44px, 6vw, 76px) clamp(48px, 7vw, 92px); width: 100%; box-sizing: border-box;">
+          <div style="max-width: var(--container); margin: 0 auto; padding: clamp(44px, 6vw, 76px) clamp(48px, 7vw, 92px); width: 100%; box-sizing: border-box;">
             <div style="max-width: 640px;">
               <div style="display: inline-block; border-left: 3px solid #C89B3C; padding: 2px 0 2px 12px; font-size: 12.5px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #E8CE9A; margin-bottom: 20px;">Career-oriented guidance</div>
-              <h2 style="font-family: 'Source Serif 4', serif; font-weight: 700; font-size: clamp(29px, 4.2vw, 48px); line-height: 1.15; margin: 0 0 18px; color: #FFFFFF; text-wrap: pretty;">A Clear Path Into Healthcare Careers</h2>
+              <h2 style="font-family: var(--font-head); font-weight: 700; font-size: clamp(29px, 4.2vw, 48px); line-height: 1.15; margin: 0 0 18px; color: #FFFFFF; text-wrap: pretty;">A Clear Path Into Healthcare Careers</h2>
               <p style="font-size: clamp(15px, 1.5vw, 17.5px); line-height: 1.7; color: #C2D2DC; margin: 0 0 30px; max-width: 54ch;">Graduates work as registered pharmacists in hospitals, run licensed community pharmacies, join pharmaceutical companies, or continue to B.Pharm through lateral entry.</p>
               <div style="display: flex; gap: 12px; flex-wrap: wrap;">
-                <a class="h5" href="apply.html" style="background: #C89B3C; color: #2A2109; font-weight: 700; font-size: 16px; padding: 14px 28px; border-radius: 4px;">Apply Now</a>
+                <a class="btn-primary h5" href="apply.html" >Apply Now</a>
                 <a class="h16" href="dpharm.html" style="background: transparent; color: #FFFFFF; font-weight: 600; font-size: 16px; padding: 14px 28px; border-radius: 4px; border: 1.5px solid rgba(255,255,255,0.5);">Know More</a>
               </div>
             </div>
           </div>
         </div>
       </div>
-    <button class="h17" data-on-click="prev" aria-label="Previous slide" style="position: absolute; left: 14px; top: 50%; transform: translateY(-50%); width: 46px; height: 46px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.35); background: rgba(6,23,38,0.45); color: #FFFFFF; font-size: 19px; cursor: pointer; display: flex; align-items: center; justify-content: center; font-family: 'Public Sans', sans-serif;">‹</button>
-    <button class="h17" data-on-click="next" aria-label="Next slide" style="position: absolute; right: 14px; top: 50%; transform: translateY(-50%); width: 46px; height: 46px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.35); background: rgba(6,23,38,0.45); color: #FFFFFF; font-size: 19px; cursor: pointer; display: flex; align-items: center; justify-content: center; font-family: 'Public Sans', sans-serif;">›</button>
+    <button class="h17" data-on-click="prev" aria-label="Previous slide" style="position: absolute; left: 14px; top: 50%; transform: translateY(-50%); width: 46px; height: 46px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.35); background: rgba(6,23,38,0.45); color: #FFFFFF; font-size: 19px; cursor: pointer; display: flex; align-items: center; justify-content: center; font-family: var(--font-body);">‹</button>
+    <button class="h17" data-on-click="next" aria-label="Next slide" style="position: absolute; right: 14px; top: 50%; transform: translateY(-50%); width: 46px; height: 46px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.35); background: rgba(6,23,38,0.45); color: #FFFFFF; font-size: 19px; cursor: pointer; display: flex; align-items: center; justify-content: center; font-family: var(--font-body);">›</button>
     <div style="position: absolute; left: 0; right: 0; bottom: 18px; display: flex; justify-content: center; gap: 9px;">
       
         <button data-on-click="d.go" data-i="0" aria-label="Go to slide" style="width: 30px; height: 5px; border-radius: 3px; border: none; padding: 0; cursor: pointer; background: #C89B3C; transition: width 0.3s ease, background 0.3s ease;"></button>
@@ -714,7 +715,7 @@
 </div>
 
 <div style="background: #FFFFFF; border-bottom: 1px solid #D7DFE5;">
-  <div style="max-width: 1180px; margin: 0 auto; padding: 22px 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px;">
+  <div style="max-width: var(--container); margin: 0 auto; padding: 22px 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px;">
     <div style="display: flex; gap: 12px; align-items: flex-start;"><div style="width: 8px; height: 8px; border-radius: 50%; background: #C89B3C; margin-top: 7px; flex-shrink: 0;"></div><div><div style="font-weight: 700; font-size: 14.5px; color: #0B2545;">Approved by PCI, New Delhi</div><div style="font-size: 13px; color: #5A6B78;">Pharmacy Council of India recognition</div></div></div>
     <div style="display: flex; gap: 12px; align-items: flex-start;"><div style="width: 8px; height: 8px; border-radius: 50%; background: #C89B3C; margin-top: 7px; flex-shrink: 0;"></div><div><div style="font-weight: 700; font-size: 14.5px; color: #0B2545;">Affiliated to WBSCT&amp;VE&amp;SD</div><div style="font-size: 13px; color: #5A6B78;">West Bengal state technical council</div></div></div>
     <div style="display: flex; gap: 12px; align-items: flex-start;"><div style="width: 8px; height: 8px; border-radius: 50%; background: #C89B3C; margin-top: 7px; flex-shrink: 0;"></div><div><div style="font-weight: 700; font-size: 14.5px; color: #0B2545;">Experienced Faculty</div><div style="font-size: 13px; color: #5A6B78;">M.Pharm-qualified, dedicated teachers</div></div></div>
@@ -722,10 +723,10 @@
   </div>
 </div>
 
-<div style="max-width: 1180px; margin: 0 auto; padding: clamp(50px, 7vw, 80px) 20px;">
+<div style="max-width: var(--container); margin: 0 auto; padding: var(--space-8) var(--space-3);">
   <div style="text-align: center; max-width: 660px; margin: 0 auto 44px;">
     <div style="color: #C89B3C; font-weight: 700; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 10px;">Our Legacy</div>
-    <h2 style="font-family: 'Source Serif 4', serif; font-weight: 700; font-size: clamp(26px, 3.4vw, 38px); color: #0B2545; margin: 0 0 14px; line-height: 1.18;">A legacy of academic brilliance</h2>
+    <h2 style="font-family: var(--font-head); font-weight: 700; font-size: clamp(26px, 3.4vw, 38px); color: #0B2545; margin: 0 0 14px; line-height: 1.18;">A legacy of academic brilliance</h2>
     <p style="font-size: 15.5px; line-height: 1.7; color: #5A6B78; margin: 0;">One programme, run properly — an ecosystem of teaching, laboratory practice and professional guidance for the healthcare workforce of North 24 Parganas.</p>
   </div>
   <div class="bento">
@@ -773,10 +774,10 @@
 </div>
 
 <div style="background: #FFFFFF; border-top: 1px solid #D7DFE5; border-bottom: 1px solid #D7DFE5;">
-  <div style="max-width: 1180px; margin: 0 auto; padding: clamp(50px, 7vw, 80px) 20px;">
+  <div style="max-width: var(--container); margin: 0 auto; padding: var(--space-8) var(--space-3);">
     <div style="text-align: center; max-width: 640px; margin: 0 auto 40px;">
       <div style="color: #C89B3C; font-weight: 700; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 10px;">Our Programme</div>
-      <h2 style="font-family: 'Source Serif 4', serif; font-weight: 700; font-size: clamp(26px, 3.2vw, 36px); color: #0B2545; margin: 0 0 12px;">Diploma in Pharmacy (D.Pharm)</h2>
+      <h2 style="font-family: var(--font-head); font-weight: 700; font-size: clamp(26px, 3.2vw, 36px); color: #0B2545; margin: 0 0 12px;">Diploma in Pharmacy (D.Pharm)</h2>
       <p style="font-size: 15.5px; line-height: 1.7; color: #5A6B78; margin: 0;">One programme, done properly. Drug formulation, dispensing and patient care — with emphasis on ethical practice, healthcare regulations and industry standards.</p>
     </div>
     <div class="course-card" style="background: #FFFFFF; border: 1px solid #D7DFE5; border-radius: 14px; overflow: hidden; box-shadow: 0 14px 40px rgba(11,37,69,0.09); display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
@@ -786,7 +787,7 @@
       </div>
       <div style="padding: clamp(26px, 3.4vw, 40px);">
         <div style="color: #16456F; font-weight: 700; font-size: 12.5px; letter-spacing: 0.22em; text-transform: uppercase; margin-bottom: 8px;">Diploma</div>
-        <h3 style="font-family: 'Source Serif 4', serif; font-weight: 700; font-size: clamp(30px, 3.6vw, 42px); color: #0B2545; margin: 0 0 16px; line-height: 1.1;">D.Pharm</h3>
+        <h3 style="font-family: var(--font-head); font-weight: 700; font-size: clamp(30px, 3.6vw, 42px); color: #0B2545; margin: 0 0 16px; line-height: 1.1;">D.Pharm</h3>
         <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 22px;">
           <span class="chip"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><polyline points="12,7 12,12 15.5,14"></polyline></svg>2 Years</span>
           <span class="chip"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12,4 21,8.5 12,13 3,8.5"></polygon><path d="M7,11v4c0,1.5 2.2,2.8 5,2.8s5-1.3 5-2.8v-4"></path></svg>Diploma</span>
@@ -802,8 +803,8 @@
           <div class="fact"><span class="fact__ico"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="9" r="5"></circle><circle cx="14.5" cy="15" r="5"></circle></svg></span><span><strong>Fees:</strong> ₹ 65,000 per year, instalments accepted — <a href="fees.html">see full structure</a></span></div>
         </div>
         <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 26px;">
-          <a class="h10" href="dpharm.html" style="display: inline-flex; align-items: center; gap: 9px; background: #FFFFFF; color: #0B2545; font-weight: 700; font-size: 15px; padding: 13px 26px; border-radius: 30px; border: 1.5px solid #0B2545;">Read More <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" y1="12" x2="19" y2="12"></line><polyline points="13,6 19,12 13,18"></polyline></svg></a>
-          <a class="h5" href="apply.html" style="display: inline-flex; align-items: center; gap: 9px; background: #C89B3C; color: #2A2109; font-weight: 700; font-size: 15px; padding: 13px 26px; border-radius: 30px; box-shadow: 0 6px 18px rgba(200,155,60,0.35);">Apply Now for Admission <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M21.4 2.6 2.9 10.2c-.9.4-.8 1.6.1 1.9l4.7 1.5 1.8 5.6c.3.9 1.5 1 2 .2l2.3-3.4 4.6 3.4c.7.5 1.7.1 1.9-.7l3-14.4c.2-.9-.7-1.6-1.5-1.2z"/></svg></a>
+          <a class="btn-secondary h10" href="dpharm.html" >Read More <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" y1="12" x2="19" y2="12"></line><polyline points="13,6 19,12 13,18"></polyline></svg></a>
+          <a class="btn-primary h5" href="apply.html" >Apply Now for Admission <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M21.4 2.6 2.9 10.2c-.9.4-.8 1.6.1 1.9l4.7 1.5 1.8 5.6c.3.9 1.5 1 2 .2l2.3-3.4 4.6 3.4c.7.5 1.7.1 1.9-.7l3-14.4c.2-.9-.7-1.6-1.5-1.2z"/></svg></a>
         </div>
       </div>
     </div>
@@ -812,11 +813,11 @@
 
 </div>
 <div class="band-wash" style="background: #FFFFFF; border-top: 1px solid #D7DFE5; border-bottom: 1px solid #D7DFE5;">
-  <div style="max-width: 1180px; margin: 0 auto; padding: clamp(50px, 7vw, 76px) 20px;">
+  <div style="max-width: var(--container); margin: 0 auto; padding: var(--space-8) var(--space-3);">
     <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: 32px;">
       <div style="max-width: 640px;">
         <div style="color: #C89B3C; font-weight: 700; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 10px;">Academics</div>
-        <h2 style="font-family: 'Source Serif 4', serif; font-weight: 700; font-size: clamp(26px, 3.2vw, 36px); color: #0B2545; margin: 0 0 12px;">Six teaching departments</h2>
+        <h2 style="font-family: var(--font-head); font-weight: 700; font-size: clamp(26px, 3.2vw, 36px); color: #0B2545; margin: 0 0 12px;">Six teaching departments</h2>
         <p style="font-size: 15.5px; line-height: 1.7; color: #5A6B78; margin: 0;">Every subject of the ER-2020 diploma is taught by a dedicated department with its own laboratory time.</p>
       </div>
       <a href="syllabus.html" style="font-weight: 700; font-size: 15px; color: #0B2545; border-bottom: 2px solid #C89B3C; padding-bottom: 3px;">Full syllabus &rarr;</a>
@@ -824,14 +825,14 @@
 <div class="deptgrid"><a class="dept" href="dept-pharmaceutics.html"><span class="dept__ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="9" width="17" height="6.5" rx="3.25"></rect><line x1="12" y1="9" x2="12" y2="15.5"></line></svg></span><span class="dept__name">Pharmaceutics</span><span class="dept__desc">Formulation &amp; dispensing</span></a><a class="dept" href="dept-chemistry.html"><span class="dept__ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="9.5" y1="3.5" x2="14.5" y2="3.5"></line><path d="M10.5,3.5v5.5L5.5,18a1.6,1.6 0 0 0 1.4,2.5h10.2a1.6,1.6 0 0 0 1.4-2.5L13.5,9V3.5"></path><line x1="7.5" y1="15" x2="16.5" y2="15"></line></svg></span><span class="dept__name">Pharmaceutical Chemistry</span><span class="dept__desc">Medicinal compounds</span></a><a class="dept" href="dept-pharmacology.html"><span class="dept__ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="3,12 8,12 10.2,6.5 13.5,17.5 15.5,12 21,12"></polyline></svg></span><span class="dept__name">Pharmacology</span><span class="dept__desc">How drugs act on the body</span></a><a class="dept" href="dept-pharmacognosy.html"><span class="dept__ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6,18.5C6,10.5 12,5 19.5,4.5c0.5,7.5-5,13.5-13.5,14"></path><path d="M6,18.5C8,14.5 11,11 15,8.5"></path></svg></span><span class="dept__name">Pharmacognosy</span><span class="dept__desc">Drugs from natural sources</span></a><a class="dept" href="dept-analysis.html"><span class="dept__ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="5.5"></circle><line x1="14.7" y1="14.7" x2="20" y2="20"></line></svg></span><span class="dept__name">Pharmaceutical Analysis</span><span class="dept__desc">Quality &amp; testing</span></a><a class="dept" href="dept-practice.html"><span class="dept__ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3.5"></rect><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg></span><span class="dept__name">Pharmacy Practice</span><span class="dept__desc">Hospital &amp; community practice</span></a></div>
   </div>
 </div>
-<div style="max-width: 1180px; margin: 0 auto; padding: clamp(50px, 7vw, 80px) 20px;">
+<div style="max-width: var(--container); margin: 0 auto; padding: var(--space-8) var(--space-3);">
   <div class="why-grid">
     <div class="why-aside">
       <div style="color: #C89B3C; font-weight: 700; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 10px;">Why Pharmacy</div>
-      <h2 style="font-family: 'Source Serif 4', serif; font-weight: 700; font-size: clamp(26px, 3.2vw, 36px); color: #0B2545; margin: 0 0 14px; line-height: 1.2;">Eight reasons to study pharmacy</h2>
+      <h2 style="font-family: var(--font-head); font-weight: 700; font-size: clamp(26px, 3.2vw, 36px); color: #0B2545; margin: 0 0 14px; line-height: 1.2;">Eight reasons to study pharmacy</h2>
       <p style="font-size: 15.5px; line-height: 1.7; color: #5A6B78; margin: 0 0 22px;">For students — and for the parents helping them decide. Two years, a regulated profession, and work that exists in every town of the state.</p>
       <div style="border-left: 3px solid #C89B3C; padding: 4px 0 4px 16px; margin-bottom: 24px;">
-        <div style="font-family: 'Source Serif 4', serif; font-size: 30px; font-weight: 700; color: #0B2545; line-height: 1;">2 years</div>
+        <div style="font-family: var(--font-head); font-size: 30px; font-weight: 700; color: #0B2545; line-height: 1;">2 years</div>
         <div style="font-size: 13.5px; color: #5A6B78; margin-top: 4px;">to a professional qualification and eligibility for registration as a pharmacist</div>
       </div>
       <a href="apply.html" style="display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: 15px; color: #0B2545; border-bottom: 2px solid #C89B3C; padding-bottom: 3px;">Talk to our admissions desk →</a>
@@ -850,10 +851,10 @@
 </div>
 
 <div class="pattern-grid pattern-rings" style="background: #061726; color: #FFFFFF;">
-  <div style="max-width: 1180px; margin: 0 auto; padding: clamp(50px, 7vw, 76px) 20px;">
+  <div style="max-width: var(--container); margin: 0 auto; padding: var(--space-8) var(--space-3);">
     <div style="max-width: 640px; margin-bottom: 40px;">
       <div style="color: #C89B3C; font-weight: 700; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 10px;">Admissions 2026–27</div>
-      <h2 style="font-family: 'Source Serif 4', serif; font-weight: 700; font-size: clamp(26px, 3.2vw, 36px); margin: 0 0 12px;">How to take admission — four steps</h2>
+      <h2 style="font-family: var(--font-head); font-weight: 700; font-size: clamp(26px, 3.2vw, 36px); margin: 0 0 12px;">How to take admission — four steps</h2>
       <p style="font-size: 15.5px; line-height: 1.7; color: #A9C3D1; margin: 0;">No agents, no donation. The office does this with you, in person or over the phone.</p>
     </div>
     <ol class="steps">
@@ -863,18 +864,18 @@
       <li class="step"><span class="step__num">4</span><h3>Fee payment &amp; classes</h3><p>Pay in instalments if needed, apply for scholarships, and join the session.</p><a href="fees.html">Fee structure →</a></li>
     </ol>
     <div style="margin-top: 34px; display: flex; gap: 12px; flex-wrap: wrap; align-items: center;">
-      <a class="h5" href="apply.html" style="background: #C89B3C; color: #2A2109; font-weight: 700; font-size: 15px; padding: 13px 26px; border-radius: 30px;">Start your application</a>
+      <a class="btn-primary h5" href="apply.html" >Start your application</a>
       <span style="font-size: 14px; color: #A9C3D1;">Last date for the 2026–27 session: <strong style="color: #E8CE9A;">31 August 2026</strong></span>
     </div>
   </div>
 </div>
 
 <div style="background: #F7F1E3; border-top: 1px solid #E2D2AC; border-bottom: 1px solid #E2D2AC;">
-  <div style="max-width: 1180px; margin: 0 auto; padding: clamp(40px, 5vw, 58px) 20px;">
+  <div style="max-width: var(--container); margin: 0 auto; padding: var(--space-6) var(--space-3);">
     <div class="schol">
       <div>
         <div style="color: #7A5E1E; font-weight: 700; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 10px;">Financial help</div>
-        <h2 style="font-family: 'Source Serif 4', serif; font-weight: 700; font-size: clamp(23px, 2.8vw, 30px); color: #0B2545; margin: 0 0 10px;">Most of our students study on a scholarship</h2>
+        <h2 style="font-family: var(--font-head); font-weight: 700; font-size: clamp(23px, 2.8vw, 30px); color: #0B2545; margin: 0 0 10px;">Most of our students study on a scholarship</h2>
         <p style="font-size: 15px; line-height: 1.7; color: #6A511A; margin: 0;">The office fills the forms with you, checks the documents and follows up until the money arrives.</p>
       </div>
       <ul class="schol__list">
@@ -887,8 +888,8 @@
     </div>
   </div>
 <div style="background: #FFFFFF; border-bottom: 1px solid #D7DFE5;">
-  <div style="max-width: 1180px; margin: 0 auto; padding: clamp(40px, 5vw, 56px) 20px;">
-    <h2 style="font-family: 'Source Serif 4', serif; font-weight: 700; font-size: clamp(22px, 2.6vw, 27px); color: #0B2545; margin: 0 0 22px;">Quick links</h2>
+  <div style="max-width: var(--container); margin: 0 auto; padding: var(--space-6) var(--space-3);">
+    <h2 style="font-family: var(--font-head); font-weight: 700; font-size: clamp(22px, 2.6vw, 27px); color: #0B2545; margin: 0 0 22px;">Quick links</h2>
     <div class="quick-grid">
       <a class="quick" href="syllabus.html"><span class="quick__ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="9" y1="6.5" x2="19" y2="6.5"></line><line x1="9" y1="12" x2="19" y2="12"></line><line x1="9" y1="17.5" x2="19" y2="17.5"></line><line x1="5" y1="6.5" x2="5.01" y2="6.5"></line><line x1="5" y1="12" x2="5.01" y2="12"></line><line x1="5" y1="17.5" x2="5.01" y2="17.5"></line></svg></span>Syllabus</a>
       <a class="quick" href="fees.html"><span class="quick__ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="9" r="5"></circle><circle cx="14.5" cy="15" r="5"></circle></svg></span>Fee structure</a>
@@ -903,11 +904,11 @@
 </div>
 
 <div class="pattern-dots" style="background: #0B2545; color: #FFFFFF;">
-  <div style="max-width: 1180px; margin: 0 auto; padding: clamp(50px, 7vw, 76px) 20px;">
+  <div style="max-width: var(--container); margin: 0 auto; padding: var(--space-8) var(--space-3);">
     <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: 32px;">
       <div>
         <div style="color: #C89B3C; font-weight: 700; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 10px;">Campus</div>
-        <h2 style="font-family: 'Source Serif 4', serif; font-weight: 700; font-size: clamp(26px, 3.2vw, 36px); margin: 0;">Life at Muktir Shiksha</h2>
+        <h2 style="font-family: var(--font-head); font-weight: 700; font-size: clamp(26px, 3.2vw, 36px); margin: 0;">Life at Muktir Shiksha</h2>
       </div>
       <a href="gallery.html" style="color: #E8CE9A; font-weight: 700; font-size: 15px; border-bottom: 2px solid #C89B3C; padding-bottom: 2px;">View full gallery →</a>
     </div>
@@ -933,20 +934,20 @@
   </div>
 </div>
 
-<div style="max-width: 1180px; margin: 0 auto; padding: clamp(50px, 7vw, 76px) 20px;">
+<div style="max-width: var(--container); margin: 0 auto; padding: var(--space-8) var(--space-3);">
   <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: 32px;">
     <div style="max-width: 640px;">
       <div style="color: #C89B3C; font-weight: 700; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 10px;">Infrastructure</div>
-      <h2 style="font-family: 'Source Serif 4', serif; font-weight: 700; font-size: clamp(26px, 3.2vw, 36px); color: #0B2545; margin: 0 0 12px;">Everything the course needs, on one campus</h2>
+      <h2 style="font-family: var(--font-head); font-weight: 700; font-size: clamp(26px, 3.2vw, 36px); color: #0B2545; margin: 0 0 12px;">Everything the course needs, on one campus</h2>
     </div>
     <a href="infrastructure.html" style="font-weight: 700; font-size: 15px; color: #0B2545; border-bottom: 2px solid #C89B3C; padding-bottom: 3px;">See all facilities &rarr;</a>
   </div>
 <div class="deptgrid"><a class="dept" href="classrooms.html"><span class="dept__ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6.5" y="4" width="11" height="16" rx="1.5"></rect><line x1="14.5" y1="12" x2="14.51" y2="12"></line><line x1="4" y1="20" x2="20" y2="20"></line></svg></span><span class="dept__name">Classrooms</span><span class="dept__desc">Ventilated, AV-equipped</span></a><a class="dept" href="laboratory.html"><span class="dept__ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="9.5" y1="3.5" x2="14.5" y2="3.5"></line><path d="M10.5,3.5v5.5L5.5,18a1.6,1.6 0 0 0 1.4,2.5h10.2a1.6,1.6 0 0 0 1.4-2.5L13.5,9V3.5"></path><line x1="7.5" y1="15" x2="16.5" y2="15"></line></svg></span><span class="dept__name">Laboratories</span><span class="dept__desc">Four labs, PCI norms</span></a><a class="dept" href="library.html"><span class="dept__ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="4" width="14" height="16" rx="2"></rect><line x1="9.5" y1="4" x2="9.5" y2="20"></line><line x1="13" y1="9" x2="16" y2="9"></line></svg></span><span class="dept__name">Library</span><span class="dept__desc">2,000+ books &amp; book bank</span></a><a class="dept" href="computer-lab.html"><span class="dept__ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="11.5" rx="2"></rect><line x1="12" y1="16" x2="12" y2="19.5"></line><line x1="8" y1="19.5" x2="16" y2="19.5"></line></svg></span><span class="dept__name">Computer lab</span><span class="dept__desc">Internet-enabled systems</span></a><a class="dept" href="herbal-garden.html"><span class="dept__ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6,18.5C6,10.5 12,5 19.5,4.5c0.5,7.5-5,13.5-13.5,14"></path><path d="M6,18.5C8,14.5 11,11 15,8.5"></path></svg></span><span class="dept__name">Herbal garden</span><span class="dept__desc">40+ medicinal plants</span></a><a class="dept" href="drug-museum.html"><span class="dept__ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="3.5,9 12,4 20.5,9"></polygon><line x1="6" y1="9" x2="6" y2="18.5"></line><line x1="12" y1="9" x2="12" y2="18.5"></line><line x1="18" y1="9" x2="18" y2="18.5"></line><line x1="3.5" y1="18.5" x2="20.5" y2="18.5"></line></svg></span><span class="dept__name">Drug museum</span><span class="dept__desc">Specimens &amp; exhibits</span></a><a class="dept" href="hostel.html"><span class="dept__ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="6" rx="2"></rect><line x1="3" y1="17" x2="3" y2="19.5"></line><line x1="21" y1="17" x2="21" y2="19.5"></line><circle cx="7" cy="8" r="2"></circle></svg></span><span class="dept__name">Hostel</span><span class="dept__desc">Boys &amp; girls, supervised</span></a><a class="dept" href="sports.html"><span class="dept__ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"></circle><line x1="3.5" y1="12" x2="20.5" y2="12"></line><path d="M12,3.5a12,12 0 0 1 0,17"></path></svg></span><span class="dept__name">Sports &amp; canteen</span><span class="dept__desc">Ground and fresh food</span></a></div>
 </div>
-<div style="max-width: 1180px; margin: 0 auto; padding: clamp(50px, 7vw, 80px) 20px;">
+<div style="max-width: var(--container); margin: 0 auto; padding: var(--space-8) var(--space-3);">
   <div style="max-width: 640px; margin-bottom: 36px;">
     <div style="color: #C89B3C; font-weight: 700; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 10px;">After D.Pharm</div>
-    <h2 style="font-family: 'Source Serif 4', serif; font-weight: 700; font-size: clamp(26px, 3.2vw, 36px); color: #0B2545; margin: 0 0 12px;">Where our graduates go</h2>
+    <h2 style="font-family: var(--font-head); font-weight: 700; font-size: clamp(26px, 3.2vw, 36px); color: #0B2545; margin: 0 0 12px;">Where our graduates go</h2>
   </div>
   <div class="paths">
     <a class="path" href="dpharm.html">
@@ -977,10 +978,10 @@
 </div>
 
 <div style="background: #FFFFFF; border-top: 1px solid #D7DFE5; border-bottom: 1px solid #D7DFE5;">
-  <div style="max-width: 1180px; margin: 0 auto; padding: clamp(50px, 7vw, 80px) 20px;">
+  <div style="max-width: var(--container); margin: 0 auto; padding: var(--space-8) var(--space-3);">
     <div style="max-width: 640px; margin-bottom: 36px;">
       <div style="color: #C89B3C; font-weight: 700; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 10px;">Student Voices</div>
-      <h2 style="font-family: 'Source Serif 4', serif; font-weight: 700; font-size: clamp(26px, 3.2vw, 36px); color: #0B2545; margin: 0;">What our students say</h2>
+      <h2 style="font-family: var(--font-head); font-weight: 700; font-size: clamp(26px, 3.2vw, 36px); color: #0B2545; margin: 0;">What our students say</h2>
     </div>
     <div class="voices">
       
@@ -1013,12 +1014,12 @@
 </div>
 
 <div class="pattern-dots" style="background: #0B2545; color: #FFFFFF;">
-  <div style="max-width: 1180px; margin: 0 auto; padding: clamp(50px, 7vw, 76px) 20px;">
+  <div style="max-width: var(--container); margin: 0 auto; padding: var(--space-8) var(--space-3);">
     <div class="principal">
       <div class="principal__aside">
         <div class="principal__avatar">AB</div>
         <div>
-          <div style="font-family: 'Source Serif 4', serif; font-weight: 700; font-size: 17px; color: #FFFFFF;">Dr. Amit Kumar Bhattacharya</div>
+          <div style="font-family: var(--font-head); font-weight: 700; font-size: 17px; color: #FFFFFF;">Dr. Amit Kumar Bhattacharya</div>
           <div style="font-size: 13px; color: #A9C3D1; margin-top: 3px;">Principal &middot; M.Pharm, Ph.D. (Pharmaceutics)</div>
         </div>
       </div>
@@ -1033,11 +1034,11 @@
 </div>
 
 <div class="band-wash" style="background: #FFFFFF; border-top: 1px solid #D7DFE5; border-bottom: 1px solid #D7DFE5;">
-  <div style="max-width: 1180px; margin: 0 auto; padding: clamp(50px, 7vw, 76px) 20px;">
+  <div style="max-width: var(--container); margin: 0 auto; padding: var(--space-8) var(--space-3);">
     <div class="faqgrid">
       <div>
         <div style="color: #C89B3C; font-weight: 700; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 10px;">Questions</div>
-        <h2 style="font-family: 'Source Serif 4', serif; font-weight: 700; font-size: clamp(26px, 3.2vw, 36px); color: #0B2545; margin: 0 0 14px; line-height: 1.2;">Asked most often by parents</h2>
+        <h2 style="font-family: var(--font-head); font-weight: 700; font-size: clamp(26px, 3.2vw, 36px); color: #0B2545; margin: 0 0 14px; line-height: 1.2;">Asked most often by parents</h2>
         <p style="font-size: 15.5px; line-height: 1.7; color: #5A6B78; margin: 0 0 22px;">If your question is not here, call the admissions desk &mdash; someone will answer plainly.</p>
         <a href="faq.html" style="font-weight: 700; font-size: 15px; color: #0B2545; border-bottom: 2px solid #C89B3C; padding-bottom: 3px;">All questions &rarr;</a>
       </div>
@@ -1045,10 +1046,10 @@
     </div>
   </div>
 </div>
-<div style="max-width: 1180px; margin: 0 auto; padding: clamp(50px, 7vw, 80px) 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); gap: 44px;">
+<div style="max-width: var(--container); margin: 0 auto; padding: var(--space-8) var(--space-3); display: grid; grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); gap: 44px;">
   <div>
     <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 12px; margin-bottom: 22px;">
-      <h2 style="font-family: 'Source Serif 4', serif; font-weight: 700; font-size: 26px; color: #0B2545; margin: 0;">News &amp; notices</h2>
+      <h2 style="font-family: var(--font-head); font-weight: 700; font-size: 26px; color: #0B2545; margin: 0;">News &amp; notices</h2>
       <a href="news.html" style="font-weight: 700; font-size: 14px; color: #0B2545;">All news →</a>
     </div>
     <div style="display: flex; flex-direction: column;">
@@ -1072,18 +1073,18 @@
   </div>
   <div>
     <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 12px; margin-bottom: 22px;">
-      <h2 style="font-family: 'Source Serif 4', serif; font-weight: 700; font-size: 26px; color: #0B2545; margin: 0;">Upcoming events</h2>
+      <h2 style="font-family: var(--font-head); font-weight: 700; font-size: 26px; color: #0B2545; margin: 0;">Upcoming events</h2>
       <a href="events.html" style="font-weight: 700; font-size: 14px; color: #0B2545;">All events →</a>
     </div>
     <div style="display: flex; flex-direction: column; gap: 12px;">
       
         <a class="h18" href="events.html" style="display: flex; gap: 16px; background: #FFFFFF; border: 1px solid #D7DFE5; border-radius: 8px; padding: 16px 18px; color: #16232E; align-items: center; transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;">
-          <div style="width: 56px; text-align: center; flex-shrink: 0;"><div style="font-family: 'Source Serif 4', serif; font-weight: 700; font-size: 24px; color: #0B2545; line-height: 1;">09</div><div style="font-size: 12px; font-weight: 700; letter-spacing: 0.06em; color: #C89B3C; text-transform: uppercase;">Aug</div></div>
+          <div style="width: 56px; text-align: center; flex-shrink: 0;"><div style="font-family: var(--font-head); font-weight: 700; font-size: 24px; color: #0B2545; line-height: 1;">09</div><div style="font-size: 12px; font-weight: 700; letter-spacing: 0.06em; color: #C89B3C; text-transform: uppercase;">Aug</div></div>
           <div><div style="font-weight: 700; font-size: 15px; margin-bottom: 3px;">Campus open day for students & parents</div><div style="font-size: 13px; color: #5A6B78;">10:00 AM – 2:00 PM · Free entry, no registration needed</div></div>
         </a>
       
         <a class="h18" href="events.html" style="display: flex; gap: 16px; background: #FFFFFF; border: 1px solid #D7DFE5; border-radius: 8px; padding: 16px 18px; color: #16232E; align-items: center; transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;">
-          <div style="width: 56px; text-align: center; flex-shrink: 0;"><div style="font-family: 'Source Serif 4', serif; font-weight: 700; font-size: 24px; color: #0B2545; line-height: 1;">25</div><div style="font-size: 12px; font-weight: 700; letter-spacing: 0.06em; color: #C89B3C; text-transform: uppercase;">Sep</div></div>
+          <div style="width: 56px; text-align: center; flex-shrink: 0;"><div style="font-family: var(--font-head); font-weight: 700; font-size: 24px; color: #0B2545; line-height: 1;">25</div><div style="font-size: 12px; font-weight: 700; letter-spacing: 0.06em; color: #C89B3C; text-transform: uppercase;">Sep</div></div>
           <div><div style="font-weight: 700; font-size: 15px; margin-bottom: 3px;">World Pharmacists Day celebration</div><div style="font-size: 13px; color: #5A6B78;">Seminar and poster session · Main hall</div></div>
         </a>
       
@@ -1092,7 +1093,7 @@
 </div>
 
 <div style="background: #FFFFFF; border-top: 1px solid #D7DFE5;">
-  <div style="max-width: 1180px; margin: 0 auto; padding: clamp(34px, 4vw, 46px) 20px;">
+  <div style="max-width: var(--container); margin: 0 auto; padding: clamp(34px, 4vw, 46px) 20px;">
     <div style="font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #5A6B78; margin-bottom: 20px;">Approvals &amp; Affiliations</div>
     <div class="approvals">
       <div class="approval">
@@ -1114,7 +1115,7 @@
 <div class="visit pattern-dots">
   <div class="visit__panel">
     <div style="color: #C89B3C; font-weight: 700; font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 12px;">Find Us</div>
-    <h2 style="font-family: 'Source Serif 4', serif; font-weight: 700; font-size: clamp(26px, 3.2vw, 36px); color: #FFFFFF; margin: 0 0 20px;">Visit Our Campus</h2>
+    <h2 style="font-family: var(--font-head); font-weight: 700; font-size: clamp(26px, 3.2vw, 36px); color: #FFFFFF; margin: 0 0 20px;">Visit Our Campus</h2>
     <p style="font-size: 16px; line-height: 1.85; color: #A9C3D1; margin: 0 0 6px;">Jogen Mondal Colony, Vill. Kuchlia,<br>P.O. &amp; P.S. Gobardanga, Dist. North 24 Parganas,<br>West Bengal — 743252</p>
     <p style="font-size: 14.5px; line-height: 1.7; color: #7E97A8; margin: 0 0 22px;">About 10 minutes by auto or toto from Gobardanga railway station (Sealdah–Bongaon line).</p>
     <div class="visit__rows">
@@ -1122,7 +1123,7 @@
       <a href="mailto:muktirshikshacollegeofpharnacy@gmail.com"><span class="visit__ico"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"></rect><polyline points="3.6,7.2 12,12.8 20.4,7.2"></polyline></svg></span>muktirshikshacollegeofpharnacy@gmail.com</a>
     </div>
     <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 28px;">
-      <a class="h5" href="https://www.google.com/maps/dir/?api=1&amp;destination=Muktir+Shiksha+College+Of+Education&amp;destination_place_id=ChIJRVmMSbuz-DkR_Iqo1VXfNTQ" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 9px; background: #C89B3C; color: #2A2109; font-weight: 700; font-size: 15px; padding: 14px 26px; border-radius: 8px;"><svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>Get Directions</a>
+      <a class="btn-primary h5" href="https://www.google.com/maps/dir/?api=1&amp;destination=Muktir+Shiksha+College+Of+Education&amp;destination_place_id=ChIJRVmMSbuz-DkR_Iqo1VXfNTQ" target="_blank" rel="noopener" ><svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>Get Directions</a>
       <a class="h19" href="contact.html" style="display: inline-flex; align-items: center; background: transparent; color: #FFFFFF; font-weight: 600; font-size: 15px; padding: 14px 26px; border-radius: 8px; border: 1.5px solid rgba(255,255,255,0.4);">Contact page</a>
     </div>
   </div>
@@ -1132,23 +1133,23 @@
 </div>
 
 <div style="background: #FFFFFF; border-top: 1px solid #D7DFE5;">
-  <div style="max-width: 1180px; margin: 0 auto; padding: 26px 20px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;">
+  <div style="max-width: var(--container); margin: 0 auto; padding: 26px 20px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;">
     <div>
-      <div style="font-family: 'Source Serif 4', serif; font-weight: 700; font-size: 20px; color: #0B2545;">Have a question about admission?</div>
+      <div style="font-family: var(--font-head); font-weight: 700; font-size: 20px; color: #0B2545;">Have a question about admission?</div>
       <div style="color: #5A6B78; font-size: 14px; margin-top: 3px;">Our admissions desk is open Monday–Saturday, 10:00 AM – 5:00 PM.</div>
     </div>
     <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-      <a class="h6" href="apply.html" style="background: #0B2545; color: #FFFFFF; font-weight: 700; padding: 12px 22px; border-radius: 4px; font-size: 15px;">Send an Enquiry</a>
-      <a class="h10" href="tel:+919830236143" style="background: #FFFFFF; color: #0B2545; font-weight: 700; padding: 12px 22px; border-radius: 4px; font-size: 15px; border: 1.5px solid #0B2545;"><svg class="ico" viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.6 15.6 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.7.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C11.3 21 3 12.7 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.7.1.3 0 .7-.2 1z"/></svg> (+91) 9830 236143</a>
+      <a class="btn-primary h6" href="apply.html" >Send an Enquiry</a>
+      <a class="btn-secondary h10" href="tel:+919830236143" ><svg class="ico" viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.6 15.6 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.7.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C11.3 21 3 12.7 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.7.1.3 0 .7-.2 1z"/></svg> (+91) 9830 236143</a>
     </div>
   </div>
 </div>
-<footer style="background: #0B2545; color: #A9C3D1; font-family: 'Public Sans', sans-serif;">
-  <div style="max-width: 1180px; margin: 0 auto; padding: 44px 20px 30px; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 34px;">
+<footer style="background: #0B2545; color: #A9C3D1; font-family: var(--font-body);">
+  <div style="max-width: var(--container); margin: 0 auto; padding: 44px 20px 30px; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 34px;">
     <div>
       <div style="display: flex; align-items: center; gap: 11px; margin-bottom: 14px;">
         <span style="width: 60px; height: 60px; border-radius: 10px; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0; padding: 5px; box-sizing: border-box;"><img src="assets/img/logo.jpg" alt="Muktir Shiksha College of Education &amp; Pharmacy" style="width: 100%; height: 100%; object-fit: contain;"></span>
-        <div style="font-family: 'Source Serif 4', serif; font-weight: 700; font-size: 16px; color: #FFFFFF; line-height: 1.25;">Muktir Shiksha College of Education &amp; Pharmacy</div>
+        <div style="font-family: var(--font-head); font-weight: 700; font-size: 16px; color: #FFFFFF; line-height: 1.25;">Muktir Shiksha College of Education &amp; Pharmacy</div>
       </div>
       <p style="font-size: 13.5px; line-height: 1.65; margin: 0;">A premier institute in Gobardanga, North 24 Parganas, dedicated to excellence in pharmacy education — shaping skilled and ethical healthcare professionals.</p>
       <p style="font-size: 13px; margin: 12px 0 0; color: #7E97A8;">Approved by PCI, New Delhi · Affiliated to WBSCT&amp;VE&amp;SD</p>
@@ -1189,7 +1190,7 @@
     </div>
   </div>
   <div style="border-top: 1px solid #1B3E60;">
-    <div style="max-width: 1180px; margin: 0 auto; padding: 15px 20px; display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; font-size: 13px; color: #7E97A8;">
+    <div style="max-width: var(--container); margin: 0 auto; padding: 15px 20px; display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; font-size: 13px; color: #7E97A8;">
       <div>© 2026 Muktir Shiksha College of Education &amp; Pharmacy. All rights reserved.</div>
       <div style="display: flex; gap: 16px;">
         <a class="h11" href="terms.html" style="color: #7E97A8;">Terms of Use</a>
@@ -1198,9 +1199,9 @@
     </div>
   </div>
 </footer>
-<div class="floatbtns" style="position: fixed; right: 16px; bottom: 16px; z-index: 150; display: flex; flex-direction: column; gap: 9px; font-family: 'Public Sans', sans-serif;">
-  <a class="h13" href="https://wa.me/919830236143?text=Hello%2C%20I%20want%20to%20know%20about%20D.Pharm%20admission." style="background: #25D366; color: #073B14; font-weight: 700; font-size: 14.5px; padding: 12px 18px; border-radius: 30px; box-shadow: 0 4px 14px rgba(7,59,20,0.3); text-align: center;"><svg class="ico" viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M12 2.2A9.7 9.7 0 0 0 3.6 16.8L2.2 21.8l5.1-1.3A9.7 9.7 0 1 0 12 2.2zm0 1.8a7.9 7.9 0 1 1-4 14.7l-.3-.2-3 .8.8-2.9-.2-.3A7.9 7.9 0 0 1 12 4zm-3.6 4c-.2 0-.5.1-.7.4-.2.3-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.7 2.7 4.2 3.7 2 .8 2.5.7 2.9.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2l-.5-.3-1.6-.8c-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1-.2-.1-1.1-.4-2-1.2-.7-.6-1.2-1.4-1.4-1.7-.1-.2 0-.4.1-.5l.4-.5c.1-.2.2-.3.2-.5s0-.3-.1-.5l-.8-1.8c-.2-.4-.4-.4-.6-.4z"/></svg> WhatsApp Us</a>
-  <a class="h6" href="tel:+919830236143" style="background: #0B2545; color: #FFFFFF; font-weight: 700; font-size: 14.5px; padding: 12px 18px; border-radius: 30px; box-shadow: 0 4px 14px rgba(11,37,69,0.3); text-align: center;"><svg class="ico" viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.6 15.6 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.7.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C11.3 21 3 12.7 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.7.1.3 0 .7-.2 1z"/></svg> Call Now</a>
+<div class="floatbtns" style="position: fixed; right: 16px; bottom: 16px; z-index: 150; display: flex; flex-direction: column; gap: 9px; font-family: var(--font-body);">
+  <a class="btn-whatsapp h13" href="https://wa.me/919830236143?text=Hello%2C%20I%20want%20to%20know%20about%20D.Pharm%20admission." ><svg class="ico" viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M12 2.2A9.7 9.7 0 0 0 3.6 16.8L2.2 21.8l5.1-1.3A9.7 9.7 0 1 0 12 2.2zm0 1.8a7.9 7.9 0 1 1-4 14.7l-.3-.2-3 .8.8-2.9-.2-.3A7.9 7.9 0 0 1 12 4zm-3.6 4c-.2 0-.5.1-.7.4-.2.3-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.7 2.7 4.2 3.7 2 .8 2.5.7 2.9.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2l-.5-.3-1.6-.8c-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1-.2-.1-1.1-.4-2-1.2-.7-.6-1.2-1.4-1.4-1.7-.1-.2 0-.4.1-.5l.4-.5c.1-.2.2-.3.2-.5s0-.3-.1-.5l-.8-1.8c-.2-.4-.4-.4-.6-.4z"/></svg> WhatsApp Us</a>
+  <a class="btn-primary h6" href="tel:+919830236143" ><svg class="ico" viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.6 15.6 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.7.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C11.3 21 3 12.7 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.7.1.3 0 .7-.2 1z"/></svg> Call Now</a>
 </div>
 <dialog id="enquiry-modal" class="emodal" aria-labelledby="emodal-title">
   <button type="button" class="emodal__close" data-emodal-close aria-label="Close">

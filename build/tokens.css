@@ -1,0 +1,197 @@
+/* =========================================================================
+   Muktir Shiksha College — design tokens
+   Single source of truth for colour, type, spacing, radius, shadow, motion.
+   Nothing below this file should carry a raw hex value or a magic number.
+   ========================================================================= */
+
+:root {
+  /* ---- colour: 4 roles + support -------------------------------------- */
+  --color-primary: #0B2545;          /* brand, links, primary buttons       */
+  --color-primary-dark: #061726;     /* hover / pressed                     */
+  --color-primary-soft: #16456F;     /* lighter navy for icons, nav hover   */
+  --color-primary-tint: #E6EDF4;     /* icon tiles, hover fills             */
+  --color-accent: #C89B3C;           /* CTAs, "New" badges, highlights      */
+  --color-accent-dark: #A87F28;
+  --color-accent-tint: #F7F1E3;
+  --color-ink: #16232E;              /* body text                           */
+  --color-muted: #5A6B78;            /* secondary text                      */
+  --color-surface: #FFFFFF;
+  --color-surface-alt: #EEF2F5;      /* alternating section ground          */
+  --color-border: #D7DFE5;
+  --color-border-soft: #E6ECEF;      /* hairlines inside components         */
+  --color-on-primary: #FFFFFF;
+  --color-on-accent: #2A2109;
+  --color-on-dark-muted: #A9C3D1;    /* secondary text on navy              */
+  --color-alert: #C0392B;            /* ticker / urgent only                */
+  --color-whatsapp: #25D366;
+  --color-whatsapp-ink: #073B14;
+
+  /* ---- type ------------------------------------------------------------ */
+  --font-body: 'Mukta', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-head: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  /* 1.25 scale, headings fluid so they lose ~20% on a phone */
+  --fs-h1: clamp(1.9rem, 5vw, 2.44rem);
+  --fs-h2: clamp(1.55rem, 4vw, 1.95rem);
+  --fs-h3: clamp(1.3rem, 3vw, 1.56rem);
+  --fs-h4: 1.25rem;
+  --fs-body: 1rem;
+  --fs-small: 0.8rem;
+
+  /* ---- spacing --------------------------------------------------------- */
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2rem;
+  --space-6: 3rem;
+  --space-8: 5rem;
+
+  /* ---- shape & depth --------------------------------------------------- */
+  --radius: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 999px;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 6px 20px rgba(0, 0, 0, 0.10);
+  --shadow-lg: 0 16px 40px rgba(11, 37, 69, 0.14);
+
+  /* ---- motion ---------------------------------------------------------- */
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --dur: 180ms;
+
+  /* ---- layout ---------------------------------------------------------- */
+  --container: 1140px;
+  --measure: 68ch;                   /* paragraph line length               */
+  --floatbar: 76px;                  /* clearance for the floating buttons  */
+}
+
+/* =========================================================================
+   Base
+   ========================================================================= */
+body {
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  color: var(--color-ink);
+  background: var(--color-surface-alt);
+  padding-bottom: var(--floatbar);   /* floating call buttons never cover content */
+}
+h1, h2, h3, h4, h5, h6 { font-family: var(--font-head); letter-spacing: -0.01em; }
+h1 { font-size: var(--fs-h1); }
+h2 { font-size: var(--fs-h2); }
+h3 { font-size: var(--fs-h3); }
+
+/* every interactive thing gets a visible keyboard focus ring */
+a:focus-visible, button:focus-visible, input:focus-visible,
+select:focus-visible, textarea:focus-visible, summary:focus-visible, [tabindex]:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* =========================================================================
+   Section rhythm — equal padding, alternating grounds, constrained measure
+   ========================================================================= */
+.section { padding: var(--space-8) 0; }
+.section--alt { background: var(--color-surface-alt); }
+.section--surface { background: var(--color-surface); }
+@media (max-width: 700px) { .section { padding: var(--space-6) 0; } }
+
+.container {
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: var(--space-3);
+}
+.measure { max-width: var(--measure); }
+
+.eyebrow {
+  font-size: var(--fs-small);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: var(--space-1);
+}
+
+/* =========================================================================
+   Buttons — exactly three, every CTA maps to one
+   ========================================================================= */
+.btn-primary, .btn-secondary, .btn-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-1);
+  min-height: 44px;                  /* tap target */
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius);
+  border: 2px solid transparent;
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  font-weight: 600;
+  line-height: 1.2;
+  cursor: pointer;
+  text-align: center;
+  transition: background var(--dur) var(--ease), color var(--dur) var(--ease),
+              border-color var(--dur) var(--ease), transform var(--dur) var(--ease),
+              box-shadow var(--dur) var(--ease);
+}
+.btn-primary { background: var(--color-accent); color: var(--color-on-accent); }
+.btn-primary:hover { background: var(--color-accent-dark); color: var(--color-on-accent); transform: translateY(-1px); box-shadow: var(--shadow-md); }
+
+.btn-secondary { background: transparent; color: var(--color-primary); border-color: var(--color-primary); }
+.btn-secondary:hover { background: var(--color-primary-tint); color: var(--color-primary); }
+/* on dark grounds the outline button goes white */
+.on-dark .btn-secondary, .btn-secondary--onDark { color: var(--color-on-primary); border-color: rgba(255, 255, 255, 0.55); }
+.on-dark .btn-secondary:hover, .btn-secondary--onDark:hover { background: rgba(255, 255, 255, 0.14); color: var(--color-on-primary); }
+
+.btn-whatsapp { background: var(--color-whatsapp); color: var(--color-whatsapp-ink); }
+.btn-whatsapp:hover { background: #1EBD5A; color: var(--color-whatsapp-ink); transform: translateY(-1px); }
+
+/* =========================================================================
+   Card — one component behind every grid on the site
+   ========================================================================= */
+.card {
+  display: block;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: var(--space-3);
+  box-shadow: var(--shadow-sm);
+  color: var(--color-ink);
+  transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease), border-color var(--dur) var(--ease);
+}
+a.card:hover, a.card:focus-visible, .card--hover:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-accent);
+  color: var(--color-ink);
+}
+.card__ico {
+  display: flex; align-items: center; justify-content: center;
+  width: 48px; height: 48px; border-radius: var(--radius);
+  background: var(--color-primary-tint); color: var(--color-primary-soft);
+  margin-bottom: var(--space-2);
+  transition: background var(--dur) var(--ease), color var(--dur) var(--ease);
+}
+a.card:hover .card__ico { background: var(--color-primary); color: var(--color-on-primary); }
+.card__title { font-family: var(--font-head); font-weight: 700; font-size: var(--fs-h4); color: var(--color-primary); margin: 0 0 var(--space-1); }
+.card__desc { font-size: var(--fs-small); line-height: 1.6; color: var(--color-muted); margin: 0; }
+
+.card-grid {
+  display: grid;
+  gap: var(--space-3);
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  align-items: stretch;
+}
+
+/* every image inside a card or grid shares one crop */
+.card img, .card-grid img, .ratio-4x3 { aspect-ratio: 4 / 3; object-fit: cover; width: 100%; background: var(--color-primary-tint); }
+
+/* =========================================================================
+   Motion — opt-in only
+   ========================================================================= */
+@media (prefers-reduced-motion: no-preference) {
+  .reveal { opacity: 0; transform: translateY(14px); transition: opacity 420ms var(--ease), transform 420ms var(--ease); }
+  .reveal.is-in { opacity: 1; transform: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+}

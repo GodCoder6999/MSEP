@@ -14,6 +14,38 @@
     });
   });
 
+  /* ---------------- sticky header condenses after 40px ---------------- */
+  var header = document.querySelector('header');
+  if (header) {
+    var onScroll = function () {
+      header.classList.toggle('is-stuck', window.scrollY > 40);
+    };
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+  }
+
+  /* ---------------- mark the current page in the nav ---------------- */
+  (function () {
+    var here = location.pathname.split('/').pop() || 'index.html';
+    document.querySelectorAll('nav a[href]').forEach(function (a) {
+      if (a.getAttribute('href') === here) a.setAttribute('aria-current', 'page');
+    });
+  })();
+
+  /* ---------------- gentle reveal on scroll (motion-safe) ---------------- */
+  if (window.IntersectionObserver &&
+      window.matchMedia('(prefers-reduced-motion: no-preference)').matches) {
+    var targets = document.querySelectorAll('.card-grid, .deptgrid, .bento, .mosaic, .paths, .voices, .steps, .quick-grid');
+    if (targets.length) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); }
+        });
+      }, { rootMargin: '0px 0px -10% 0px' });
+      targets.forEach(function (t) { t.classList.add('reveal'); io.observe(t); });
+    }
+  }
+
   /* ---------------- admission enquiry modal ----------------
      Opens shortly after the first page of a visit. Dismissal is remembered for
      the session, so it does not re-open on every navigation. */
@@ -147,6 +179,16 @@
       if (e.key === 'ArrowLeft') go(cur - 1);
       if (e.key === 'ArrowRight') go(cur + 1);
     });
+    // pause while the reader is hovering or tabbing through the hero
+    var heroBand = slides[0].parentElement;
+    if (heroBand) {
+      ['mouseenter', 'focusin'].forEach(function (ev) {
+        heroBand.addEventListener(ev, function () { clearInterval(timer); });
+      });
+      ['mouseleave', 'focusout'].forEach(function (ev) {
+        heroBand.addEventListener(ev, function () { auto(); });
+      });
+    }
     paint();
     auto();
   }
