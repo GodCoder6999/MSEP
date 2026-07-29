@@ -66,6 +66,57 @@ img { max-width: 100%; }
 /* below the desktop breakpoint the chips move into the mobile menu (.menu-chips) */
 @media (max-width: 919px) { .hdr-action { display: none; } }
 
+/* ---------- logo band ----------
+   The bar was a flat white slab. It now carries a faint navy-to-white wash
+   anchored under the crest, a dot field on the action side, and a gold rule
+   along the bottom edge. Everything is drawn in pseudo-elements at low
+   opacity, so no metric of the bar changes and nothing competes with the
+   college name. */
+.logoband {
+  position: relative;
+  background:
+    /* warm pool behind the action cluster, cool one behind the crest */
+    radial-gradient(60% 150% at 92% 55%, rgba(200, 155, 60, 0.16) 0%, rgba(200, 155, 60, 0) 62%),
+    radial-gradient(75% 170% at 4% 10%, rgba(11, 37, 69, 0.10) 0%, rgba(11, 37, 69, 0) 60%),
+    linear-gradient(180deg, #F6F9FB 0%, var(--color-surface) 58%);
+  border-bottom: 1px solid var(--color-border);
+}
+/* dot field, fading out before it reaches the name */
+.logoband::before {
+  content: "";
+  position: absolute;
+  top: 0; bottom: 0; right: 0;
+  width: min(46%, 520px);
+  background-image: radial-gradient(rgba(11, 37, 69, 0.22) 1.2px, transparent 1.2px);
+  background-size: 12px 12px;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 65%);
+          mask-image: linear-gradient(90deg, transparent, #000 65%);
+  opacity: 0.85;
+  pointer-events: none;
+}
+/* accent rule: navy at the crest, gold under the action cluster */
+.logoband::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 3px;
+  background: linear-gradient(90deg,
+    var(--color-primary) 0%,
+    var(--color-primary-soft) 24%,
+    var(--color-accent) 58%,
+    var(--color-accent) 78%,
+    rgba(200, 155, 60, 0.30) 100%);
+  pointer-events: none;
+}
+/* the crest lifts off the wash instead of sitting flat on it */
+.lockup__logo {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  padding: 4px;
+  box-shadow: 0 4px 14px rgba(11, 37, 69, 0.13);
+}
+
 /* ---------- header lock-up ----------
    Two aligned columns: the crest, then a text column holding the college name
    above a single accreditation row. The crest centres against the whole text
@@ -78,7 +129,7 @@ img { max-width: 100%; }
   min-width: 0;
   flex: 1;
 }
-.lockup__logo { width: auto; height: 68px; object-fit: contain; flex-shrink: 0; }
+.lockup__logo { width: auto; height: 78px; object-fit: contain; flex-shrink: 0; }
 .lockup__text { display: flex; flex-direction: column; gap: var(--space-1); min-width: 0; }
 
 .hdr-name {
@@ -97,17 +148,33 @@ img { max-width: 100%; }
   font-weight: 500;
   color: var(--color-muted);
 }
-.accred { display: inline-flex; align-items: center; gap: 0.5em; }
+/* each approval reads as a credential chip rather than a run of grey text */
+.accred {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  /* no vertical padding: the 28px mark sets the row height, so the chips cost
+     the bar 2px, not a new line */
+  padding: 0 12px 0 3px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  background: var(--color-surface);
+  box-shadow: 0 1px 2px rgba(11, 37, 69, 0.06);
+  color: var(--color-primary);
+  font-weight: 600;
+}
 /* both marks are cropped to the same circle so the row reads as one style */
 .accred img { width: 28px; height: 28px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
-.accred__sep { width: 1px; height: 18px; background: var(--color-border); }
+.accred__sep { display: none; }   /* the chips carry their own edge */
 
 @media (max-width: 600px) {
   .lockup { gap: var(--space-2); }
-  .lockup__logo { height: 48px; }
+  .lockup__logo { height: 56px; border-radius: 11px; }
   .hdr-name { font-size: 1.4rem; }
-  .accred img { width: 24px; height: 24px; }
-  .accred__sep { display: none; }      /* badges stack, so the rule would dangle */
+  .accred img { width: 20px; height: 20px; }
+  /* a wrapped pill looks broken, and two-line chips cost the bar 70px on a
+     320px screen — hold each credential on one line and shrink it instead */
+  .accred { padding: 0 8px 0 2px; font-size: 11px; white-space: nowrap; }
   .hdr-sub { gap: 4px var(--space-1); }
 }
 
@@ -967,7 +1034,7 @@ header.is-stuck { box-shadow: var(--shadow-sm); }
 @media (min-width: 920px) {
   header.is-stuck .topbar { display: none; }
   header.is-stuck .logobar { min-height: 84px !important; transition: min-height var(--dur) var(--ease); }
-  header.is-stuck .lockup__logo { height: 48px; }
+  header.is-stuck .lockup__logo { height: 56px; }
   header.is-stuck .hdr-sub { display: none !important; }
   header.is-stuck .hdr-name { font-size: 20px !important; }
 }
